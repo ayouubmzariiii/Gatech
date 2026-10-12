@@ -3,15 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, btnPrimary, btnSecondary } from "@/components/ui";
+import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, GuideCard, btnPrimary, btnSecondary } from "@/components/ui";
+import { guidesForCert } from "@/data/guides";
 import { VendorLogo } from "@/components/VendorLogo";
 import { certifications, getCertification } from "@/data";
 import type { Certification } from "@/data/types";
 import { fmt, getDictionary } from "@/dictionaries";
 import { fixBidi } from "@/lib/bidi";
 import { isLocale, locales, type Locale } from "@/lib/i18n";
-import { breadcrumbSchema, courseSchema, faqSchema, graph } from "@/lib/schema";
-import { formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
+import { breadcrumbSchema, courseSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
+import { absoluteUrl, formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/certificat
     path: routes.certification(slug),
     title: cert.seoTitle[lang],
     description: cert.seoDescription[lang],
+    hasOwnImage: true,
   });
 }
 
@@ -73,6 +75,14 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
     <>
       <JsonLd
         data={graph(
+          webPageSchema({
+            locale,
+            path: routes.certification(cert.slug),
+            name: cert.seoTitle[locale],
+            description: cert.seoDescription[locale],
+            type: "ItemPage",
+            mainEntity: `${absoluteUrl(localePath(locale, routes.certification(cert.slug)))}#course`,
+          }),
           courseSchema(cert, locale),
           breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))),
           faqSchema(cert.faqs[locale]),
@@ -214,6 +224,21 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
           </div>
         </div>
       </section>
+
+      {guidesForCert(cert.slug).length > 0 && (
+        <section aria-labelledby="cert-guides" className="container-page py-16">
+          <h2 id="cert-guides" className="font-display text-3xl font-bold text-ink sm:text-4xl">
+            {dict.guides.related}
+          </h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {guidesForCert(cert.slug)
+              .slice(0, 3)
+              .map((g) => (
+                <GuideCard key={g.slug} guide={g} locale={locale} dict={dict} />
+              ))}
+          </div>
+        </section>
+      )}
 
       <CtaBanner locale={locale} dict={dict} />
     </>

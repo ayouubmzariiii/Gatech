@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CtaBanner, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, CtaBanner, FaqSection, PageHero, SectionHeading } from "@/components/ui";
+import { pageFaqs } from "@/data/pageFaqs";
+
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
-import { breadcrumbSchema, graph, orgId } from "@/lib/schema";
-import { absoluteUrl, localePath, pageMetadata, routes } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema, graph, orgId, webPageSchema } from "@/lib/schema";
+import { localePath, pageMetadata, routes } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/a-propos">): Promise<Metadata> {
   const { lang } = await params;
@@ -26,12 +28,11 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
   return (
     <>
       <JsonLd
-        data={graph(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))), {
-          "@type": "AboutPage",
-          url: absoluteUrl(localePath(lang, routes.about)),
-          name: dict.meta.aboutTitle,
-          about: { "@id": orgId },
-        })}
+        data={graph(
+          webPageSchema({ locale: lang, path: routes.about, name: dict.meta.aboutTitle, description: dict.meta.aboutDescription, type: "AboutPage", mainEntity: orgId }),
+          breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))),
+          faqSchema(pageFaqs.about[lang]),
+        )}
       />
       <PageHero>
         <Breadcrumbs items={crumbs} />
@@ -55,6 +56,8 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
           ))}
         </div>
       </section>
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.about[lang]} surface />
+
       <CtaBanner locale={lang} dict={dict} />
     </>
   );

@@ -26,6 +26,9 @@ const en: Dictionary = {
     legalTitle: "Legal Notice",
     legalDescription:
       "Legal notice for gatech.world: publisher, hosting, intellectual property and certification vendors' trademarks.",
+    guidesTitle: "Cybersecurity Guides Morocco: Choose Your Certification",
+    guidesDescription:
+      "Practical guides to choose and pass your cybersecurity certification in Morocco: CEH vs OSCP+, CISSP, prices in MAD, law 05-20 and ISO 27001. Read now.",
     notFoundTitle: "Page not found",
   },
   nav: {
@@ -33,6 +36,7 @@ const en: Dictionary = {
     certifications: "Certifications",
     business: "Business",
     cities: "Cities",
+    guides: "Guides",
     about: "About",
     contact: "Contact",
     cta: "Get a quote",
@@ -70,6 +74,23 @@ const en: Dictionary = {
       { title: "Covering tracks", text: "Anti-forensics, and above all how to detect it." },
     ],
     cta: "Discover the CEH v13 training",
+  },
+  guides: {
+    eyebrow: "Guides & comparisons",
+    title: "Guides to build your cybersecurity career",
+    subtitle: "Comparisons, prices, Moroccan regulation and career paths: clear answers before you choose your certification.",
+    toc: "Contents",
+    minutes: "{n} min read",
+    published: "Published",
+    updated: "Updated",
+    readMore: "Read the guide",
+    related: "Useful guides",
+    relatedCerts: "Trainings mentioned in this guide",
+    author: "GATech teaching team",
+    faqTitle: "Frequently asked questions",
+    homeTitle: "Choose the right certification",
+    homeSubtitle: "Our comparison guides to help you decide with confidence.",
+    viewAll: "All guides",
   },
   popular: {
     eyebrow: "Most requested",

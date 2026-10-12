@@ -6,7 +6,7 @@ import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, PageHero, Section
 import { cities, getCertification, getCity } from "@/data";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
-import { breadcrumbSchema, cityServiceSchema, faqSchema, graph } from "@/lib/schema";
+import { breadcrumbSchema, cityServiceSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { localePath, pageMetadata, routes } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/maroc/[cit
     path: routes.city(slug),
     title: city.seoTitle[lang],
     description: city.seoDescription[lang],
+    hasOwnImage: true,
   });
 }
 
@@ -41,6 +42,7 @@ export default async function CityPage({ params }: PageProps<"/[lang]/maroc/[cit
     <>
       <JsonLd
         data={graph(
+          webPageSchema({ locale: lang, path: routes.city(city.slug), name: city.seoTitle[lang], description: city.seoDescription[lang] }),
           cityServiceSchema(city, lang),
           breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))),
           faqSchema(city.faqs[lang]),

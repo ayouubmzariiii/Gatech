@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import type { Certification, Faq } from "@/data/types";
-import type { Dictionary } from "@/dictionaries";
+import type { Certification, Faq, Guide } from "@/data/types";
+import { fmt, type Dictionary } from "@/dictionaries";
 import type { Locale } from "@/lib/i18n";
 import { formatPrice, localePath, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
@@ -181,5 +181,39 @@ export function CheckList({ items, dark = false }: { items: string[]; dark?: boo
         </li>
       ))}
     </ul>
+  );
+}
+
+export const formatDate = (iso: string, locale: Locale) =>
+  new Intl.DateTimeFormat({ fr: "fr-FR", ar: "ar-MA-u-nu-latn", en: "en-GB" }[locale], { dateStyle: "long" }).format(new Date(iso));
+
+export function GuideCard({ guide, locale, dict }: { guide: Guide; locale: Locale; dict: Dictionary }) {
+  return (
+    <article className="card group relative flex h-full flex-col p-6 transition duration-200 hover:-translate-y-1 hover:border-ink hover:shadow-[0_18px_40px_-24px_rgb(17_19_24/0.45)]">
+      <span aria-hidden className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-red transition duration-300 group-hover:scale-x-100 rtl:origin-right" />
+      <p className="text-xs font-bold tracking-wider text-red uppercase">{fmt(dict.guides.minutes, { n: guide.readingMinutes })}</p>
+      <h3 className="mt-3 font-display text-2xl leading-tight font-bold text-ink">
+        <Link href={localePath(locale, routes.guide(guide.slug))} className="after:absolute after:inset-0">
+          {guide.title[locale]}
+        </Link>
+      </h3>
+      <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-body">{guide.excerpt[locale]}</p>
+      <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold tracking-wide text-ink uppercase group-hover:text-red">
+        {dict.guides.readMore}
+        <ArrowIcon width={16} height={16} />
+      </span>
+    </article>
+  );
+}
+
+/** FAQ block with its own heading, used on listing and service pages. */
+export function FaqSection({ id = "faq", title, eyebrow, faqs, surface = false }: { id?: string; title: string; eyebrow?: string; faqs: Faq[]; surface?: boolean }) {
+  return (
+    <section aria-labelledby={id} className={surface ? "bg-surface py-20" : "py-20"}>
+      <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.7fr]">
+        <SectionHeading id={id} eyebrow={eyebrow} title={title} />
+        <FaqList faqs={faqs} />
+      </div>
+    </section>
   );
 }

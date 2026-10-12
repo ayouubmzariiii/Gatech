@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CatalogFilter } from "@/components/CatalogFilter";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CtaBanner, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, CertCard, CtaBanner, FaqSection, PageHero, SectionHeading } from "@/components/ui";
+import { pageFaqs } from "@/data/pageFaqs";
+
 import { certifications, vendors } from "@/data";
 import type { Category, Level } from "@/data/types";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
-import { breadcrumbSchema, graph, itemListSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, graph, itemListSchema, webPageSchema } from "@/lib/schema";
 import { localePath, pageMetadata, routes } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/certifications">): Promise<Metadata> {
@@ -38,8 +40,10 @@ export default async function CatalogPage({ params }: PageProps<"/[lang]/certifi
     <>
       <JsonLd
         data={graph(
+          webPageSchema({ locale: lang, path: routes.certifications, name: dict.meta.catalogTitle, description: dict.meta.catalogDescription, type: "CollectionPage" }),
           breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))),
           itemListSchema(lang, certifications),
+          faqSchema(pageFaqs.catalog[lang]),
         )}
       />
       <PageHero>
@@ -72,6 +76,8 @@ export default async function CatalogPage({ params }: PageProps<"/[lang]/certifi
           }}
         />
       </section>
+
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.catalog[lang]} surface />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

@@ -24,6 +24,9 @@ const fr = {
     legalTitle: "Mentions légales",
     legalDescription:
       "Mentions légales du site gatech.world : éditeur, hébergement, propriété intellectuelle et marques des éditeurs de certifications.",
+    guidesTitle: "Guides cybersécurité Maroc : choisir sa certification",
+    guidesDescription:
+      "Guides pratiques pour choisir et réussir votre certification cybersécurité au Maroc : comparatifs CEH, OSCP+, CISSP, prix en MAD, loi 05-20 et ISO 27001.",
     notFoundTitle: "Page introuvable",
   },
   nav: {
@@ -31,6 +34,7 @@ const fr = {
     certifications: "Certifications",
     business: "Entreprises",
     cities: "Villes",
+    guides: "Guides",
     about: "À propos",
     contact: "Contact",
     cta: "Demander un devis",
@@ -68,6 +72,23 @@ const fr = {
       { title: "Effacement des traces", text: "Anti-forensic, et surtout comment le détecter." },
     ],
     cta: "Découvrir la formation CEH v13",
+  },
+  guides: {
+    eyebrow: "Guides & comparatifs",
+    title: "Guides pour réussir votre carrière en cybersécurité",
+    subtitle: "Comparatifs, prix, réglementation marocaine et parcours métiers : des réponses claires avant de choisir votre certification.",
+    toc: "Sommaire",
+    minutes: "{n} min de lecture",
+    published: "Publié le",
+    updated: "Mis à jour le",
+    readMore: "Lire le guide",
+    related: "Guides utiles",
+    relatedCerts: "Formations mentionnées dans ce guide",
+    author: "Équipe pédagogique GATech",
+    faqTitle: "Questions fréquentes",
+    homeTitle: "Bien choisir sa certification",
+    homeSubtitle: "Nos guides comparatifs pour décider en connaissance de cause.",
+    viewAll: "Tous les guides",
   },
   popular: {
     eyebrow: "Les plus demandées",

@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, IBM_Plex_Sans_Arabic, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -68,6 +71,11 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <SiteHeader locale={lang} dict={dict} />
         <main id="main">{children}</main>
         <SiteFooter locale={lang} dict={dict} />
+        {/* Cookieless, privacy-friendly analytics + real-user Core Web Vitals (active on Vercel only). */}
+        <Suspense fallback={null}>
+          <Analytics />
+          <SpeedInsights />
+        </Suspense>
       </body>
     </html>
   );

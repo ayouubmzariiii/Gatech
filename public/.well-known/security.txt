@@ -1,0 +1,5 @@
+Contact: mailto:contact@gatech.world
+Expires: 2027-10-12T00:00:00.000Z
+Preferred-Languages: fr, en, ar
+Canonical: https://gatech.world/.well-known/security.txt
+Policy: https://gatech.world/mentions-legales

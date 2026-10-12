@@ -41,6 +41,15 @@ export const site = {
   },
 } as const;
 
+/**
+ * True on the production deployment. Vercel sets VERCEL_ENV to "preview" for branch/PR
+ * deployments: those must never be indexed. Outside Vercel (e.g. `next start`) we assume production.
+ */
+export const isProduction = (process.env.VERCEL_ENV ?? "production") === "production";
+
+/** IndexNow key (Bing, Yandex, Seznam…). The matching file is public/<key>.txt. */
+export const indexNowKey = "3dacf6067b80d516e4ebc539ab6c3c9c";
+
 export const sameAs = Object.values(site.social).filter(Boolean);
 
 export const whatsappLink = (text?: string) =>

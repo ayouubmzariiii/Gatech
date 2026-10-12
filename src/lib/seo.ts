@@ -10,6 +10,8 @@ export const routes = {
   business: "/entreprises",
   cities: "/maroc",
   city: (slug: string) => `/maroc/${slug}`,
+  guides: "/guides",
+  guide: (slug: string) => `/guides/${slug}`,
   about: "/a-propos",
   contact: "/contact",
   privacy: "/confidentialite",
@@ -25,6 +27,12 @@ export const localePath = (locale: Locale, path: string = "") => {
   const prefixed = locale === defaultLocale ? path : `/${locale}${path}`;
   return prefixed === "" ? "/" : prefixed;
 };
+
+/**
+ * Absolute URL of a page's generated Open Graph image. Images are served from the
+ * internal locale-prefixed route (e.g. /fr/certifications/ceh-v13/opengraph-image).
+ */
+export const ogImageUrl = (locale: Locale, path: string = "") => `${site.url}/${locale}${path}/opengraph-image`;
 
 export const absoluteUrl = (path: string) => `${site.url}${path === "/" ? "" : path}` || site.url;
 
@@ -44,6 +52,11 @@ interface PageMetaInput {
   /** Use the title as-is, without the " | GATech" template. */
   absoluteTitle?: boolean;
   type?: "website" | "article";
+  /** Article dates (ISO), used when type is "article". */
+  publishedTime?: string;
+  modifiedTime?: string;
+  /** Set for routes that have their own opengraph-image file. */
+  hasOwnImage?: boolean;
 }
 
 export function pageMetadata({
@@ -53,7 +66,11 @@ export function pageMetadata({
   description,
   absoluteTitle,
   type = "website",
+  publishedTime,
+  modifiedTime,
+  hasOwnImage = false,
 }: PageMetaInput): Metadata {
+  const image = hasOwnImage ? ogImageUrl(locale, path) : ogImageUrl(locale);
   const url = absoluteUrl(localePath(locale, path));
   // Keep titles within ~60 characters: drop the brand suffix when it would overflow.
   const suffix = ` | ${site.name}`;
@@ -65,14 +82,17 @@ export function pageMetadata({
     alternates: { canonical: url, languages: languageAlternates(path) },
     openGraph: {
       type,
+      ...(type === "article" ? { publishedTime, modifiedTime, authors: [site.url] } : {}),
       url,
       siteName: site.name,
       title: fullTitle,
       description,
       locale: ogLocale[locale],
       alternateLocale: locales.filter((l) => l !== locale).map((l) => ogLocale[l]),
+      // Default share image; routes with their own opengraph-image file override it.
+      images: [{ url: image, width: 1200, height: 630, alt: fullTitle }],
     },
-    twitter: { card: "summary_large_image", title: fullTitle, description },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [image] },
   };
 }
 

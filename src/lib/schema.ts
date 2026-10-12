@@ -1,7 +1,8 @@
-import type { Certification, City, Faq } from "@/data/types";
+import type { Certification, City, Faq, Guide } from "@/data/types";
 import { hreflang, type Locale } from "./i18n";
-import { absoluteUrl, localePath, routes } from "./seo";
+import { absoluteUrl, localePath, ogImageUrl, routes } from "./seo";
 import { sameAs, site } from "./site";
+import { certifications } from "@/data";
 
 /** schema.org JSON-LD builders. Every node links to the organization by @id. */
 
@@ -33,8 +34,23 @@ export function organizationSchema(locale: Locale, description: string) {
     telephone: site.phone,
     foundingDate: String(site.foundingYear),
     address: postalAddress(),
-    areaServed: { "@type": "Country", name: "Morocco", identifier: "MA" },
+    areaServed: [
+      { "@type": "Country", name: "Morocco", identifier: "MA" },
+      ...["Casablanca", "Rabat", "Marrakech", "Tangier", "Fez", "Agadir"].map((name) => ({ "@type": "City", name })),
+    ],
     knowsLanguage: ["fr", "ar", "en"],
+    knowsAbout: ["Cybersecurity", "Ethical hacking", "Penetration testing", "Information security management", "ISO/IEC 27001", "Digital forensics"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Cybersecurity certification trainings",
+      itemListElement: certifications.map((c) => ({
+        "@type": "Offer",
+        price: c.priceMAD,
+        priceCurrency: "MAD",
+        url: absoluteUrl(localePath(locale, routes.certification(c.slug))),
+        itemOffered: { "@id": `${absoluteUrl(localePath(locale, routes.certification(c.slug)))}#course` },
+      })),
+    },
     sameAs: sameAs.length ? sameAs : undefined,
     contactPoint: {
       "@type": "ContactPoint",
@@ -96,6 +112,9 @@ export function courseSchema(cert: Certification, locale: Locale) {
     inLanguage: hreflang[locale],
     educationalLevel: cert.level,
     teaches: cert.outcomes[locale],
+    image: ogImageUrl(locale, routes.certification(cert.slug)),
+    availableLanguage: ["fr", "en"],
+    about: { "@type": "Thing", name: "Cybersecurity" },
     coursePrerequisites: cert.prerequisites[locale],
     provider: { "@id": orgId },
     educationalCredentialAwarded: {
@@ -162,6 +181,65 @@ export function cityServiceSchema(city: City, locale: Locale) {
       containedInPlace: { "@type": "AdministrativeArea", name: city.region.en },
       geo: { "@type": "GeoCoordinates", ...city.geo },
     },
+  };
+}
+
+/** WebPage node for every page: ties the page to the site, its language, breadcrumb and main entity. */
+export function webPageSchema({
+  locale,
+  path,
+  name,
+  description,
+  type = "WebPage",
+  mainEntity,
+  dateModified = "2026-10-12",
+}: {
+  locale: Locale;
+  path: string;
+  name: string;
+  description: string;
+  type?: "WebPage" | "CollectionPage" | "AboutPage" | "ContactPage" | "FAQPage" | "ItemPage";
+  mainEntity?: string;
+  dateModified?: string;
+}) {
+  const url = absoluteUrl(localePath(locale, path));
+  return {
+    "@type": type,
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: hreflang[locale],
+    isPartOf: { "@id": websiteId },
+    publisher: { "@id": orgId },
+    dateModified,
+    ...(mainEntity ? { mainEntity: { "@id": mainEntity } } : {}),
+  };
+}
+
+export function articleSchema(guide: Guide, locale: Locale, image: string) {
+  const url = absoluteUrl(localePath(locale, routes.guide(guide.slug)));
+  return {
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline: guide.title[locale],
+    description: guide.seoDescription[locale],
+    url,
+    mainEntityOfPage: { "@id": `${url}#webpage` },
+    image: [image],
+    inLanguage: hreflang[locale],
+    datePublished: guide.datePublished,
+    dateModified: guide.dateModified,
+    author: { "@type": "Organization", "@id": orgId, name: site.name, url: site.url },
+    publisher: { "@id": orgId },
+    wordCount: guide.sections[locale].reduce(
+      (n, s) => n + [...s.paragraphs, ...(s.list ?? [])].join(" ").split(/\s+/).length,
+      0,
+    ),
+    about: guide.relatedCerts.map((slug) => ({
+      "@id": `${absoluteUrl(localePath(locale, routes.certification(slug)))}#course`,
+    })),
+    articleSection: "Cybersecurity",
   };
 }
 

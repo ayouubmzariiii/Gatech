@@ -3,11 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CtaBanner, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, CtaBanner, FaqSection, PageHero, SectionHeading } from "@/components/ui";
+import { pageFaqs } from "@/data/pageFaqs";
+
 import { cities } from "@/data";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
-import { breadcrumbSchema, graph } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { localePath, pageMetadata, routes } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/maroc">): Promise<Metadata> {
@@ -28,7 +30,13 @@ export default async function CitiesPage({ params }: PageProps<"/[lang]/maroc">)
 
   return (
     <>
-      <JsonLd data={graph(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))))} />
+      <JsonLd
+        data={graph(
+          webPageSchema({ locale: lang, path: routes.cities, name: dict.meta.citiesTitle, description: dict.meta.citiesDescription, type: "CollectionPage" }),
+          breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))),
+          faqSchema(pageFaqs.cities[lang]),
+        )}
+      />
       <PageHero>
         <Breadcrumbs items={crumbs} />
         <div className="mt-8">
@@ -54,6 +62,8 @@ export default async function CitiesPage({ params }: PageProps<"/[lang]/maroc">)
           ))}
         </ul>
       </section>
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.cities[lang]} surface />
+
       <CtaBanner locale={lang} dict={dict} />
     </>
   );

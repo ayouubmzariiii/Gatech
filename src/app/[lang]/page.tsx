@@ -3,13 +3,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowIcon, WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { CertCard, CheckList, CtaBanner, FaqList, SectionHeading, btnPrimary, btnSecondary } from "@/components/ui";
+import { CertCard, CheckList, CtaBanner, FaqList, GuideCard, SectionHeading, btnPrimary, btnSecondary } from "@/components/ui";
+import { guides } from "@/data/guides";
 import { VendorLogo } from "@/components/VendorLogo";
 import { certifications, cities, getCertification, vendors } from "@/data";
 import type { Certification } from "@/data/types";
 import { getDictionary, type Dictionary } from "@/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { faqSchema, graph } from "@/lib/schema";
+import { faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
 
@@ -114,7 +115,12 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
 
   return (
     <>
-      <JsonLd data={graph(faqSchema(dict.faq.items))} />
+      <JsonLd
+        data={graph(
+          webPageSchema({ locale, path: routes.home, name: dict.meta.homeTitle, description: dict.meta.homeDescription }),
+          faqSchema(dict.faq.items),
+        )}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
@@ -322,6 +328,23 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Guides */}
+      <section aria-labelledby="home-guides" className="border-t border-line py-20 sm:py-28">
+        <div className="container-page">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeading id="home-guides" eyebrow={dict.guides.eyebrow} title={dict.guides.homeTitle} subtitle={dict.guides.homeSubtitle} />
+            <Link href={p(routes.guides)} className={`${btnSecondary} shrink-0`}>
+              {dict.guides.viewAll}
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {guides.slice(0, 3).map((g) => (
+              <GuideCard key={g.slug} guide={g} locale={locale} dict={dict} />
+            ))}
+          </div>
         </div>
       </section>
 

@@ -4,12 +4,14 @@ import { Suspense } from "react";
 import { ContactForm, ContactFormFromQuery } from "@/components/ContactForm";
 import { WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, FaqSection, PageHero, SectionHeading } from "@/components/ui";
+import { pageFaqs } from "@/data/pageFaqs";
+
 import { certifications } from "@/data";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
-import { breadcrumbSchema, graph, orgId } from "@/lib/schema";
-import { absoluteUrl, localePath, pageMetadata, routes } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema, graph, orgId, webPageSchema } from "@/lib/schema";
+import { localePath, pageMetadata, routes } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contact">): Promise<Metadata> {
@@ -42,12 +44,11 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
   return (
     <>
       <JsonLd
-        data={graph(breadcrumbSchema(crumbs.map((x) => ({ name: x.name, path: x.href }))), {
-          "@type": "ContactPage",
-          url: absoluteUrl(localePath(lang, routes.contact)),
-          name: dict.meta.contactTitle,
-          about: { "@id": orgId },
-        })}
+        data={graph(
+          webPageSchema({ locale: lang, path: routes.contact, name: dict.meta.contactTitle, description: dict.meta.contactDescription, type: "ContactPage", mainEntity: orgId }),
+          breadcrumbSchema(crumbs.map((x) => ({ name: x.name, path: x.href }))),
+          faqSchema(pageFaqs.contact[lang]),
+        )}
       />
       <PageHero>
         <Breadcrumbs items={crumbs} />
@@ -89,6 +90,8 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           <p className="mt-6 border-t border-line pt-4 text-sm text-body">{c.hours}</p>
         </aside>
       </section>
+
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.contact[lang]} surface />
     </>
   );
 }

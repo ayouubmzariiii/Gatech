@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CheckList, CtaBanner, PageHero, SectionHeading, btnPrimary } from "@/components/ui";
+import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqSection, PageHero, SectionHeading, btnPrimary } from "@/components/ui";
+import { pageFaqs } from "@/data/pageFaqs";
+
 import { getCertification } from "@/data";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
-import { breadcrumbSchema, graph, orgId } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, graph, orgId, webPageSchema } from "@/lib/schema";
 import { absoluteUrl, localePath, pageMetadata, routes } from "@/lib/seo";
 
 const teamCerts = ["iso-27001-lead-implementer", "ceh-v13", "comptia-cysa-plus", "cissp"];
@@ -31,7 +33,11 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
   return (
     <>
       <JsonLd
-        data={graph(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))), {
+        data={graph(
+          webPageSchema({ locale: lang, path: routes.business, name: dict.meta.businessTitle, description: dict.meta.businessDescription }),
+          breadcrumbSchema(crumbs.map((c) => ({ name: c.name, path: c.href }))),
+          faqSchema(pageFaqs.business[lang]),
+          {
           "@type": "Service",
           name: dict.meta.businessTitle,
           description: dict.meta.businessDescription,
@@ -39,7 +45,8 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
           url: absoluteUrl(localePath(lang, routes.business)),
           provider: { "@id": orgId },
           areaServed: { "@type": "Country", name: "Morocco" },
-        })}
+          },
+        )}
       />
       <PageHero>
         <Breadcrumbs items={crumbs} />
@@ -87,6 +94,8 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
           </ol>
         </div>
       </section>
+
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.business[lang]} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

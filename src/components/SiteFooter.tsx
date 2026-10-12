@@ -72,6 +72,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             {dict.footer.company}
           </h2>
           <ul className="space-y-2">
+            <li><Link href={p(routes.guides)} className={linkClass}>{dict.nav.guides}</Link></li>
             <li><Link href={p(routes.about)} className={linkClass}>{dict.nav.about}</Link></li>
             <li><Link href={p(routes.business)} className={linkClass}>{dict.nav.business}</Link></li>
             <li><Link href={p(routes.contact)} className={linkClass}>{dict.nav.contact}</Link></li>

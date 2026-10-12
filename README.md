@@ -29,32 +29,71 @@ To add a certification: create `src/data/certs/<slug>.ts` (copy an existing one)
 
 ## SEO built in
 
-- Static prerendering of every page (fast TTFB / Core Web Vitals), minimal client JS.
-- Unique `<title>` (≤ 60 chars) and meta description (≤ 160) per page and language; one `<h1>` per page.
-- Self-referencing canonical + `hreflang` `fr-MA` / `ar-MA` / `en-MA` / `x-default` in HTML **and** in `sitemap.xml`.
-- `<html lang dir>` per locale, RTL layout for Arabic, IBM Plex Sans Arabic font.
-- JSON-LD on every page (Course with MAD offers and course instances, FAQ, breadcrumbs, organization).
-- Dynamic Open Graph images (site + one per certification), `robots.txt`, `sitemap.xml`, web manifest, favicons.
-- Localized 404 with `noindex`, 308 redirects for duplicate URLs, security headers.
-- No fake reviews/ratings/statistics: everything in structured data is verifiable (Google penalizes fabricated review markup).
+**Indexing & crawling**
+- Every page statically prerendered; all translated text is in the server HTML (verified without JavaScript).
+- Self-referencing canonical + `hreflang` `fr-MA` / `ar-MA` / `en-MA` / `x-default` in HTML **and** `sitemap.xml`.
+- `sitemap.xml` with hreflang alternates, `lastmod` and image entries (generated OG images).
+- `robots.txt` is environment-aware: Vercel **preview** deployments are `Disallow: /` + `X-Robots-Tag: noindex`.
+- 308 redirects: `/fr/*` → unprefixed, trailing slash removed, `www.gatech.world` → `gatech.world`.
+- Localized 404 (`noindex`) for unknown URLs.
+- IndexNow key (`public/<key>.txt`) + `npm run indexnow` to push all URLs to Bing/Yandex after a deploy.
+- `/llms.txt`: markdown site map for AI assistants (ChatGPT, Perplexity, Gemini…).
 
-## Before going live (checklist)
+**On-page**
+- Unique `<title>` (≤ 60 chars) and description (110–160 chars) per page and language; one `<h1>` per page.
+- `<html lang dir>` per locale, RTL Arabic layout, Arabic font.
+- Visible breadcrumbs on every inner page, FAQ sections on every commercial page, strong internal linking
+  (catalog ⇄ certifications ⇄ guides ⇄ cities, footer).
+- 8 long-form guides in 3 languages targeting informational searches (comparisons, prices, law 05-20, ISO 27001, careers).
 
-1. **`src/lib/site.ts`**: real phone, WhatsApp number, legal name, founding year, address (leave `streetAddress` empty if no public office), social profile URLs.
-2. **Legal notice** (`legal.notice` in the dictionaries): RC, ICE, registered address, host.
+**Structured data (JSON-LD, one `@graph` per page)**
+- `EducationalOrganization` (+ `OfferCatalog`, `ContactPoint`, served cities) and `WebSite` on every page.
+- `WebPage` / `CollectionPage` / `ItemPage` / `AboutPage` / `ContactPage` node on every page.
+- `Course` with MAD `Offer`, `CourseInstance` (Casablanca, Rabat, online), credential and image.
+- `Article` for guides, `FAQPage` wherever FAQs are shown, `BreadcrumbList`, `ItemList`, city `Service`.
+- No fake reviews/ratings/statistics (Google penalizes fabricated review markup).
+
+**Performance & monitoring**
+- Static HTML from the edge, `next/font`, optimized images, minimal client JS.
+- Vercel Analytics (cookieless) and Speed Insights (real-user Core Web Vitals).
+- Security headers (HSTS, nosniff, frame, referrer, permissions), `/.well-known/security.txt`.
+
+## Deploying on Vercel (go-live runbook)
+
+1. **Import** the GitHub repo in Vercel → framework "Next.js" is detected, no build settings to change.
+2. **Environment variables** (Project → Settings → Environment Variables, *Production*):
+   - `NEXT_PUBLIC_SITE_URL` = `https://gatech.world`
+   - `CONTACT_WEBHOOK_URL` = your Zapier / Make / n8n / CRM webhook (otherwise leads only appear in Vercel logs)
+   - `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION` = tokens from Search Console / Bing Webmaster Tools (HTML-tag method)
+3. **Domains** (Project → Settings → Domains): add `gatech.world` (primary) **and** `www.gatech.world`
+   (set it to redirect to `gatech.world`). Point DNS as Vercel instructs.
+4. **Analytics**: enable *Web Analytics* and *Speed Insights* in the Vercel project (Analytics tab).
+5. **Deploy**, then check: `https://gatech.world/robots.txt` shows `Allow: /` and the sitemap;
+   a preview URL (`*.vercel.app`) shows `Disallow: /`.
+6. **Google Search Console**: add the *Domain* property, verify, submit `https://gatech.world/sitemap.xml`,
+   then request indexing for the home page and the top certification pages.
+7. **Bing Webmaster Tools**: import from Search Console, then run `npm run indexnow`.
+8. **Rich results**: test a certification page and a guide in https://search.google.com/test/rich-results.
+9. **Google Business Profile**: create it with exactly the same name, phone (+212 6 84 19 94 00) and address as `site.ts`.
+
+## Before going live (content checklist)
+
+1. **`src/lib/site.ts`**: legal name, founding year, address (leave `streetAddress` empty if no public office), social profile URLs.
+2. **Legal notice** (`legal.notice` in the dictionaries): RC, ICE, registered address, host (Vercel Inc.).
 3. **Prices** in `src/data/certs/*.ts` are placeholders — set your real prices; check `voucherIncluded`.
-4. **Exam facts**: content was written carefully but verify each exam detail (question count, duration, passing score, CHFI v11 module list, OSCP+ dates) against the vendor sites before launch.
-5. **Vendor logos**: the EC-Council file from Wikimedia is a plain text rendering, and OffSec has no logo there (a text wordmark is shown). Replace both with official files from the vendors' partner/brand kits.
-6. **Partner status**: the site never claims to be an authorized partner. If you are an EC-Council ATC / CompTIA / PECB partner, say so on the relevant pages (it is a strong trust signal) — and ensure you have the right to resell vouchers.
-7. **Environment variables** (see `.env.example`): `NEXT_PUBLIC_SITE_URL`, `CONTACT_WEBHOOK_URL` (otherwise leads only go to the server log), `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION`.
-8. Deploy on HTTPS at `https://gatech.world`, then submit `https://gatech.world/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
-9. Create a **Google Business Profile** (Casablanca/Rabat) with exactly the same name, address and phone as `site.ts`.
+4. **Exam & legal facts**: verify exam details (question count, duration, passing score, CHFI v11 module list,
+   OSCP+ dates) and the legal references in the guides (law 05-20, Code pénal 607-3 and following) before launch.
+5. **Vendor logos**: replace the EC-Council (text rendering) and OffSec (text wordmark) logos with official files.
+6. **Partner status**: the site never claims to be an authorized partner. If you are one, say so — it is a strong trust signal.
 
-## Ranking #1 in Morocco — what the code can't do for you
+## Ranking #1 in Morocco — the ongoing work
 
-Technical SEO is now solid; positions are won by authority and content:
+The technical and on-page foundation is complete; positions are then won by authority and freshness:
 
-- **Content**: add a blog/guides (e.g. "CEH ou OSCP : laquelle choisir ?", "Salaire pentester au Maroc", "Loi 05-20 : obligations"), in French first, then Arabic.
-- **Backlinks** from Moroccan sources: schools (ENSIAS, EMSI, UIR, OFPPT), tech media (Le Desk, Médias24, TelQuel), associations, job boards (Rekrute, Emploi.ma), partners.
-- **Reviews** on Google Business Profile from real learners.
-- **Session dates**: publishing real upcoming session dates per certification enables richer Course data and converts better.
+- **Publish** one new guide per month (add a file in `src/data/guides/` and register it in `src/data/guides/index.ts`;
+  sitemap, llms.txt, OG image and schema are automatic). Update `dateModified` when you refresh a guide.
+- **Backlinks** from Moroccan sources: schools (ENSIAS, EMSI, UIR, OFPPT), tech media (Le Desk, Médias24, TelQuel),
+  associations, job boards (Rekrute, Emploi.ma), partners.
+- **Reviews** on Google Business Profile from real learners (never add rating markup to the site yourself).
+- **Session dates**: publishing real upcoming dates per certification enables richer Course data and converts better.
+- **Social profiles**: create LinkedIn / Facebook / Instagram pages and add their URLs to `site.social` (feeds `sameAs`).

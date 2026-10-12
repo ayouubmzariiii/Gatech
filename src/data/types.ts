@@ -80,3 +80,40 @@ export interface City {
   featuredCerts: string[];
   faqs: Localized<Faq[]>;
 }
+
+export interface GuideSection {
+  /** H2 heading of the section. */
+  heading: string;
+  /** 1–4 paragraphs. */
+  paragraphs: string[];
+  /** Optional bullet list rendered after the paragraphs. */
+  list?: string[];
+}
+
+/** Editorial guide (blog article) targeting an informational search intent. */
+export interface Guide {
+  /** URL slug, identical in every locale (French words), e.g. "ceh-ou-oscp". */
+  slug: string;
+  /** ISO dates, e.g. "2026-10-12". */
+  datePublished: string;
+  dateModified: string;
+  /** Approximate reading time in minutes (based on the French version). */
+  readingMinutes: number;
+  /** Slugs of the certifications discussed (links + structured data `about`). */
+  relatedCerts: string[];
+  /** H1 / article headline (max ~70 chars). */
+  title: Localized;
+  /** SEO <title>, max 60 chars, no brand name. */
+  seoTitle: Localized;
+  /** Meta description, 140–160 chars, with a call to action. */
+  seoDescription: Localized;
+  /** 1–2 sentence summary shown in listings and as the article intro. */
+  excerpt: Localized;
+  /** 5–7 sections forming the body (aim for 1,000–1,400 words in French). */
+  sections: Localized<GuideSection[]>;
+  /** 4–5 FAQs specific to the article topic. */
+  faqs: Localized<Faq[]>;
+}
+
+/** FAQs for listing / service pages, keyed by page. */
+export type PageFaqKey = "catalog" | "business" | "cities" | "contact" | "about";

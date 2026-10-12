@@ -1,9 +1,12 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
+import { isProduction, site } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
+  // Preview deployments (*.vercel.app) must never be indexed.
+  if (!isProduction) return { rules: [{ userAgent: "*", disallow: "/" }] };
   return {
-    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/"] }],
+    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/*?certification=", "/*?format="] }],
     sitemap: `${site.url}/sitemap.xml`,
+    host: site.url,
   };
 }
