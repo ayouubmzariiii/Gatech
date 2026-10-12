@@ -1,0 +1,364 @@
+const fr = {
+  meta: {
+    homeTitle: "Certifications cybersécurité Maroc : CEH v13, CISSP, OSCP+",
+    homeDescription:
+      "Préparez CEH v13, CompTIA Security+, CISSP, OSCP+ ou ISO 27001 au Maroc avec voucher d'examen officiel inclus. Casablanca, Rabat ou en ligne. Devis en 24 h.",
+    catalogTitle: "Certifications cybersécurité au Maroc : prix en MAD",
+    catalogDescription:
+      "Comparez 10 certifications en cybersécurité : CEH v13, OSCP+, CISSP, CISM, Security+, CySA+, ISO 27001… Durée, niveau, examen et prix en dirhams.",
+    businessTitle: "Formation cybersécurité pour entreprises au Maroc",
+    businessDescription:
+      "Formez vos équipes IT et sécurité au Maroc : sessions intra-entreprise sur site ou à distance, CEH, ISO 27001, CISSP. Conformité loi 05-20. Demandez un devis.",
+    citiesTitle: "Formations cybersécurité dans les villes du Maroc",
+    citiesDescription:
+      "Formations certifiantes en cybersécurité à Casablanca, Rabat, Marrakech, Tanger, Fès et Agadir : présentiel, classe virtuelle ou intra. Voir les sessions.",
+    aboutTitle: "À propos : centre de formation en cybersécurité au Maroc",
+    aboutDescription:
+      "GATech prépare les professionnels marocains aux certifications cybersécurité reconnues dans le monde entier. Notre méthode, nos formateurs et nos engagements.",
+    contactTitle: "Contact et inscription : parlez à un conseiller",
+    contactDescription:
+      "Une question sur une certification, un devis entreprise ou une inscription ? Écrivez-nous ou contactez-nous sur WhatsApp. Réponse sous 24 h ouvrées.",
+    privacyTitle: "Politique de confidentialité",
+    privacyDescription:
+      "Comment GATech collecte, utilise et protège vos données personnelles conformément à la loi marocaine 09-08 et aux recommandations de la CNDP.",
+    legalTitle: "Mentions légales",
+    legalDescription:
+      "Mentions légales du site gatech.world : éditeur, hébergement, propriété intellectuelle et marques des éditeurs de certifications.",
+    notFoundTitle: "Page introuvable",
+  },
+  nav: {
+    home: "Accueil",
+    certifications: "Certifications",
+    business: "Entreprises",
+    cities: "Villes",
+    about: "À propos",
+    contact: "Contact",
+    cta: "Demander un devis",
+    menu: "Menu",
+    close: "Fermer",
+    language: "Langue",
+    skip: "Aller au contenu",
+  },
+  hero: {
+    title: "Formations CEH, CISSP, OSCP+ et CompTIA au Maroc, examen inclus",
+    subtitle:
+      "Des formateurs certifiés, des labs pratiques et votre voucher d'examen officiel dans un seul prix en dirhams. En classe à Casablanca et Rabat, ou en direct en ligne depuis tout le Maroc.",
+    vendors: "Préparation aux certifications officielles de",
+    highlight: "examen inclus",
+    panelTitle: "Les plus demandées",
+    panelAll: "Voir le catalogue complet",
+    primaryCta: "Voir les certifications",
+    secondaryCta: "Parler à un conseiller",
+    trust: [
+      "Voucher d'examen officiel inclus",
+      "Labs pratiques 24/7",
+      "Paiement en plusieurs fois",
+      "Facture entreprise",
+    ],
+  },
+  spotlight: {
+    eyebrow: "Certification phare",
+    title: "CEH v13 : la méthode complète du hacker éthique, augmentée par l'IA",
+    text: "La certification offensive la plus demandée par les recruteurs marocains. Vous suivez les 5 phases d'une attaque réelle, en lab, avant de passer l'examen officiel 312-50 avec votre voucher inclus.",
+    phases: [
+      { title: "Reconnaissance", text: "Footprinting, OSINT et cartographie de la cible." },
+      { title: "Scan & énumération", text: "Ports, services, vulnérabilités et comptes exposés." },
+      { title: "Obtention d'accès", text: "Exploitation système, web, réseau sans fil et cloud." },
+      { title: "Maintien de l'accès", text: "Escalade de privilèges, persistance, pivot." },
+      { title: "Effacement des traces", text: "Anti-forensic, et surtout comment le détecter." },
+    ],
+    cta: "Découvrir la formation CEH v13",
+  },
+  popular: {
+    eyebrow: "Les plus demandées",
+    title: "Les certifications que les recruteurs marocains exigent",
+    subtitle:
+      "Banques, opérateurs télécoms, centres d'offshoring et administrations : ces certifications figurent dans la majorité des offres d'emploi en cybersécurité.",
+    viewAll: "Voir les 10 certifications",
+  },
+  paths: {
+    eyebrow: "Parcours métiers",
+    title: "Choisissez votre parcours",
+    subtitle: "Chaque parcours combine les certifications dans l'ordre logique, du premier poste au niveau expert.",
+    items: [
+      {
+        title: "Pentest & Red Team",
+        text: "Attaquez pour mieux défendre : tests d'intrusion, exploitation, rapports d'audit.",
+        certs: ["comptia-security-plus", "ceh-v13", "comptia-pentest-plus", "oscp"],
+      },
+      {
+        title: "SOC & Blue Team",
+        text: "Détectez, analysez et répondez aux incidents dans un SOC ou une équipe CERT.",
+        certs: ["comptia-security-plus", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
+      },
+      {
+        title: "Gouvernance, risque & conformité",
+        text: "Pilotez la sécurité, la conformité loi 05-20 / DNSSI et les SMSI ISO 27001.",
+        certs: ["iso-27001-lead-implementer", "cism", "cissp"],
+      },
+    ],
+  },
+  why: {
+    eyebrow: "Pourquoi GATech",
+    title: "Une préparation pensée pour réussir l'examen du premier coup",
+    items: [
+      {
+        title: "Voucher officiel inclus",
+        text: "Le prix affiché comprend la formation et le voucher d'examen de l'éditeur. Pas de frais cachés.",
+      },
+      {
+        title: "Formateurs certifiés et praticiens",
+        text: "Pentesteurs, analystes SOC et auditeurs en activité, qui enseignent ce qu'ils pratiquent chaque semaine.",
+      },
+      {
+        title: "Labs pratiques",
+        text: "Environnements d'attaque et de défense accessibles à distance pour s'entraîner sur des cas réels.",
+      },
+      {
+        title: "Examens blancs",
+        text: "Questions d'entraînement au format officiel et correction détaillée avant de passer l'examen.",
+      },
+      {
+        title: "En français, en arabe et en anglais",
+        text: "Cours en français ou en anglais, accompagnement en arabe ou en darija, supports officiels en anglais.",
+      },
+      {
+        title: "Paiement flexible",
+        text: "Virement, carte bancaire, paiement en plusieurs fois sur demande et facturation entreprise.",
+      },
+    ],
+  },
+  process: {
+    eyebrow: "Comment ça marche",
+    title: "De l'inscription à la certification en 4 étapes",
+    steps: [
+      { title: "Échange conseil", text: "15 minutes pour valider votre niveau et choisir la bonne certification." },
+      { title: "Inscription", text: "Choisissez la session : présentiel, classe virtuelle ou intra-entreprise." },
+      { title: "Formation & labs", text: "Cours intensifs, labs pratiques et examens blancs avec suivi personnalisé." },
+      { title: "Examen officiel", text: "Passez l'examen en ligne surveillé ou en centre agréé avec votre voucher." },
+    ],
+  },
+  business: {
+    eyebrow: "Entreprises & administrations",
+    title: "Formez vos équipes, renforcez votre conformité",
+    text: "Sessions intra-entreprise dans vos locaux partout au Maroc ou à distance, programmes adaptés à votre secteur et à vos exigences réglementaires (loi 05-20, DNSSI, Bank Al-Maghrib, loi 09-08).",
+    points: [
+      "Programme adapté à votre contexte",
+      "Sessions dans vos locaux ou en ligne",
+      "Bons de commande et facturation",
+      "Rapport de progression des participants",
+    ],
+    cta: "Demander un devis entreprise",
+  },
+  citiesSection: {
+    eyebrow: "Partout au Maroc",
+    title: "Formez-vous près de chez vous",
+    subtitle: "En classe à Casablanca et Rabat, en direct en ligne depuis n'importe quelle ville, ou dans les locaux de votre entreprise.",
+  },
+  faq: {
+    eyebrow: "Questions fréquentes",
+    title: "Tout savoir avant de vous inscrire",
+    items: [
+      {
+        q: "Quelle certification cybersécurité choisir pour débuter au Maroc ?",
+        a: "CompTIA Security+ est le meilleur point d'entrée : elle couvre les fondamentaux, ne demande pas d'expérience préalable et est reconnue par les employeurs marocains comme internationaux. Pour une orientation offensive, enchaînez ensuite avec le CEH v13, puis l'OSCP+.",
+      },
+      {
+        q: "Le voucher d'examen est-il inclus dans le prix ?",
+        a: "Oui. Pour toutes nos certifications, le prix affiché en dirhams comprend la formation, les supports, l'accès aux labs et le voucher d'examen officiel de l'éditeur.",
+      },
+      {
+        q: "Où se déroulent les formations ?",
+        a: "En présentiel à Casablanca et Rabat, en classe virtuelle en direct accessible depuis tout le Maroc, ou dans les locaux de votre entreprise pour les groupes (intra-entreprise).",
+      },
+      {
+        q: "Comment se passe l'examen ?",
+        a: "Selon l'éditeur, l'examen se passe en ligne sous surveillance (depuis chez vous) ou dans un centre de test agréé au Maroc. Nous vous aidons à le planifier et à préparer votre environnement.",
+      },
+      {
+        q: "Peut-on payer en plusieurs fois ?",
+        a: "Oui, le paiement en plusieurs fois est possible sur demande pour les particuliers. Les entreprises peuvent régler par virement sur facture ou bon de commande.",
+      },
+      {
+        q: "Les certifications sont-elles reconnues à l'international ?",
+        a: "Oui. CEH, CISSP, CISM, CompTIA, OSCP+ et ISO 27001 sont délivrées par leurs éditeurs (EC-Council, ISC2, ISACA, CompTIA, OffSec, PECB) et sont reconnues par les employeurs au Maroc, en Europe, dans le Golfe et en Amérique du Nord.",
+      },
+    ],
+  },
+  finalCta: {
+    title: "Prêt à décrocher votre certification ?",
+    text: "Réservez un échange gratuit de 15 minutes avec un conseiller : nous évaluons votre niveau et vous recommandons le parcours le plus rapide vers votre objectif.",
+    primary: "Réserver mon appel gratuit",
+    whatsapp: "Écrire sur WhatsApp",
+    whatsappMessage: "Bonjour, je souhaite des informations sur vos certifications en cybersécurité.",
+  },
+  labels: {
+    levels: {
+      beginner: "Débutant",
+      intermediate: "Intermédiaire",
+      advanced: "Avancé",
+      expert: "Expert",
+    },
+    categories: {
+      offensive: "Offensive",
+      defensive: "Défensive",
+      governance: "Gouvernance",
+      forensics: "Forensic",
+    },
+    from: "À partir de",
+    currency: "MAD",
+    voucherIncluded: "Voucher inclus",
+    days: "jours",
+    hours: "heures",
+    level: "Niveau",
+    duration: "Durée",
+    vendor: "Éditeur",
+    examCode: "Code d'examen",
+    learnMore: "Voir la formation",
+    enroll: "S'inscrire",
+    all: "Toutes",
+    filterVendor: "Éditeur",
+    filterCategory: "Domaine",
+    filterLevel: "Niveau",
+    results: "{count} certifications",
+    noResults: "Aucune certification ne correspond à ces filtres.",
+    reset: "Réinitialiser",
+    popular: "Populaire",
+  },
+  catalog: {
+    eyebrow: "Catalogue 2026",
+    title: "Certifications en cybersécurité",
+    subtitle:
+      "Toutes nos formations incluent le voucher d'examen officiel, les labs pratiques et des examens blancs. Prix en dirhams, sessions au Maroc et en ligne.",
+  },
+  cert: {
+    h1: "Formation {name} au Maroc",
+    overview: "Présentation",
+    audience: "Pour qui ?",
+    prerequisites: "Prérequis",
+    outcomes: "Ce que vous saurez faire",
+    modules: "Programme de la formation",
+    exam: "L'examen",
+    examFormat: "Format",
+    examDuration: "Durée",
+    passingScore: "Score de réussite",
+    validity: "Validité",
+    careers: "Débouchés au Maroc",
+    faq: "Questions fréquentes",
+    included: "Inclus dans le prix",
+    includedItems: [
+      "Formation avec formateur certifié",
+      "Voucher d'examen officiel",
+      "Accès aux labs pratiques",
+      "Examens blancs corrigés",
+      "Attestation de formation",
+    ],
+    voucherNotIncluded: "Voucher d'examen en option",
+    bookCall: "Réserver un appel",
+    askWhatsapp: "Question sur WhatsApp",
+    whatsappMessage: "Bonjour, je suis intéressé(e) par la formation {name}.",
+    related: "Certifications complémentaires",
+    sessions: "Présentiel Casablanca & Rabat · Classe virtuelle · Intra-entreprise",
+    priceNote: "Prix TTC indicatif, formation + examen. Tarifs de groupe sur devis.",
+  },
+  city: {
+    sectors: "Secteurs qui recrutent",
+    featured: "Certifications recommandées",
+    otherCities: "Autres villes",
+    delivery: "Formats disponibles",
+  },
+  about: {
+    eyebrow: "À propos",
+    title: "Nous formons la prochaine génération d'experts cybersécurité au Maroc",
+    paragraphs: [
+      "La transformation numérique du Maroc s'accélère : banques, administrations, industriels et centres d'offshoring numérisent leurs services, et la loi 05-20 sur la cybersécurité impose de nouvelles exigences. Le besoin en profils certifiés n'a jamais été aussi fort.",
+      "GATech est né d'un constat simple : les certifications de référence comme le CEH, l'OSCP+ ou le CISSP restaient difficiles d'accès au Maroc — prix en devises, supports uniquement en anglais, peu d'accompagnement. Nous avons construit une offre en dirhams, avec des formateurs praticiens et un suivi jusqu'à l'examen.",
+      "Notre approche est pratique avant tout : chaque concept est appliqué en lab, chaque formation se termine par des examens blancs, et chaque apprenant est accompagné jusqu'à l'obtention de sa certification.",
+    ],
+    valuesTitle: "Nos engagements",
+    values: [
+      { title: "Transparence", text: "Des prix publics en dirhams, voucher inclus, sans frais cachés." },
+      { title: "Pratique", text: "Au moins la moitié du temps de formation consacrée aux labs et cas réels." },
+      { title: "Accompagnement", text: "Un conseiller dédié de l'inscription jusqu'au résultat de l'examen." },
+      { title: "Éthique", text: "Le hacking éthique s'enseigne avec un cadre légal clair et des labs isolés." },
+    ],
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Parlons de votre projet de certification",
+    subtitle: "Remplissez le formulaire ou écrivez-nous sur WhatsApp. Un conseiller vous répond sous 24 h ouvrées.",
+    name: "Nom complet",
+    email: "Adresse e-mail",
+    phone: "Téléphone",
+    company: "Entreprise (optionnel)",
+    certification: "Certification qui vous intéresse",
+    certificationPlaceholder: "Je ne sais pas encore",
+    format: "Format souhaité",
+    formats: { classroom: "Présentiel", online: "Classe virtuelle", intra: "Intra-entreprise" },
+    message: "Votre message",
+    consent: "J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la politique de confidentialité (loi 09-08).",
+    submit: "Envoyer ma demande",
+    sending: "Envoi…",
+    success: "Merci ! Votre demande a bien été reçue. Un conseiller vous contacte sous 24 h ouvrées.",
+    error: "Veuillez vérifier les champs indiqués.",
+    required: "Ce champ est obligatoire.",
+    invalidEmail: "Adresse e-mail invalide.",
+    direct: "Contact direct",
+    hours: "Lun–Ven 9h–18h · Sam 9h–13h",
+    whatsapp: "WhatsApp",
+    phoneLabel: "Téléphone",
+    emailLabel: "E-mail",
+  },
+  footer: {
+    tagline: "Formations et certifications en cybersécurité au Maroc. Voucher d'examen officiel inclus.",
+    certifications: "Certifications",
+    company: "GATech",
+    cities: "Villes",
+    legal: "Mentions légales",
+    privacy: "Confidentialité",
+    rights: "Tous droits réservés.",
+    trademarks:
+      "CEH, CHFI et CND sont des marques d'EC-Council. CompTIA Security+, CySA+ et PenTest+ sont des marques de CompTIA. CISSP est une marque d'ISC2. CISM est une marque d'ISACA. OSCP est une marque d'OffSec. Ces marques sont citées à titre descriptif.",
+  },
+  breadcrumbs: { home: "Accueil" },
+  notFound: {
+    title: "Page introuvable",
+    text: "Cette page n'existe pas ou a été déplacée. Explorez nos certifications ou revenez à l'accueil.",
+    home: "Retour à l'accueil",
+  },
+  legal: {
+    privacy: [
+      {
+        h: "Responsable du traitement",
+        p: "Le site gatech.world est édité par GATech. Les données collectées via nos formulaires sont traitées par GATech conformément à la loi n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.",
+      },
+      {
+        h: "Données collectées",
+        p: "Nous collectons uniquement les données que vous nous transmettez : nom, adresse e-mail, téléphone, entreprise et contenu de votre message. Elles servent exclusivement à répondre à votre demande et à gérer votre inscription.",
+      },
+      {
+        h: "Durée de conservation",
+        p: "Les données des prospects sont conservées 3 ans maximum après le dernier contact. Les données des apprenants sont conservées pendant la durée nécessaire au suivi de la formation et aux obligations légales.",
+      },
+      {
+        h: "Vos droits",
+        p: "Vous disposez d'un droit d'accès, de rectification et d'opposition. Pour l'exercer, écrivez à contact@gatech.world. Vous pouvez également saisir la CNDP (Commission nationale de contrôle de la protection des données à caractère personnel).",
+      },
+      {
+        h: "Cookies",
+        p: "Ce site n'utilise pas de cookies publicitaires. Seuls des cookies strictement nécessaires au fonctionnement du site peuvent être déposés.",
+      },
+    ],
+    notice: [
+      { h: "Éditeur", p: "GATech — contact@gatech.world. Raison sociale, RC, ICE et adresse du siège : à compléter." },
+      { h: "Hébergement", p: "Le site est hébergé par un prestataire d'hébergement cloud. Coordonnées de l'hébergeur : à compléter." },
+      {
+        h: "Propriété intellectuelle",
+        p: "Les contenus de ce site sont la propriété de GATech. Les noms de certifications et logos cités appartiennent à leurs éditeurs respectifs et sont utilisés à titre descriptif uniquement.",
+      },
+    ],
+  },
+};
+
+export default fr;
+export type Dictionary = typeof fr;

@@ -1,26 +1,146 @@
 @import "tailwindcss";
 
+@theme {
+  /* Neutrals */
+  --color-canvas: #ffffff;
+  --color-surface: #f4f5f7;
+  --color-line: #e3e5e9;
+  --color-line-strong: #cdd1d8;
+  --color-ink: #111318;
+  --color-body: #41454e;
+  --color-muted: #6b707a;
+
+  /* Dark bands */
+  --color-night: #0e1014;
+  --color-night-2: #181b21;
+  --color-night-line: #2a2e36;
+
+  /* Brand: cyber red */
+  --color-red: #d3121b;
+  --color-red-hover: #b20e16;
+  --color-red-tint: #fdeeee;
+  --color-ok: #0f7a55;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-face), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: var(--font-arabic-face), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Arabic has no condensed display face: use the Arabic family everywhere. */
+html[lang="ar"] body,
+html[lang="ar"] .font-display {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+::selection {
+  background: var(--color-red);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Angular cut corners (top-end and bottom-start), the site's signature shape. */
+@utility cut {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+@utility cut-lg {
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
+}
+
+@utility card {
+  border: 1px solid var(--color-line);
+  background: var(--color-canvas);
+}
+
+/* Small uppercase label with a red bar, used above section titles. */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  &::before {
+    content: "";
+    width: 1.75rem;
+    height: 3px;
+    background: currentColor;
+  }
+}
+
+/* Faint diagonal hatching used behind hero visuals. */
+@utility bg-hatch {
+  background-image: repeating-linear-gradient(135deg, rgb(17 19 24 / 0.06) 0 1px, transparent 1px 12px);
+}
+
+/* Long-form text (legal pages, overviews). */
+@utility prose-body {
+  color: var(--color-body);
+  line-height: 1.75;
+  & h2 {
+    color: var(--color-ink);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  & p + p {
+    margin-top: 1rem;
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }
