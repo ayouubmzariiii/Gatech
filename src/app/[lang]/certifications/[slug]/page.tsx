@@ -67,7 +67,7 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
   ];
   const contactHref = `${localePath(locale, routes.contact)}#cert=${cert.slug}`;
   // Contextual links: the session line first (city pages), then related courses and articles.
-  const links = new LinkBudget(locale, routes.certification(cert.slug), 9);
+  const links = new LinkBudget(locale, routes.certification(cert.slug), 5, { cities: true });
   const sessions = linkify(t.sessions, links);
   const waHref = whatsappLink(fmt(t.whatsappMessage, { name: cert.shortName }));
 
@@ -182,11 +182,11 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
           </Section>
 
           <Section id="careers" title={t.careers}>
-            <CheckList items={cert.careers[locale]} links={links} />
+            <CheckList items={cert.careers[locale]} />
           </Section>
 
           <Section id="faq" title={t.faq}>
-            <FaqList faqs={cert.faqs[locale]} links={links} />
+            <FaqList faqs={cert.faqs[locale]} />
           </Section>
         </div>
 

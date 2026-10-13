@@ -5,8 +5,11 @@ import type { Locale } from "./i18n";
 import { localePath } from "./seo";
 
 /**
- * Per-page link budget: each target is linked at most once per page, never to the page
- * itself, and at most `max` contextual links are added (avoids over-optimisation).
+ * Editorial guard-rails for contextual links, so they read like a human editor's choices:
+ * - each target is linked at most once per page, never to the page itself;
+ * - at most `max` contextual links per page;
+ * - at most one link per paragraph / list item (see linkify);
+ * - city pages are only linked where the location matters (`cities: true`).
  */
 export class LinkBudget {
   private used = new Set<string>();
@@ -15,12 +18,14 @@ export class LinkBudget {
     private readonly locale: Locale,
     /** Current page path without locale prefix, e.g. "/certifications/ceh-v13". */
     self: string,
-    private readonly max = 8,
+    private readonly max = 5,
+    private readonly options: { cities?: boolean } = {},
   ) {
     this.used.add(self);
   }
   take(path: string) {
     if (this.count >= this.max || this.used.has(path)) return false;
+    if (!this.options.cities && path.startsWith("/maroc/")) return false;
     this.used.add(path);
     this.count++;
     return true;
@@ -44,25 +49,21 @@ function matcher(locale: Locale) {
 
 const linkClass = "font-medium text-ink underline decoration-red/50 decoration-2 underline-offset-2 transition hover:text-red";
 
-/** Turns the first mention of known products, topics and cities into internal links. */
+/** Turns the first eligible mention in a block of text into an internal link (one link per block). */
 export function linkify(text: string, budget: LinkBudget): ReactNode {
   const re = matcher(budget.lang);
-  const parts: ReactNode[] = [];
-  let last = 0;
   for (const m of text.matchAll(re)) {
     const i = m.slice(1).findIndex((g) => g !== undefined);
     const rule = autoLinkRules[i];
     if (!rule || !budget.take(rule.path)) continue;
     const start = m.index ?? 0;
-    parts.push(text.slice(last, start));
-    parts.push(
+    return [
+      text.slice(0, start),
       <Link key={start} href={localePath(budget.lang, rule.path)} className={linkClass}>
         {m[0]}
       </Link>,
-    );
-    last = start + m[0].length;
+      text.slice(start + m[0].length),
+    ];
   }
-  if (!parts.length) return text;
-  parts.push(text.slice(last));
-  return parts;
+  return text;
 }

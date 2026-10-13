@@ -42,7 +42,7 @@ export default async function CityPage({ params }: PageProps<"/[lang]/maroc/[cit
     { name: city.name[lang], href: localePath(lang, routes.city(city.slug)) },
   ];
   const featured = city.featuredCerts.map(getCertification).filter((c) => c !== undefined);
-  const links = new LinkBudget(lang, routes.city(city.slug), 8);
+  const links = new LinkBudget(lang, routes.city(city.slug), 4, { cities: true });
 
   return (
     <>
@@ -91,7 +91,7 @@ export default async function CityPage({ params }: PageProps<"/[lang]/maroc/[cit
       <section aria-labelledby="city-faq" className="container-page py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.7fr]">
           <SectionHeading id="city-faq" title={dict.faq.eyebrow} />
-          <FaqList faqs={city.faqs[lang]} links={links} />
+          <FaqList faqs={city.faqs[lang]} />
         </div>
       </section>
 

@@ -56,7 +56,7 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
           <div>
             <SectionHeading as="h1" eyebrow={dict.business.eyebrow} title={dict.meta.businessTitle} />
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-pretty text-body sm:text-lg">
-              {linkify(dict.business.text, new LinkBudget(lang, routes.business, 4))}
+              {linkify(dict.business.text, new LinkBudget(lang, routes.business, 2))}
             </p>
             <Link href={`${localePath(lang, routes.contact)}#format=intra`} className={`${btnPrimary} mt-8`}>
               {dict.business.cta}
@@ -102,7 +102,7 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
 
       <PostsBand id="hub-posts" title={dict.blog.related} posts={postsBySlugs(featuredPostSlugs.business)} locale={lang} dict={dict} surface={true} />
 
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.business[lang]} links={new LinkBudget(lang, routes.business, 6)} />
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.business[lang]} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

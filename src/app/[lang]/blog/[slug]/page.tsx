@@ -67,7 +67,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
   ];
   const sections = post.sections[locale];
   // Contextual links from this article to course, city and related article pages.
-  const links = new LinkBudget(locale, path, 10);
+  const links = new LinkBudget(locale, path, 6);
   const certs = post.relatedCerts.map(getCertification).filter((c) => c !== undefined).slice(0, 3);
   const shareText = encodeURIComponent(`${post.title[locale]} ${url}`);
   const shares = [
@@ -205,7 +205,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
             <h2 id="post-faq" className="mb-6 scroll-mt-28 font-display text-3xl font-bold text-ink sm:text-4xl">
               {t.faqTitle}
             </h2>
-            <FaqList faqs={post.faqs[locale]} links={links} />
+            <FaqList faqs={post.faqs[locale]} />
           </section>
 
           <div className="mt-12 flex gap-5 border-t-2 border-ink pt-8">

@@ -21,7 +21,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const dict = getDictionary(lang);
-  const links = new LinkBudget(lang, routes.about, 8);
+  const links = new LinkBudget(lang, routes.about, 3);
   const crumbs = [
     { name: dict.breadcrumbs.home, href: localePath(lang, routes.home) },
     { name: dict.nav.about, href: localePath(lang, routes.about) },
@@ -58,7 +58,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
           ))}
         </div>
       </section>
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.about[lang]} surface links={links} />
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.about[lang]} surface />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

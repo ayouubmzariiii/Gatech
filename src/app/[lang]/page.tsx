@@ -13,7 +13,6 @@ import { isLocale, type Locale } from "@/lib/i18n";
 import { faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
-import { LinkBudget } from "@/lib/autolink";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
   const { lang } = await params;
@@ -366,7 +365,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
               {dict.finalCta.whatsapp}
             </a>
           </div>
-          <FaqList faqs={dict.faq.items} links={new LinkBudget(locale, routes.home, 8)} />
+          <FaqList faqs={dict.faq.items} />
         </div>
       </section>
 

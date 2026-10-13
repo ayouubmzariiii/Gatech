@@ -5,7 +5,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, CertCard, CtaBanner, FaqSection, OffersBand, PageHero, PostsBand, SectionHeading } from "@/components/ui";
 import { pageFaqs } from "@/data/pageFaqs";
 import { featuredPostSlugs, postsBySlugs } from "@/data/blog";
-import { LinkBudget } from "@/lib/autolink";
 
 import { certifications, vendors } from "@/data";
 import type { Category, Level } from "@/data/types";
@@ -83,7 +82,7 @@ export default async function CatalogPage({ params }: PageProps<"/[lang]/certifi
 
       <OffersBand locale={lang} dict={dict} />
 
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.catalog[lang]} links={new LinkBudget(lang, routes.certifications, 6)} />
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.catalog[lang]} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

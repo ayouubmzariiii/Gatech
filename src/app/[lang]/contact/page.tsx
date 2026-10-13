@@ -5,7 +5,6 @@ import { WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, FaqSection, PageHero, SectionHeading } from "@/components/ui";
 import { pageFaqs } from "@/data/pageFaqs";
-import { LinkBudget } from "@/lib/autolink";
 
 import { certifications } from "@/data";
 import { getDictionary } from "@/dictionaries";
@@ -89,7 +88,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
         </aside>
       </section>
 
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.contact[lang]} links={new LinkBudget(lang, routes.contact, 6)} surface />
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.contact[lang]} surface />
     </>
   );
 }
