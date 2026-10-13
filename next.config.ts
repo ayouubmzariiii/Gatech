@@ -32,10 +32,20 @@ const nextConfig: NextConfig = {
         source: "/logos/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
+      {
+        // Blog photos (public/blog/<slug>/*.webp|jpg); replace the file name to bust the cache.
+        source: "/blog/:slug/:file(.+\\.(?:webp|jpg))",
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
+      },
     ];
   },
   async redirects() {
     return [
+      // The guides section became the blog.
+      { source: "/guides", destination: "/blog", permanent: true },
+      { source: "/guides/:slug", destination: "/blog/:slug", permanent: true },
+      { source: "/:lang(ar|en)/guides", destination: "/:lang/blog", permanent: true },
+      { source: "/:lang(ar|en)/guides/:slug", destination: "/:lang/blog/:slug", permanent: true },
       // One canonical host: www.gatech.world -> gatech.world (also add both domains in Vercel).
       {
         source: "/:path*",

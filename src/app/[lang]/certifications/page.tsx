@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CatalogFilter } from "@/components/CatalogFilter";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CtaBanner, FaqSection, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, CertCard, CtaBanner, FaqSection, OffersBand, PageHero, SectionHeading } from "@/components/ui";
 import { pageFaqs } from "@/data/pageFaqs";
 
 import { certifications, vendors } from "@/data";
@@ -77,7 +77,9 @@ export default async function CatalogPage({ params }: PageProps<"/[lang]/certifi
         />
       </section>
 
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.catalog[lang]} surface />
+      <OffersBand locale={lang} dict={dict} />
+
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.catalog[lang]} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

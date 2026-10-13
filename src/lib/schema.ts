@@ -1,8 +1,9 @@
-import type { Certification, City, Faq, Guide } from "@/data/types";
+import type { BlogPost, Certification, City, Faq } from "@/data/types";
 import { hreflang, type Locale } from "./i18n";
 import { absoluteUrl, localePath, ogImageUrl, routes } from "./seo";
 import { sameAs, site } from "./site";
 import { certifications } from "@/data";
+import { categoryLabels } from "@/data/blog";
 
 /** schema.org JSON-LD builders. Every node links to the organization by @id. */
 
@@ -26,6 +27,7 @@ export function organizationSchema(locale: Locale, description: string) {
     "@type": "EducationalOrganization",
     "@id": orgId,
     name: site.name,
+    alternateName: ["GATech World", "GATech Maroc", "GATech cybersecurity training center Morocco"],
     legalName: site.legalName,
     url: site.url,
     logo: { "@type": "ImageObject", url: `${site.url}/logo.png`, width: 512, height: 512 },
@@ -39,7 +41,7 @@ export function organizationSchema(locale: Locale, description: string) {
       ...["Casablanca", "Rabat", "Marrakech", "Tangier", "Fez", "Agadir"].map((name) => ({ "@type": "City", name })),
     ],
     knowsLanguage: ["fr", "ar", "en"],
-    knowsAbout: ["Cybersecurity", "Ethical hacking", "Penetration testing", "Information security management", "ISO/IEC 27001", "Digital forensics"],
+    knowsAbout: ["Cybersecurity certification training", "CEH", "CompTIA Security+", "CISSP", "CISM", "OSCP", "Cisco CCNA", "Cisco CCNA Cybersecurity", "Cybersecurity", "Ethical hacking", "Penetration testing", "Information security management", "ISO/IEC 27001", "Digital forensics"],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Cybersecurity certification trainings",
@@ -217,16 +219,18 @@ export function webPageSchema({
   };
 }
 
-export function articleSchema(guide: Guide, locale: Locale, image: string) {
-  const url = absoluteUrl(localePath(locale, routes.guide(guide.slug)));
+export function articleSchema(guide: BlogPost, locale: Locale) {
+  const url = absoluteUrl(localePath(locale, routes.post(guide.slug)));
   return {
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": `${url}#article`,
     headline: guide.title[locale],
     description: guide.seoDescription[locale],
     url,
     mainEntityOfPage: { "@id": `${url}#webpage` },
-    image: [image],
+    image: [absoluteUrl(guide.cover.src), absoluteUrl(`/blog/${guide.slug}/og.jpg`)],
+    thumbnailUrl: absoluteUrl(guide.cover.src),
+    isPartOf: { "@id": `${absoluteUrl(localePath(locale, routes.blog))}#blog` },
     inLanguage: hreflang[locale],
     datePublished: guide.datePublished,
     dateModified: guide.dateModified,
@@ -239,7 +243,8 @@ export function articleSchema(guide: Guide, locale: Locale, image: string) {
     about: guide.relatedCerts.map((slug) => ({
       "@id": `${absoluteUrl(localePath(locale, routes.certification(slug)))}#course`,
     })),
-    articleSection: "Cybersecurity",
+    articleSection: categoryLabels[guide.category][locale],
+    keywords: guide.relatedCerts.join(", "),
   };
 }
 

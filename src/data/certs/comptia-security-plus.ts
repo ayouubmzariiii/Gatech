@@ -11,7 +11,7 @@ const cert: Certification = {
   popular: true,
   durationDays: 5,
   hours: 35,
-  priceMAD: 9900,
+  priceMAD: 10900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -41,9 +41,9 @@ const cert: Certification = {
     en: "CompTIA Security+ Training in Morocco – SY0-701 Exam",
   },
   seoDescription: {
-    fr: "Formation Security+ SY0-701 à Casablanca, Rabat ou en ligne : 5 jours, voucher d'examen inclus, dès 9 900 MAD. Demandez le programme et les prochaines dates.",
-    ar: "تكوين Security+ SY0-701 في الدار البيضاء أو الرباط أو عن بعد: 5 أيام مع قسيمة الامتحان، ابتداء من 9900 درهم. اطلب البرنامج والمواعيد القادمة الآن.",
-    en: "Security+ SY0-701 training in Casablanca, Rabat or live online: 5 days, exam voucher included, from 9,900 MAD. Request the syllabus and upcoming dates today.",
+    fr: "Formation Security+ SY0-701 à Casablanca, Rabat ou en ligne : 5 jours, voucher d'examen inclus, dès 10 900 MAD. Demandez le programme et les prochaines dates.",
+    ar: "تكوين Security+ SY0-701 في الدار البيضاء أو الرباط أو عن بعد: 5 أيام مع قسيمة الامتحان، ابتداء من 10900 درهم. اطلب البرنامج والمواعيد القادمة الآن.",
+    en: "Security+ SY0-701 training in Casablanca, Rabat or live online: 5 days, exam voucher included, from 10,900 MAD. Request the syllabus and upcoming dates today.",
   },
   tagline: {
     fr: "La certification de référence pour démarrer une carrière en cybersécurité, reconnue par les recruteurs au Maroc comme à l'international.",
@@ -189,7 +189,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Combien coûte la formation Security+ au Maroc et que comprend le prix ?",
-        a: "La formation est proposée à partir de 9 900 MAD. Ce tarif comprend les 5 jours de formation (35 heures) avec un formateur, les supports de cours, les travaux pratiques, un examen blanc et le voucher pour l'examen officiel SY0-701. Un devis entreprise peut être établi pour les inscriptions de groupe.",
+        a: "La formation est proposée à partir de 10 900 MAD. Ce tarif comprend les 5 jours de formation (35 heures) avec un formateur, les supports de cours, les travaux pratiques, un examen blanc et le voucher pour l'examen officiel SY0-701. Un devis entreprise peut être établi pour les inscriptions de groupe.",
       },
       {
         q: "Quels moyens de paiement acceptez-vous ?",
@@ -211,7 +211,7 @@ const cert: Certification = {
     ar: [
       {
         q: "كم يكلف تكوين Security+ في المغرب وماذا يشمل السعر؟",
-        a: "يبدأ سعر التكوين من 9900 درهم. ويشمل 5 أيام من التكوين (35 ساعة) مع مكون، ودعامات الدروس، والأشغال التطبيقية، وامتحانا تجريبيا، وقسيمة الامتحان الرسمي SY0-701. ويمكن إعداد عرض أسعار خاص بالمقاولات عند تسجيل مجموعات.",
+        a: "يبدأ سعر التكوين من 10900 درهم. ويشمل 5 أيام من التكوين (35 ساعة) مع مكون، ودعامات الدروس، والأشغال التطبيقية، وامتحانا تجريبيا، وقسيمة الامتحان الرسمي SY0-701. ويمكن إعداد عرض أسعار خاص بالمقاولات عند تسجيل مجموعات.",
       },
       {
         q: "ما هي وسائل الأداء المتاحة؟",
@@ -233,7 +233,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much does Security+ training cost in Morocco and what is included?",
-        a: "The course starts at 9,900 MAD. This covers 5 instructor-led days (35 hours), course materials, hands-on labs, a practice exam and the voucher for the official SY0-701 exam. Corporate quotes are available for group registrations.",
+        a: "The course starts at 10,900 MAD. This covers 5 instructor-led days (35 hours), course materials, hands-on labs, a practice exam and the voucher for the official SY0-701 exam. Corporate quotes are available for group registrations.",
       },
       {
         q: "Which payment methods do you accept?",

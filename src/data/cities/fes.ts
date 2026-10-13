@@ -82,7 +82,7 @@ const city: City = {
       },
       {
         q: "Combien coûtent les formations pour un participant de Fès ?",
-        a: "Les tarifs sont les mêmes partout au Maroc : de 9 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus. L'examen se passe en ligne sous surveillance ou en centre agréé selon la certification.",
+        a: "Les tarifs sont les mêmes partout au Maroc : de 10 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus. L'examen se passe en ligne sous surveillance ou en centre agréé selon la certification.",
       },
     ],
     ar: [
@@ -100,7 +100,7 @@ const city: City = {
       },
       {
         q: "ما تكلفة التكوينات بالنسبة لمشارك من فاس؟",
-        a: "الأسعار نفسها في جميع أنحاء المغرب: من 9 900 درهم لشهادة CompTIA Security+ إلى 29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. ويجرى الامتحان عبر الإنترنت تحت المراقبة أو في مركز معتمد حسب الشهادة.",
+        a: "الأسعار نفسها في جميع أنحاء المغرب: من 10 900 درهم لشهادة CompTIA Security+ إلى 29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. ويجرى الامتحان عبر الإنترنت تحت المراقبة أو في مركز معتمد حسب الشهادة.",
       },
     ],
     en: [
@@ -118,7 +118,7 @@ const city: City = {
       },
       {
         q: "How much do courses cost for a participant in Fez?",
-        a: "Prices are the same across Morocco: from 9,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included. Depending on the certification, the exam is taken online with remote proctoring or at an authorised centre.",
+        a: "Prices are the same across Morocco: from 10,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included. Depending on the certification, the exam is taken online with remote proctoring or at an authorised centre.",
       },
     ],
   },

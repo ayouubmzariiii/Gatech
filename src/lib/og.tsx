@@ -11,6 +11,7 @@ const vendorFiles: Partial<Record<Vendor, [file: string, mime: string, ratio: nu
   ISC2: ["isc2.svg", "image/svg+xml", 508 / 185],
   ISACA: ["isaca.png", "image/png", 600 / 146],
   PECB: ["pecb.png", "image/png", 196 / 55],
+  Cisco: ["cisco.svg", "image/svg+xml", 216 / 114],
 };
 
 async function vendorLogo(vendor: Vendor, height: number) {

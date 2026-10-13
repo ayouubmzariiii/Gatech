@@ -82,7 +82,7 @@ const city: City = {
       },
       {
         q: "Combien coûte une formation en cybersécurité à Casablanca ?",
-        a: "Les tarifs vont de 9 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus. Les entreprises reçoivent un devis et une facture à leur nom, et des conditions spécifiques s'appliquent aux groupes.",
+        a: "Les tarifs vont de 10 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus. Les entreprises reçoivent un devis et une facture à leur nom, et des conditions spécifiques s'appliquent aux groupes.",
       },
     ],
     ar: [
@@ -100,7 +100,7 @@ const city: City = {
       },
       {
         q: "ما تكلفة تكوين في الأمن السيبراني بالدار البيضاء؟",
-        a: "تتراوح الأسعار بين 9 900 درهم لشهادة CompTIA Security+ و29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. تحصل الشركات على عرض سعر وفاتورة باسمها، مع شروط خاصة بالمجموعات.",
+        a: "تتراوح الأسعار بين 10 900 درهم لشهادة CompTIA Security+ و29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. تحصل الشركات على عرض سعر وفاتورة باسمها، مع شروط خاصة بالمجموعات.",
       },
     ],
     en: [
@@ -118,7 +118,7 @@ const city: City = {
       },
       {
         q: "How much does cybersecurity training cost in Casablanca?",
-        a: "Prices range from 9,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included. Companies receive a quote and an invoice in their name, and group terms are available.",
+        a: "Prices range from 10,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included. Companies receive a quote and an invoice in their name, and group terms are available.",
       },
     ],
   },

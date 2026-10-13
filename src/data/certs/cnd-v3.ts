@@ -10,7 +10,7 @@ const cert: Certification = {
   category: "defensive",
   durationDays: 5,
   hours: 40,
-  priceMAD: 18900,
+  priceMAD: 15900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -227,7 +227,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Combien coûte la formation CND v3 au Maroc ?",
-        a: "Le tarif démarre à 18 900 MAD. Ce prix comprend les 5 jours de formation (40 heures), les labs officiels EC-Council, le support de cours et le voucher de l'examen 312-38.",
+        a: "Le tarif démarre à 15 900 MAD. Ce prix comprend les 5 jours de formation (40 heures), les labs officiels EC-Council, le support de cours et le voucher de l'examen 312-38.",
       },
       {
         q: "Quelles sont les modalités de paiement ?",
@@ -249,7 +249,7 @@ const cert: Certification = {
     ar: [
       {
         q: "كم يكلف تكوين CND v3 في المغرب؟",
-        a: "يبدأ السعر من 18900 درهم، ويشمل 5 أيام من التكوين (40 ساعة) والمختبرات الرسمية لـ EC-Council ودعامة الدروس وقسيمة امتحان 312-38.",
+        a: "يبدأ السعر من 15900 درهم، ويشمل 5 أيام من التكوين (40 ساعة) والمختبرات الرسمية لـ EC-Council ودعامة الدروس وقسيمة امتحان 312-38.",
       },
       {
         q: "ما هي طرق الأداء؟",
@@ -271,7 +271,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much does CND v3 training cost in Morocco?",
-        a: "Prices start at MAD 18,900. This covers 5 days of training (40 hours), the official EC-Council labs, the courseware and the 312-38 exam voucher.",
+        a: "Prices start at MAD 15,900. This covers 5 days of training (40 hours), the official EC-Council labs, the courseware and the 312-38 exam voucher.",
       },
       {
         q: "What are the payment options?",

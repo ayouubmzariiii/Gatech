@@ -1,11 +1,11 @@
 const fr = {
   meta: {
-    homeTitle: "Certifications cybersécurité Maroc : CEH v13, CISSP, OSCP+",
+    homeTitle: "Centre de formation cybersécurité au Maroc : CEH, CISSP",
     homeDescription:
-      "Préparez CEH v13, CompTIA Security+, CISSP, OSCP+ ou ISO 27001 au Maroc avec voucher d'examen officiel inclus. Casablanca, Rabat ou en ligne. Devis en 24 h.",
+      "Centre de formation cybersécurité au Maroc en 2026 : CEH v13, CompTIA Security+, CISSP, OSCP+, voucher d'examen inclus. Casablanca, Rabat ou en ligne.",
     catalogTitle: "Certifications cybersécurité au Maroc : prix en MAD",
     catalogDescription:
-      "Comparez 10 certifications en cybersécurité : CEH v13, OSCP+, CISSP, CISM, Security+, CySA+, ISO 27001… Durée, niveau, examen et prix en dirhams.",
+      "Comparez 12 certifications cybersécurité : CEH v13, Security+, CISSP, OSCP+, Cisco CCNA, CCNA Cybersecurity, ISO 27001… Durée, examen et prix en dirhams.",
     businessTitle: "Formation cybersécurité pour entreprises au Maroc",
     businessDescription:
       "Formez vos équipes IT et sécurité au Maroc : sessions intra-entreprise sur site ou à distance, CEH, ISO 27001, CISSP. Conformité loi 05-20. Demandez un devis.",
@@ -24,9 +24,12 @@ const fr = {
     legalTitle: "Mentions légales",
     legalDescription:
       "Mentions légales du site gatech.world : éditeur, hébergement, propriété intellectuelle et marques des éditeurs de certifications.",
-    guidesTitle: "Guides cybersécurité Maroc : choisir sa certification",
-    guidesDescription:
-      "Guides pratiques pour choisir et réussir votre certification cybersécurité au Maroc : comparatifs CEH, OSCP+, CISSP, prix en MAD, loi 05-20 et ISO 27001.",
+    blogTitle: "Blog cybersécurité Maroc : certifications et carrières",
+    blogDescription:
+      "Le blog cybersécurité de référence au Maroc : guides des certifications CEH, OSCP+, CISSP, prix en MAD, carrières, loi 05-20 et ISO 27001. À lire.",
+    blogCategoryTitle: "{category} : articles cybersécurité Maroc",
+    blogCategoryDescription:
+      "Tous nos articles « {category} » : conseils pour réussir votre certification et votre carrière en cybersécurité au Maroc. Lisez nos guides.",
     notFoundTitle: "Page introuvable",
   },
   nav: {
@@ -34,7 +37,7 @@ const fr = {
     certifications: "Certifications",
     business: "Entreprises",
     cities: "Villes",
-    guides: "Guides",
+    blog: "Blog",
     about: "À propos",
     contact: "Contact",
     cta: "Demander un devis",
@@ -73,29 +76,37 @@ const fr = {
     ],
     cta: "Découvrir la formation CEH v13",
   },
-  guides: {
-    eyebrow: "Guides & comparatifs",
-    title: "Guides pour réussir votre carrière en cybersécurité",
-    subtitle: "Comparatifs, prix, réglementation marocaine et parcours métiers : des réponses claires avant de choisir votre certification.",
+  blog: {
+    eyebrow: "Blog",
+    title: "Le blog cybersécurité au Maroc",
+    subtitle: "Certifications, comparatifs, carrières et réglementation marocaine : des articles concrets pour décider et progresser.",
+    featured: "À la une",
+    all: "Tous les articles",
+    categories: "Catégories",
     toc: "Sommaire",
     minutes: "{n} min de lecture",
     published: "Publié le",
     updated: "Mis à jour le",
-    readMore: "Lire le guide",
-    related: "Guides utiles",
-    relatedCerts: "Formations mentionnées dans ce guide",
+    readMore: "Lire l'article",
+    related: "Articles liés",
+    relatedCerts: "Formations mentionnées dans cet article",
     author: "Équipe pédagogique GATech",
+    authorBio: "Formateurs et consultants en cybersécurité qui préparent aux certifications CEH, OSCP+, CISSP, CompTIA et ISO 27001 au Maroc.",
     faqTitle: "Questions fréquentes",
-    homeTitle: "Bien choisir sa certification",
-    homeSubtitle: "Nos guides comparatifs pour décider en connaissance de cause.",
-    viewAll: "Tous les guides",
+    homeTitle: "Derniers articles du blog",
+    homeSubtitle: "Guides, comparatifs et conseils pour réussir en cybersécurité au Maroc.",
+    viewAll: "Voir tout le blog",
+    share: "Partager",
+    photo: "Photo",
+    rss: "Flux RSS",
+    count: "{n} articles",
   },
   popular: {
     eyebrow: "Les plus demandées",
     title: "Les certifications que les recruteurs marocains exigent",
     subtitle:
       "Banques, opérateurs télécoms, centres d'offshoring et administrations : ces certifications figurent dans la majorité des offres d'emploi en cybersécurité.",
-    viewAll: "Voir les 10 certifications",
+    viewAll: "Voir les 12 certifications",
   },
   paths: {
     eyebrow: "Parcours métiers",
@@ -180,6 +191,10 @@ const fr = {
     eyebrow: "Questions fréquentes",
     title: "Tout savoir avant de vous inscrire",
     items: [
+      {
+        q: "Quel est le meilleur centre de formation en cybersécurité au Maroc en 2026 ?",
+        a: "Le meilleur centre est celui qui inclut le voucher d'examen officiel, des labs pratiques, des formateurs certifiés et des prix transparents en dirhams. GATech prépare au Maroc aux certifications CEH v13, CompTIA Security+, CySA+, PenTest+, CISSP, CISM, OSCP+ et ISO 27001, en classe à Casablanca et Rabat ou en ligne, voucher inclus à partir de 10 900 MAD. Notre guide détaille les critères pour comparer les centres, y compris pour les certifications Cisco.",
+      },
       {
         q: "Quelle certification cybersécurité choisir pour débuter au Maroc ?",
         a: "CompTIA Security+ est le meilleur point d'entrée : elle couvre les fondamentaux, ne demande pas d'expérience préalable et est reconnue par les employeurs marocains comme internationaux. Pour une orientation offensive, enchaînez ensuite avec le CEH v13, puis l'OSCP+.",
@@ -280,7 +295,9 @@ const fr = {
     whatsappMessage: "Bonjour, je suis intéressé(e) par la formation {name}.",
     related: "Certifications complémentaires",
     sessions: "Présentiel Casablanca & Rabat · Classe virtuelle · Intra-entreprise",
-    priceNote: "Prix TTC indicatif, formation + examen. Tarifs de groupe sur devis.",
+    priceNote: "Prix par participant, formation + voucher d'examen officiel. Devis entreprise sur demande.",
+    offersTitle: "Nos offres",
+    offersSubtitle: "Des réductions claires, sans prix barrés fictifs.",
   },
   city: {
     sectors: "Secteurs qui recrutent",
@@ -339,7 +356,7 @@ const fr = {
     privacy: "Confidentialité",
     rights: "Tous droits réservés.",
     trademarks:
-      "CEH, CHFI et CND sont des marques d'EC-Council. CompTIA Security+, CySA+ et PenTest+ sont des marques de CompTIA. CISSP est une marque d'ISC2. CISM est une marque d'ISACA. OSCP est une marque d'OffSec. Ces marques sont citées à titre descriptif.",
+      "CEH, CHFI et CND sont des marques d'EC-Council. CompTIA Security+, CySA+ et PenTest+ sont des marques de CompTIA. CISSP est une marque d'ISC2. CISM est une marque d'ISACA. OSCP est une marque d'OffSec. CCNA est une marque de Cisco. Ces marques sont citées à titre descriptif.",
   },
   breadcrumbs: { home: "Accueil" },
   notFound: {

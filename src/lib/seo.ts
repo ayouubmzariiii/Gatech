@@ -10,8 +10,9 @@ export const routes = {
   business: "/entreprises",
   cities: "/maroc",
   city: (slug: string) => `/maroc/${slug}`,
-  guides: "/guides",
-  guide: (slug: string) => `/guides/${slug}`,
+  blog: "/blog",
+  post: (slug: string) => `/blog/${slug}`,
+  blogCategory: (category: string) => `/blog/categorie/${category}`,
   about: "/a-propos",
   contact: "/contact",
   privacy: "/confidentialite",
@@ -57,6 +58,8 @@ interface PageMetaInput {
   modifiedTime?: string;
   /** Set for routes that have their own opengraph-image file. */
   hasOwnImage?: boolean;
+  /** Explicit share image (absolute URL), e.g. a blog post photo. */
+  image?: string;
 }
 
 export function pageMetadata({
@@ -69,8 +72,9 @@ export function pageMetadata({
   publishedTime,
   modifiedTime,
   hasOwnImage = false,
+  image: explicitImage,
 }: PageMetaInput): Metadata {
-  const image = hasOwnImage ? ogImageUrl(locale, path) : ogImageUrl(locale);
+  const image = explicitImage ?? (hasOwnImage ? ogImageUrl(locale, path) : ogImageUrl(locale));
   const url = absoluteUrl(localePath(locale, path));
   // Keep titles within ~60 characters: drop the brand suffix when it would overflow.
   const suffix = ` | ${site.name}`;

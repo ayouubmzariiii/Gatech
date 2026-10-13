@@ -1,6 +1,9 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import type { Certification, Faq, Guide } from "@/data/types";
+import Image from "next/image";
+import type { BlogPost, Certification, Faq } from "@/data/types";
+import { categoryLabels } from "@/data/blog";
+import { offers, offersNote } from "@/data/offers";
 import { fmt, type Dictionary } from "@/dictionaries";
 import type { Locale } from "@/lib/i18n";
 import { formatPrice, localePath, routes } from "@/lib/seo";
@@ -187,21 +190,42 @@ export function CheckList({ items, dark = false }: { items: string[]; dark?: boo
 export const formatDate = (iso: string, locale: Locale) =>
   new Intl.DateTimeFormat({ fr: "fr-FR", ar: "ar-MA-u-nu-latn", en: "en-GB" }[locale], { dateStyle: "long" }).format(new Date(iso));
 
-export function GuideCard({ guide, locale, dict }: { guide: Guide; locale: Locale; dict: Dictionary }) {
+export function PostCard({ post, locale, dict, featured = false }: { post: BlogPost; locale: Locale; dict: Dictionary; featured?: boolean }) {
+  const href = localePath(locale, routes.post(post.slug));
   return (
-    <article className="card group relative flex h-full flex-col p-6 transition duration-200 hover:-translate-y-1 hover:border-ink hover:shadow-[0_18px_40px_-24px_rgb(17_19_24/0.45)]">
-      <span aria-hidden className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-red transition duration-300 group-hover:scale-x-100 rtl:origin-right" />
-      <p className="text-xs font-bold tracking-wider text-red uppercase">{fmt(dict.guides.minutes, { n: guide.readingMinutes })}</p>
-      <h3 className="mt-3 font-display text-2xl leading-tight font-bold text-ink">
-        <Link href={localePath(locale, routes.guide(guide.slug))} className="after:absolute after:inset-0">
-          {guide.title[locale]}
-        </Link>
-      </h3>
-      <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-body">{guide.excerpt[locale]}</p>
-      <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold tracking-wide text-ink uppercase group-hover:text-red">
-        {dict.guides.readMore}
-        <ArrowIcon width={16} height={16} />
-      </span>
+    <article
+      className={`card group relative flex h-full overflow-hidden transition duration-200 hover:-translate-y-1 hover:border-ink hover:shadow-[0_18px_40px_-24px_rgb(17_19_24/0.45)] ${
+        featured ? "flex-col lg:flex-row" : "flex-col"
+      }`}
+    >
+      <div className={`relative overflow-hidden bg-surface ${featured ? "aspect-[16/9] lg:aspect-auto lg:w-[58%]" : "aspect-[16/9]"}`}>
+        <Image
+          src={post.cover.src}
+          alt={post.cover.alt[locale]}
+          fill
+          sizes={featured ? "(min-width: 1024px) 700px, 100vw" : "(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"}
+          className="object-cover transition duration-500 group-hover:scale-105"
+          priority={featured}
+        />
+        <span className="absolute start-4 top-4 bg-red px-2.5 py-1 text-[0.6875rem] font-bold tracking-wider text-white uppercase">
+          {categoryLabels[post.category][locale]}
+        </span>
+      </div>
+      <div className={`flex flex-1 flex-col ${featured ? "p-7 lg:p-10" : "p-6"}`}>
+        <p className="text-xs font-semibold tracking-wider text-muted uppercase">
+          <time dateTime={post.datePublished}>{formatDate(post.datePublished, locale)}</time> · {fmt(dict.blog.minutes, { n: post.readingMinutes })}
+        </p>
+        <h3 className={`mt-3 font-display leading-tight font-bold text-ink group-hover:text-red ${featured ? "text-3xl sm:text-4xl" : "text-2xl"}`}>
+          <Link href={href} className="after:absolute after:inset-0">
+            {post.title[locale]}
+          </Link>
+        </h3>
+        <p className={`mt-3 leading-relaxed text-body ${featured ? "text-base" : "line-clamp-3 text-sm"}`}>{post.excerpt[locale]}</p>
+        <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold tracking-wide text-ink uppercase group-hover:text-red">
+          {dict.blog.readMore}
+          <ArrowIcon width={16} height={16} />
+        </span>
+      </div>
     </article>
   );
 }
@@ -215,5 +239,47 @@ export function FaqSection({ id = "faq", title, eyebrow, faqs, surface = false }
         <FaqList faqs={faqs} />
       </div>
     </section>
+  );
+}
+
+/** Offers band (home, catalog). */
+export function OffersBand({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  return (
+    <section aria-labelledby="offers" className="border-y border-line bg-surface py-16">
+      <div className="container-page">
+        <SectionHeading id="offers" title={dict.cert.offersTitle} subtitle={dict.cert.offersSubtitle} />
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {offers.map((o) => (
+            <li key={o.id} className="card flex flex-col border-t-4 border-t-red p-6">
+              <span className="font-display text-4xl leading-none font-extrabold text-red">{o.badge[locale]}</span>
+              <h3 className="mt-4 font-bold text-ink">{o.title[locale]}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-body">{o.text[locale]}</p>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-5 text-xs text-muted">{offersNote[locale]}</p>
+      </div>
+    </section>
+  );
+}
+
+/** Compact offers list for the certification price card. */
+export function OffersList({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  return (
+    <div className="mt-6 border-t border-line pt-6">
+      <p className="font-display text-lg font-bold text-ink uppercase">{dict.cert.offersTitle}</p>
+      <ul className="mt-3 space-y-2.5">
+        {offers.map((o) => (
+          <li key={o.id} className="flex items-start gap-3 text-sm">
+            <span className="cut min-w-12 shrink-0 bg-red px-1.5 py-0.5 text-center text-xs font-bold text-white">{o.badge[locale]}</span>
+            <span className="text-body">
+              <span className="font-semibold text-ink">{o.title[locale]}</span>
+              <span className="block text-xs text-muted">{o.text[locale]}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 text-[0.6875rem] text-muted">{offersNote[locale]}</p>
+    </div>
   );
 }

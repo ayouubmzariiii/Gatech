@@ -11,7 +11,7 @@ const cert: Certification = {
   popular: true,
   durationDays: 5,
   hours: 40,
-  priceMAD: 27900,
+  priceMAD: 23900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -195,7 +195,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Combien coûte la formation CISSP au Maroc et que comprend le prix ?",
-        a: "La formation est proposée à partir de 27 900 MAD. Ce prix comprend les 5 jours de préparation (40 heures) avec formateur, les supports de cours, les questions d'entraînement et le voucher de l'examen CISSP. Un devis détaillé vous est envoyé sur demande.",
+        a: "La formation est proposée à partir de 23 900 MAD. Ce prix comprend les 5 jours de préparation (40 heures) avec formateur, les supports de cours, les questions d'entraînement et le voucher de l'examen CISSP. Un devis détaillé vous est envoyé sur demande.",
       },
       {
         q: "Quels sont les moyens de paiement acceptés ?",
@@ -217,7 +217,7 @@ const cert: Certification = {
     ar: [
       {
         q: "كم تبلغ تكلفة تكوين CISSP في المغرب وماذا يشمل السعر؟",
-        a: "يبدأ سعر التكوين من 27900 درهم. ويشمل 5 أيام من التحضير (40 ساعة) مع مكوّن، ودعامات التكوين، وأسئلة التدريب، وقسيمة امتحان CISSP. نرسل لك عرض سعر مفصلًا عند الطلب.",
+        a: "يبدأ سعر التكوين من 23900 درهم. ويشمل 5 أيام من التحضير (40 ساعة) مع مكوّن، ودعامات التكوين، وأسئلة التدريب، وقسيمة امتحان CISSP. نرسل لك عرض سعر مفصلًا عند الطلب.",
       },
       {
         q: "ما هي طرق الأداء المتاحة؟",
@@ -239,7 +239,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much does CISSP training cost in Morocco and what is included?",
-        a: "The course starts at 27,900 MAD. The price covers 5 instructor-led days (40 hours), course materials, practice questions and the CISSP exam voucher. A detailed quote is available on request.",
+        a: "The course starts at 23,900 MAD. The price covers 5 instructor-led days (40 hours), course materials, practice questions and the CISSP exam voucher. A detailed quote is available on request.",
       },
       {
         q: "Which payment methods do you accept?",

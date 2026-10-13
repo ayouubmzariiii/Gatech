@@ -58,6 +58,24 @@ To add a certification: create `src/data/certs/<slug>.ts` (copy an existing one)
 - Vercel Analytics (cookieless) and Speed Insights (real-user Core Web Vitals).
 - Security headers (HSTS, nosniff, frame, referrer, permissions), `/.well-known/security.txt`.
 
+## Blog
+
+`/blog` (+ `/blog/categorie/<category>`, `/blog/<slug>`, RSS at `/feeds/fr.xml`, `/feeds/ar.xml`, `/feeds/en.xml`).
+
+To publish a post:
+1. Create `src/data/blog/<slug>.ts` (copy an existing post: fr/ar/en texts, category, related certifications, FAQs).
+2. Add photos in `public/blog/<slug>/`: `cover.webp` (1600×900), `og.jpg` (1200×630, social sharing), `figure.webp` (1200×800).
+   Use free-license photos (Unsplash License) and fill author + URL in `src/data/blog/images.ts`.
+3. Register the post in `src/data/blog/index.ts`.
+Sitemap (with image), RSS, llms.txt, BlogPosting + FAQ schema, category pages and internal links are automatic.
+
+## Prices & offers
+
+- Prices: `priceMAD` in each `src/data/certs/*.ts` (market-based, Oct 2026: voucher cost at 9.85 MAD/USD + training).
+  Prices are also quoted inside FAQ/blog texts: search the old amount when you change one.
+- Offers (early-bird −10 %, group −15 %, student −15 %, 3 interest-free instalments): `src/data/offers.ts`.
+  They are public commitments shown on every course page — edit or remove them there.
+
 ## Deploying on Vercel (go-live runbook)
 
 1. **Import** the GitHub repo in Vercel → framework "Next.js" is detected, no build settings to change.
@@ -90,8 +108,7 @@ To add a certification: create `src/data/certs/<slug>.ts` (copy an existing one)
 
 The technical and on-page foundation is complete; positions are then won by authority and freshness:
 
-- **Publish** one new guide per month (add a file in `src/data/guides/` and register it in `src/data/guides/index.ts`;
-  sitemap, llms.txt, OG image and schema are automatic). Update `dateModified` when you refresh a guide.
+- **Publish** one new blog post per month (see "Blog" below). Update `dateModified` when you refresh a post.
 - **Backlinks** from Moroccan sources: schools (ENSIAS, EMSI, UIR, OFPPT), tech media (Le Desk, Médias24, TelQuel),
   associations, job boards (Rekrute, Emploi.ma), partners.
 - **Reviews** on Google Business Profile from real learners (never add rating markup to the site yourself).

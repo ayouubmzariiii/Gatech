@@ -3,8 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowIcon, WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { CertCard, CheckList, CtaBanner, FaqList, GuideCard, SectionHeading, btnPrimary, btnSecondary } from "@/components/ui";
-import { guides } from "@/data/guides";
+import { CertCard, CheckList, CtaBanner, FaqList, OffersBand, PostCard, SectionHeading, btnPrimary, btnSecondary } from "@/components/ui";
+import { posts } from "@/data/blog";
 import { VendorLogo } from "@/components/VendorLogo";
 import { certifications, cities, getCertification, vendors } from "@/data";
 import type { Certification } from "@/data/types";
@@ -222,6 +222,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         </div>
       </section>
 
+      <OffersBand locale={locale} dict={dict} />
+
       {/* Career paths */}
       <section aria-labelledby="paths" className="bg-surface py-20 sm:py-28">
         <div className="container-page">
@@ -332,17 +334,17 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* Guides */}
-      <section aria-labelledby="home-guides" className="border-t border-line py-20 sm:py-28">
+      <section aria-labelledby="home-blog" className="border-t border-line py-20 sm:py-28">
         <div className="container-page">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading id="home-guides" eyebrow={dict.guides.eyebrow} title={dict.guides.homeTitle} subtitle={dict.guides.homeSubtitle} />
-            <Link href={p(routes.guides)} className={`${btnSecondary} shrink-0`}>
-              {dict.guides.viewAll}
+            <SectionHeading id="home-blog" eyebrow={dict.blog.eyebrow} title={dict.blog.homeTitle} subtitle={dict.blog.homeSubtitle} />
+            <Link href={p(routes.blog)} className={`${btnSecondary} shrink-0`}>
+              {dict.blog.viewAll}
             </Link>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.slice(0, 3).map((g) => (
-              <GuideCard key={g.slug} guide={g} locale={locale} dict={dict} />
+            {posts.slice(0, 3).map((post) => (
+              <PostCard key={post.slug} post={post} locale={locale} dict={dict} />
             ))}
           </div>
         </div>

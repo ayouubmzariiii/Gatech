@@ -11,7 +11,7 @@ const cert: Certification = {
   popular: true,
   durationDays: 5,
   hours: 40,
-  priceMAD: 24900,
+  priceMAD: 21900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -231,7 +231,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Combien coûte la formation CEH v13 au Maroc et que comprend le prix ?",
-        a: "Le tarif public démarre à 24 900 MAD. Il comprend les 5 jours de formation (40 heures), l'accès aux labs officiels, le support de cours EC-Council et le voucher de l'examen 312-50. Le CEH Practical, optionnel, fait l'objet d'un devis séparé.",
+        a: "Le tarif public démarre à 21 900 MAD. Il comprend les 5 jours de formation (40 heures), l'accès aux labs officiels, le support de cours EC-Council et le voucher de l'examen 312-50. Le CEH Practical, optionnel, fait l'objet d'un devis séparé.",
       },
       {
         q: "Quels sont les moyens de paiement acceptés ?",
@@ -253,7 +253,7 @@ const cert: Certification = {
     ar: [
       {
         q: "كم يكلف تكوين CEH v13 في المغرب وماذا يشمل السعر؟",
-        a: "يبدأ السعر من 24900 درهم، ويشمل 5 أيام من التكوين (40 ساعة) والولوج إلى المختبرات الرسمية ودعامة الدروس من EC-Council وقسيمة امتحان 312-50. أما امتحان CEH Practical الاختياري فيخضع لعرض سعر منفصل.",
+        a: "يبدأ السعر من 21900 درهم، ويشمل 5 أيام من التكوين (40 ساعة) والولوج إلى المختبرات الرسمية ودعامة الدروس من EC-Council وقسيمة امتحان 312-50. أما امتحان CEH Practical الاختياري فيخضع لعرض سعر منفصل.",
       },
       {
         q: "ما هي وسائل الأداء المتاحة؟",
@@ -275,7 +275,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much does CEH v13 training cost in Morocco and what is included?",
-        a: "Prices start at MAD 24,900. This covers 5 days of training (40 hours), access to the official labs, the EC-Council courseware and the 312-50 exam voucher. The optional CEH Practical is quoted separately.",
+        a: "Prices start at MAD 21,900. This covers 5 days of training (40 hours), access to the official labs, the EC-Council courseware and the 312-50 exam voucher. The optional CEH Practical is quoted separately.",
       },
       {
         q: "Which payment methods do you accept?",

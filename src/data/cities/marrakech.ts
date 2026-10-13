@@ -82,7 +82,7 @@ const city: City = {
       },
       {
         q: "Quels sont les tarifs pour les participants de Marrakech ?",
-        a: "Les mêmes partout au Maroc : de 9 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher inclus. Pour une formation intra à Marrakech, le devis tient compte du nombre de participants et du déplacement.",
+        a: "Les mêmes partout au Maroc : de 10 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher inclus. Pour une formation intra à Marrakech, le devis tient compte du nombre de participants et du déplacement.",
       },
     ],
     ar: [
@@ -100,7 +100,7 @@ const city: City = {
       },
       {
         q: "ما الأسعار بالنسبة للمشاركين من مراكش؟",
-        a: "نفس الأسعار في جميع أنحاء المغرب: من 9 900 درهم لشهادة CompTIA Security+ إلى 29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. وبالنسبة للتكوين الداخلي في مراكش، يأخذ عرض السعر بعين الاعتبار عدد المشاركين والتنقل.",
+        a: "نفس الأسعار في جميع أنحاء المغرب: من 10 900 درهم لشهادة CompTIA Security+ إلى 29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. وبالنسبة للتكوين الداخلي في مراكش، يأخذ عرض السعر بعين الاعتبار عدد المشاركين والتنقل.",
       },
     ],
     en: [
@@ -118,7 +118,7 @@ const city: City = {
       },
       {
         q: "What are the prices for participants in Marrakech?",
-        a: "The same as everywhere in Morocco: from 9,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, voucher included. For in-house training in Marrakech, the quote reflects the number of participants and travel.",
+        a: "The same as everywhere in Morocco: from 10,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, voucher included. For in-house training in Marrakech, the quote reflects the number of participants and travel.",
       },
     ],
   },

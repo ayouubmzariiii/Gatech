@@ -2,12 +2,12 @@ import type { Dictionary } from "./fr";
 
 const en: Dictionary = {
   meta: {
-    homeTitle: "Cybersecurity Certifications in Morocco: CEH v13, CISSP",
+    homeTitle: "Cybersecurity Training Center Morocco: CEH, Security+, CISSP",
     homeDescription:
-      "Prepare for CEH v13, CompTIA Security+, CISSP, OSCP+ or ISO 27001 in Morocco with the official exam voucher included. Casablanca, Rabat or online. Get a quote.",
+      "Cybersecurity certification training center in Morocco for 2026: CEH v13, CompTIA Security+, CISSP, OSCP+, exam voucher included. Casablanca, Rabat, online.",
     catalogTitle: "All Cybersecurity Certifications in Morocco (MAD prices)",
     catalogDescription:
-      "Compare 10 cybersecurity certifications: CEH v13, OSCP+, CISSP, CISM, Security+, CySA+, ISO 27001… Duration, level, exam and price in dirhams. Enroll today.",
+      "Compare 12 cybersecurity certifications: CEH v13, Security+, CISSP, OSCP+, Cisco CCNA, ISO 27001… Duration, exam and price in MAD. Enroll today.",
     businessTitle: "Corporate Cybersecurity Training in Morocco",
     businessDescription:
       "Train your IT and security teams in Morocco: on-site or remote private sessions, CEH, ISO 27001, CISSP. Law 05-20 and DNSSI compliance. Request a quote today.",
@@ -26,9 +26,12 @@ const en: Dictionary = {
     legalTitle: "Legal Notice",
     legalDescription:
       "Legal notice for gatech.world: publisher, hosting, intellectual property and certification vendors' trademarks.",
-    guidesTitle: "Cybersecurity Guides Morocco: Choose Your Certification",
-    guidesDescription:
-      "Practical guides to choose and pass your cybersecurity certification in Morocco: CEH vs OSCP+, CISSP, prices in MAD, law 05-20 and ISO 27001. Read now.",
+    blogTitle: "Cybersecurity Blog Morocco: Certifications & Careers",
+    blogDescription:
+      "Morocco's cybersecurity blog: guides to CEH, OSCP+, CISSP and CompTIA certifications, prices in MAD, careers, law 05-20 and ISO 27001. Start reading.",
+    blogCategoryTitle: "{category}: cybersecurity articles, Morocco",
+    blogCategoryDescription:
+      "All our \"{category}\" articles: practical advice to pass your certification and grow your cybersecurity career in Morocco. Read our guides now.",
     notFoundTitle: "Page not found",
   },
   nav: {
@@ -36,7 +39,7 @@ const en: Dictionary = {
     certifications: "Certifications",
     business: "Business",
     cities: "Cities",
-    guides: "Guides",
+    blog: "Blog",
     about: "About",
     contact: "Contact",
     cta: "Get a quote",
@@ -75,29 +78,37 @@ const en: Dictionary = {
     ],
     cta: "Discover the CEH v13 training",
   },
-  guides: {
-    eyebrow: "Guides & comparisons",
-    title: "Guides to build your cybersecurity career",
-    subtitle: "Comparisons, prices, Moroccan regulation and career paths: clear answers before you choose your certification.",
+  blog: {
+    eyebrow: "Blog",
+    title: "The cybersecurity blog for Morocco",
+    subtitle: "Certifications, comparisons, careers and Moroccan regulation: practical articles to decide and progress.",
+    featured: "Featured",
+    all: "All articles",
+    categories: "Categories",
     toc: "Contents",
     minutes: "{n} min read",
     published: "Published",
     updated: "Updated",
-    readMore: "Read the guide",
-    related: "Useful guides",
-    relatedCerts: "Trainings mentioned in this guide",
+    readMore: "Read the article",
+    related: "Related articles",
+    relatedCerts: "Trainings mentioned in this article",
     author: "GATech teaching team",
+    authorBio: "Cybersecurity trainers and consultants preparing professionals in Morocco for CEH, OSCP+, CISSP, CompTIA and ISO 27001.",
     faqTitle: "Frequently asked questions",
-    homeTitle: "Choose the right certification",
-    homeSubtitle: "Our comparison guides to help you decide with confidence.",
-    viewAll: "All guides",
+    homeTitle: "Latest from the blog",
+    homeSubtitle: "Guides, comparisons and advice to succeed in cybersecurity in Morocco.",
+    viewAll: "See the whole blog",
+    share: "Share",
+    photo: "Photo",
+    rss: "RSS feed",
+    count: "{n} articles",
   },
   popular: {
     eyebrow: "Most requested",
     title: "The certifications Moroccan recruiters ask for",
     subtitle:
       "Banks, telecom operators, offshoring centres and public administrations: these certifications appear in most cybersecurity job offers.",
-    viewAll: "See all 10 certifications",
+    viewAll: "See all 12 certifications",
   },
   paths: {
     eyebrow: "Career paths",
@@ -182,6 +193,10 @@ const en: Dictionary = {
     eyebrow: "FAQ",
     title: "Everything to know before you enroll",
     items: [
+      {
+        q: "What is the best cybersecurity certification training center in Morocco in 2026?",
+        a: "The best center is one that includes the official exam voucher, hands-on labs, certified instructors and transparent prices in dirhams. GATech prepares professionals in Morocco for CEH v13, CompTIA Security+, CySA+, PenTest+, CISSP, CISM, OSCP+ and ISO 27001, in class in Casablanca and Rabat or live online, voucher included from 10,900 MAD. Our 2026 guide explains how to compare training centers, including for Cisco certifications.",
+      },
       {
         q: "Which cybersecurity certification should I start with in Morocco?",
         a: "CompTIA Security+ is the best entry point: it covers the fundamentals, requires no prior experience and is recognised by Moroccan and international employers. For an offensive track, continue with CEH v13 and then OSCP+.",
@@ -282,7 +297,9 @@ const en: Dictionary = {
     whatsappMessage: "Hello, I am interested in the {name} training.",
     related: "Complementary certifications",
     sessions: "Classroom Casablanca & Rabat · Live online · On-site",
-    priceNote: "Indicative price incl. VAT, training + exam. Group rates on request.",
+    priceNote: "Price per participant, training + official exam voucher. Corporate quotes on request.",
+    offersTitle: "Our offers",
+    offersSubtitle: "Clear discounts, no fake crossed-out prices.",
   },
   city: {
     sectors: "Sectors that are hiring",
@@ -341,7 +358,7 @@ const en: Dictionary = {
     privacy: "Privacy",
     rights: "All rights reserved.",
     trademarks:
-      "CEH, CHFI and CND are trademarks of EC-Council. CompTIA Security+, CySA+ and PenTest+ are trademarks of CompTIA. CISSP is a trademark of ISC2. CISM is a trademark of ISACA. OSCP is a trademark of OffSec. These marks are used for descriptive purposes only.",
+      "CEH, CHFI and CND are trademarks of EC-Council. CompTIA Security+, CySA+ and PenTest+ are trademarks of CompTIA. CISSP is a trademark of ISC2. CISM is a trademark of ISACA. OSCP is a trademark of OffSec. CCNA is a trademark of Cisco. These marks are used for descriptive purposes only.",
   },
   breadcrumbs: { home: "Home" },
   notFound: {

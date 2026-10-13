@@ -82,7 +82,7 @@ const city: City = {
       },
       {
         q: "Quel budget prévoir pour une certification à Rabat ?",
-        a: "Comptez de 9 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus. Pour les groupes et les administrations, nous établissons un devis selon le nombre de participants.",
+        a: "Comptez de 10 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus. Pour les groupes et les administrations, nous établissons un devis selon le nombre de participants.",
       },
     ],
     ar: [
@@ -100,7 +100,7 @@ const city: City = {
       },
       {
         q: "ما الميزانية اللازمة لشهادة بالرباط؟",
-        a: "تتراوح الأسعار بين 9 900 درهم لشهادة CompTIA Security+ و29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. بالنسبة للمجموعات والإدارات، نعد عرض سعر حسب عدد المشاركين.",
+        a: "تتراوح الأسعار بين 10 900 درهم لشهادة CompTIA Security+ و29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. بالنسبة للمجموعات والإدارات، نعد عرض سعر حسب عدد المشاركين.",
       },
     ],
     en: [
@@ -118,7 +118,7 @@ const city: City = {
       },
       {
         q: "What budget should I plan for a certification in Rabat?",
-        a: "Prices range from 9,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included. For groups and public bodies, we prepare a quote based on the number of participants.",
+        a: "Prices range from 10,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included. For groups and public bodies, we prepare a quote based on the number of participants.",
       },
     ],
   },

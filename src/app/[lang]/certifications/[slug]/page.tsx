@@ -3,8 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, GuideCard, btnPrimary, btnSecondary } from "@/components/ui";
-import { guidesForCert } from "@/data/guides";
+import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, OffersList, PostCard, btnPrimary, btnSecondary } from "@/components/ui";
+import { postsForCert } from "@/data/blog";
 import { VendorLogo } from "@/components/VendorLogo";
 import { certifications, getCertification } from "@/data";
 import type { Certification } from "@/data/types";
@@ -206,6 +206,7 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
                 <CheckList items={t.includedItems.filter((_, i) => cert.voucherIncluded || i !== 1)} />
                 {!cert.voucherIncluded && <p className="mt-3 text-muted">{t.voucherNotIncluded}</p>}
               </div>
+              <OffersList locale={locale} dict={dict} />
               <p className="mt-6 bg-surface px-4 py-3 text-xs leading-relaxed text-body">{t.sessions}</p>
             </div>
           </div>
@@ -225,16 +226,16 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
         </div>
       </section>
 
-      {guidesForCert(cert.slug).length > 0 && (
-        <section aria-labelledby="cert-guides" className="container-page py-16">
-          <h2 id="cert-guides" className="font-display text-3xl font-bold text-ink sm:text-4xl">
-            {dict.guides.related}
+      {postsForCert(cert.slug).length > 0 && (
+        <section aria-labelledby="cert-posts" className="container-page py-16">
+          <h2 id="cert-posts" className="font-display text-3xl font-bold text-ink sm:text-4xl">
+            {dict.blog.related}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {guidesForCert(cert.slug)
+            {postsForCert(cert.slug)
               .slice(0, 3)
-              .map((g) => (
-                <GuideCard key={g.slug} guide={g} locale={locale} dict={dict} />
+              .map((post) => (
+                <PostCard key={post.slug} post={post} locale={locale} dict={dict} />
               ))}
           </div>
         </section>

@@ -6,7 +6,7 @@ export const pageFaqs: Record<PageFaqKey, Localized<Faq[]>> = {
     fr: [
       {
         q: "Combien coûtent les formations certifiantes du catalogue ?",
-        a: "Les prix vont de 9 900 MAD (CompTIA Security+) à 29 900 MAD (OSCP), formation et voucher d'examen officiel compris. Chaque fiche certification affiche son tarif « à partir de », et un devis détaillé vous est envoyé sur demande.",
+        a: "Les prix vont de 10 900 MAD (CompTIA Security+) à 29 900 MAD (OSCP), formation et voucher d'examen officiel compris. Chaque fiche certification affiche son tarif « à partir de », et un devis détaillé vous est envoyé sur demande.",
       },
       {
         q: "Combien de temps dure une formation ?",
@@ -28,7 +28,7 @@ export const pageFaqs: Record<PageFaqKey, Localized<Faq[]>> = {
     ar: [
       {
         q: "كم تبلغ تكلفة الدورات المعتمدة في الكتالوج؟",
-        a: "تتراوح الأسعار بين 9900 درهم (CompTIA Security+) و29900 درهم (OSCP)، وتشمل التكوين وقسيمة الامتحان الرسمي. تعرض صفحة كل شهادة سعرها الابتدائي، ويمكنكم طلب عرض سعر مفصل في أي وقت.",
+        a: "تتراوح الأسعار بين 10900 درهم (CompTIA Security+) و29900 درهم (OSCP)، وتشمل التكوين وقسيمة الامتحان الرسمي. تعرض صفحة كل شهادة سعرها الابتدائي، ويمكنكم طلب عرض سعر مفصل في أي وقت.",
       },
       {
         q: "ما مدة الدورة التكوينية؟",
@@ -50,7 +50,7 @@ export const pageFaqs: Record<PageFaqKey, Localized<Faq[]>> = {
     en: [
       {
         q: "How much do the certification courses in the catalogue cost?",
-        a: "Prices range from 9,900 MAD (CompTIA Security+) to 29,900 MAD (OSCP), including the training and the official exam voucher. Each certification page shows its starting price, and a detailed quote is available on request.",
+        a: "Prices range from 10,900 MAD (CompTIA Security+) to 29,900 MAD (OSCP), including the training and the official exam voucher. Each certification page shows its starting price, and a detailed quote is available on request.",
       },
       {
         q: "How long does a course last?",

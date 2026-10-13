@@ -11,6 +11,8 @@ import comptiaPentestPlus from "./certs/comptia-pentest-plus";
 import cism from "./certs/cism";
 import chfiV11 from "./certs/chfi-v11";
 import cndV3 from "./certs/cnd-v3";
+import ciscoCcna from "./certs/cisco-ccna";
+import ciscoCcnaCyber from "./certs/cisco-ccna-cybersecurity";
 
 import casablanca from "./cities/casablanca";
 import rabat from "./cities/rabat";
@@ -45,6 +47,8 @@ export const certifications: Certification[] = [
   cism,
   chfiV11,
   cndV3,
+  ciscoCcna,
+  ciscoCcnaCyber,
 ].map(withArabicBidi);
 
 export const cities: City[] = [casablanca, rabat, marrakech, tanger, fes, agadir].map(withArabicBidi);

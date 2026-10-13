@@ -1,6 +1,6 @@
 import type { Localized } from "@/lib/i18n";
 
-export type Vendor = "EC-Council" | "CompTIA" | "ISC2" | "ISACA" | "OffSec" | "PECB";
+export type Vendor = "EC-Council" | "CompTIA" | "ISC2" | "ISACA" | "OffSec" | "PECB" | "Cisco";
 export type Level = "beginner" | "intermediate" | "advanced" | "expert";
 export type Category = "offensive" | "defensive" | "governance" | "forensics";
 
@@ -90,10 +90,25 @@ export interface GuideSection {
   list?: string[];
 }
 
-/** Editorial guide (blog article) targeting an informational search intent. */
+export type BlogCategory = "certifications" | "comparatifs" | "carrieres" | "conformite" | "entreprises";
+
+/** A photo used on the blog (stored in public/blog/<slug>/). */
+export interface BlogImage {
+  /** Public path, e.g. "/blog/ceh-ou-oscp/cover.webp". */
+  src: string;
+  width: number;
+  height: number;
+  /** Descriptive alt text (what the photo shows, in context of the article). */
+  alt: Localized;
+  /** Photographer credit (Unsplash License: free for commercial use). */
+  credit: { author: string; url: string };
+}
+
+/** Blog article targeting an informational search intent. */
 export interface Guide {
   /** URL slug, identical in every locale (French words), e.g. "ceh-ou-oscp". */
   slug: string;
+  category: BlogCategory;
   /** ISO dates, e.g. "2026-10-12". */
   datePublished: string;
   dateModified: string;
@@ -114,6 +129,9 @@ export interface Guide {
   /** 4–5 FAQs specific to the article topic. */
   faqs: Localized<Faq[]>;
 }
+
+/** Blog post = guide content + photos (photos live in src/data/blog/images.ts, keyed by slug). */
+export type BlogPost = Guide & { cover: BlogImage; figure?: BlogImage & { afterSection: number } };
 
 /** FAQs for listing / service pages, keyed by page. */
 export type PageFaqKey = "catalog" | "business" | "cities" | "contact" | "about";

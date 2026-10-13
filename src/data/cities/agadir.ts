@@ -82,7 +82,7 @@ const city: City = {
       },
       {
         q: "Quel budget pour une certification depuis Agadir ?",
-        a: "Les prix vont de 9 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus, comme partout au Maroc. Pour une formation intra, nous établissons un devis selon le nombre de participants.",
+        a: "Les prix vont de 10 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher d'examen inclus, comme partout au Maroc. Pour une formation intra, nous établissons un devis selon le nombre de participants.",
       },
     ],
     ar: [
@@ -100,7 +100,7 @@ const city: City = {
       },
       {
         q: "ما الميزانية اللازمة لشهادة انطلاقا من أكادير؟",
-        a: "تتراوح الأسعار بين 9 900 درهم لشهادة CompTIA Security+ و29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان، كما في باقي المغرب. وبالنسبة للتكوين الداخلي، نعد عرض سعر حسب عدد المشاركين.",
+        a: "تتراوح الأسعار بين 10 900 درهم لشهادة CompTIA Security+ و29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان، كما في باقي المغرب. وبالنسبة للتكوين الداخلي، نعد عرض سعر حسب عدد المشاركين.",
       },
     ],
     en: [
@@ -118,7 +118,7 @@ const city: City = {
       },
       {
         q: "What budget should I plan for a certification from Agadir?",
-        a: "Prices range from 9,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included, as everywhere in Morocco. For in-house training, we quote based on the number of participants.",
+        a: "Prices range from 10,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, exam voucher included, as everywhere in Morocco. For in-house training, we quote based on the number of participants.",
       },
     ],
   },

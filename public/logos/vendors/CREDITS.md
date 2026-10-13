@@ -10,5 +10,6 @@ If you are an authorized partner, replace these with the files from your partner
 | isc2.svg | https://commons.wikimedia.org/wiki/File:ISC2_Logo.svg | CC BY-SA 4.0 |
 | isaca.png | https://commons.wikimedia.org/wiki/File:ISACA_logo.png | Public domain |
 | pecb.png | https://commons.wikimedia.org/wiki/File:Pecb_official_logo.png | Public domain |
+| cisco.svg | https://commons.wikimedia.org/wiki/File:Cisco_logo_blue_2016.svg | Public domain |
 
 OffSec: no logo file on Wikimedia Commons; the site renders a text wordmark. Add `offsec.svg` here and register it in `src/components/VendorLogo.tsx`.

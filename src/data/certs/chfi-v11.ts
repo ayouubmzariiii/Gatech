@@ -10,7 +10,7 @@ const cert: Certification = {
   category: "forensics",
   durationDays: 5,
   hours: 40,
-  priceMAD: 22900,
+  priceMAD: 19900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -215,7 +215,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Quel est le prix de la formation CHFI v11 au Maroc ?",
-        a: "Le tarif démarre à 22 900 MAD. Il inclut les 5 jours de formation (40 heures), l'accès aux labs officiels EC-Council, le support de cours et le voucher de l'examen 312-49.",
+        a: "Le tarif démarre à 19 900 MAD. Il inclut les 5 jours de formation (40 heures), l'accès aux labs officiels EC-Council, le support de cours et le voucher de l'examen 312-49.",
       },
       {
         q: "Comment puis-je payer la formation ?",
@@ -237,7 +237,7 @@ const cert: Certification = {
     ar: [
       {
         q: "ما هو سعر تكوين CHFI v11 في المغرب؟",
-        a: "يبدأ السعر من 22900 درهم، ويشمل 5 أيام من التكوين (40 ساعة) والولوج إلى المختبرات الرسمية لـ EC-Council ودعامة الدروس وقسيمة امتحان 312-49.",
+        a: "يبدأ السعر من 19900 درهم، ويشمل 5 أيام من التكوين (40 ساعة) والولوج إلى المختبرات الرسمية لـ EC-Council ودعامة الدروس وقسيمة امتحان 312-49.",
       },
       {
         q: "كيف يمكنني أداء ثمن التكوين؟",
@@ -259,7 +259,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much does CHFI v11 training cost in Morocco?",
-        a: "Prices start at MAD 22,900. This includes 5 days of training (40 hours), access to the official EC-Council labs, the courseware and the 312-49 exam voucher.",
+        a: "Prices start at MAD 19,900. This includes 5 days of training (40 hours), access to the official EC-Council labs, the courseware and the 312-49 exam voucher.",
       },
       {
         q: "How can I pay for the course?",

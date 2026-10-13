@@ -11,7 +11,7 @@ const cert: Certification = {
   popular: true,
   durationDays: 5,
   hours: 35,
-  priceMAD: 19900,
+  priceMAD: 17900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -183,7 +183,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Combien coûte la formation ISO 27001 Lead Implementer au Maroc ?",
-        a: "La formation est proposée à partir de 19 900 MAD. Ce prix couvre les 5 jours (35 heures) avec formateur, le support de cours, l'étude de cas et l'examen de certification PECB. Les frais annuels de maintenance PECB, dus après l'obtention du certificat, ne sont pas inclus.",
+        a: "La formation est proposée à partir de 17 900 MAD. Ce prix couvre les 5 jours (35 heures) avec formateur, le support de cours, l'étude de cas et l'examen de certification PECB. Les frais annuels de maintenance PECB, dus après l'obtention du certificat, ne sont pas inclus.",
       },
       {
         q: "Quelles modalités de paiement proposez-vous ?",
@@ -205,7 +205,7 @@ const cert: Certification = {
     ar: [
       {
         q: "كم تبلغ تكلفة تكوين ISO 27001 Lead Implementer في المغرب؟",
-        a: "يبدأ سعر التكوين من 19900 درهم. ويشمل 5 أيام (35 ساعة) مع مكوّن، ودعامة التكوين، ودراسة الحالة، وامتحان الشهادة لدى PECB. أما رسوم الصيانة السنوية لـ PECB، المستحقة بعد الحصول على الشهادة، فغير مشمولة.",
+        a: "يبدأ سعر التكوين من 17900 درهم. ويشمل 5 أيام (35 ساعة) مع مكوّن، ودعامة التكوين، ودراسة الحالة، وامتحان الشهادة لدى PECB. أما رسوم الصيانة السنوية لـ PECB، المستحقة بعد الحصول على الشهادة، فغير مشمولة.",
       },
       {
         q: "ما هي طرق الأداء المقترحة؟",
@@ -227,7 +227,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much does ISO 27001 Lead Implementer training cost in Morocco?",
-        a: "The course starts at 19,900 MAD. The price covers 5 instructor-led days (35 hours), course materials, the case study and the PECB certification exam. PECB annual maintenance fees, due once you hold the certificate, are not included.",
+        a: "The course starts at 17,900 MAD. The price covers 5 instructor-led days (35 hours), course materials, the case study and the PECB certification exam. PECB annual maintenance fees, due once you hold the certificate, are not included.",
       },
       {
         q: "What payment options do you offer?",

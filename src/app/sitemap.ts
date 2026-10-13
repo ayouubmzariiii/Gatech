@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { certifications, cities, contentUpdatedAt } from "@/data";
-import { guides } from "@/data/guides";
+import { blogCategories, posts } from "@/data/blog";
 import { locales, type Locale } from "@/lib/i18n";
 import { absoluteUrl, languageAlternates, localePath, ogImageUrl, routes } from "@/lib/seo";
 
@@ -23,13 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       image: (l: Locale) => ogImageUrl(l, routes.certification(c.slug)),
     })),
-    { path: routes.guides, priority: 0.8, changeFrequency: "weekly" },
-    ...guides.map((g) => ({
-      path: routes.guide(g.slug),
+    { path: routes.blog, priority: 0.8, changeFrequency: "weekly" },
+    ...blogCategories.map((c) => ({ path: routes.blogCategory(c), priority: 0.5, changeFrequency: "weekly" as const })),
+    ...posts.map((p) => ({
+      path: routes.post(p.slug),
       priority: 0.8,
       changeFrequency: "monthly" as const,
-      lastModified: new Date(g.dateModified),
-      image: (l: Locale) => ogImageUrl(l, routes.guide(g.slug)),
+      lastModified: new Date(p.dateModified),
+      image: () => absoluteUrl(p.cover.src),
     })),
     { path: routes.business, priority: 0.8, changeFrequency: "monthly" },
     { path: routes.cities, priority: 0.7, changeFrequency: "monthly" },

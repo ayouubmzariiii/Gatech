@@ -8,6 +8,7 @@ const logos: Partial<Record<Vendor, { src: string; width: number; height: number
   ISC2: { src: "/logos/vendors/isc2.svg", width: 508, height: 185 },
   ISACA: { src: "/logos/vendors/isaca.png", width: 600, height: 146 },
   PECB: { src: "/logos/vendors/pecb.png", width: 196, height: 55 },
+  Cisco: { src: "/logos/vendors/cisco.svg", width: 216, height: 114 },
 };
 
 /** Optical size correction so all logos look equally big at the same `height`. */
@@ -18,6 +19,7 @@ const scale: Record<Vendor, number> = {
   ISACA: 1.05,
   PECB: 0.9,
   OffSec: 1.1,
+  Cisco: 1.35,
 };
 
 /** Renders the vendor's logo at a fixed height; falls back to a text wordmark when no file exists. */

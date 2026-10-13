@@ -10,7 +10,7 @@ const cert: Certification = {
   category: "governance",
   durationDays: 4,
   hours: 32,
-  priceMAD: 24900,
+  priceMAD: 19900,
   voucherIncluded: true,
   exam: {
     format: {
@@ -182,7 +182,7 @@ const cert: Certification = {
     fr: [
       {
         q: "Quel est le prix de la formation CISM au Maroc ?",
-        a: "La formation CISM est proposée à partir de 24 900 MAD. Ce tarif inclut 4 jours de préparation (32 heures) avec formateur, les supports de cours, les questions d'entraînement et le voucher de l'examen ISACA. Les frais de demande de certification et la cotisation annuelle ISACA, payés après la réussite, ne sont pas inclus.",
+        a: "La formation CISM est proposée à partir de 19 900 MAD. Ce tarif inclut 4 jours de préparation (32 heures) avec formateur, les supports de cours, les questions d'entraînement et le voucher de l'examen ISACA. Les frais de demande de certification et la cotisation annuelle ISACA, payés après la réussite, ne sont pas inclus.",
       },
       {
         q: "Comment puis-je payer ?",
@@ -204,7 +204,7 @@ const cert: Certification = {
     ar: [
       {
         q: "ما هو سعر تكوين CISM في المغرب؟",
-        a: "يبدأ سعر تكوين CISM من 24900 درهم. ويشمل 4 أيام من التحضير (32 ساعة) مع مكوّن، ودعامات التكوين، وأسئلة التدريب، وقسيمة امتحان ISACA. أما رسوم طلب الشهادة والاشتراك السنوي لدى ISACA، اللذان يُؤدَّيان بعد النجاح، فغير مشمولين.",
+        a: "يبدأ سعر تكوين CISM من 19900 درهم. ويشمل 4 أيام من التحضير (32 ساعة) مع مكوّن، ودعامات التكوين، وأسئلة التدريب، وقسيمة امتحان ISACA. أما رسوم طلب الشهادة والاشتراك السنوي لدى ISACA، اللذان يُؤدَّيان بعد النجاح، فغير مشمولين.",
       },
       {
         q: "كيف يمكنني الأداء؟",
@@ -226,7 +226,7 @@ const cert: Certification = {
     en: [
       {
         q: "How much is CISM training in Morocco?",
-        a: "CISM training starts at 24,900 MAD. It includes 4 instructor-led days (32 hours), course materials, practice questions and the ISACA exam voucher. The certification application fee and ISACA annual maintenance fee, paid after you pass, are not included.",
+        a: "CISM training starts at 19,900 MAD. It includes 4 instructor-led days (32 hours), course materials, practice questions and the ISACA exam voucher. The certification application fee and ISACA annual maintenance fee, paid after you pass, are not included.",
       },
       {
         q: "How can I pay?",

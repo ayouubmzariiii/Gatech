@@ -82,7 +82,7 @@ const city: City = {
       },
       {
         q: "Quel est le prix d'une certification pour un participant de Tanger ?",
-        a: "Le même que partout au Maroc : de 9 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher inclus. Pour une session intra, nous établissons un devis selon la taille du groupe et le lieu.",
+        a: "Le même que partout au Maroc : de 10 900 MAD pour CompTIA Security+ à 29 900 MAD pour l'OSCP+, voucher inclus. Pour une session intra, nous établissons un devis selon la taille du groupe et le lieu.",
       },
     ],
     ar: [
@@ -100,7 +100,7 @@ const city: City = {
       },
       {
         q: "ما ثمن الشهادة بالنسبة لمشارك من طنجة؟",
-        a: "نفس الثمن في جميع أنحاء المغرب: من 9 900 درهم لشهادة CompTIA Security+ إلى 29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. وبالنسبة للدورات الداخلية، نعد عرض سعر حسب حجم المجموعة والمكان.",
+        a: "نفس الثمن في جميع أنحاء المغرب: من 10 900 درهم لشهادة CompTIA Security+ إلى 29 900 درهم لشهادة OSCP+، مع قسيمة الامتحان. وبالنسبة للدورات الداخلية، نعد عرض سعر حسب حجم المجموعة والمكان.",
       },
     ],
     en: [
@@ -118,7 +118,7 @@ const city: City = {
       },
       {
         q: "How much does a certification cost for a participant in Tangier?",
-        a: "The same as anywhere in Morocco: from 9,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, voucher included. For an in-house session, we quote based on group size and location.",
+        a: "The same as anywhere in Morocco: from 10,900 MAD for CompTIA Security+ to 29,900 MAD for OSCP+, voucher included. For an in-house session, we quote based on group size and location.",
       },
     ],
   },
