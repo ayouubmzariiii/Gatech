@@ -18,6 +18,12 @@ import soc from "./analyste-soc-maroc";
 import reconversion from "./reconversion-cybersecurite-maroc";
 import entreprise from "./former-equipes-cybersecurite-entreprise";
 import meilleurCentre from "./meilleur-centre-formation-cybersecurite-maroc";
+import cehV14 from "./ceh-v14";
+import ccnaOuSecPlus from "./ccna-ou-security-plus";
+import ccnaCyber from "./ccna-cybersecurity-maroc";
+import cisspMaroc from "./certification-cissp-maroc";
+import enLigne from "./formation-cybersecurite-en-ligne-maroc";
+import metiers from "./metiers-cybersecurite-maroc";
 
 /** Fixes "+" placement in Arabic text (see lib/bidi). */
 const withArabicBidi = (g: Guide): Guide => {
@@ -36,7 +42,7 @@ const withImages = (g: Guide): BlogPost => {
 
 /** Editorial order: strategic posts first, newest first within the same date. */
 export const posts: BlogPost[] = [
-  meilleurCentre, choisir, prix, cehOscp, reussirCeh, securityPlus, secPlusCeh, oscpPrep, soc, reconversion,
+  meilleurCentre, cehV14, choisir, metiers, prix, cehOscp, ccnaOuSecPlus, enLigne, cisspMaroc, ccnaCyber, reussirCeh, securityPlus, secPlusCeh, oscpPrep, soc, reconversion,
   entreprise, cisspCism, loi0520, iso27001, pentester,
 ].map((g) => withImages(withArabicBidi(g)));
 

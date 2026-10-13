@@ -358,4 +358,136 @@ export const blogImages: Record<string, Entry> = {
       "tvn5IIZtnEU",
     ),
   },
+  "ceh-v14": {
+    cover: cover(
+      "ceh-v14",
+      {
+        fr: "Puce marquée AI sur un circuit imprimé aux pistes lumineuses vertes",
+        ar: "شريحة مكتوب عليها AI على لوحة دوائر إلكترونية بمسارات خضراء مضيئة",
+        en: "Chip labelled AI on a circuit board with glowing green traces",
+      },
+      "Immo Wegmann",
+      "w69Z8K-HGQU",
+    ),
+    figure: figure(
+      "ceh-v14",
+      {
+        fr: "Rendu 3D d'un processeur moderne monté sur une carte électronique éclairée",
+        ar: "تصوير ثلاثي الأبعاد لمعالج حديث مثبّت على لوحة إلكترونية مضيئة",
+        en: "3D render of a modern processor mounted on an illuminated circuit board",
+      },
+      "Brecht Corbeel",
+      "LTnZEjcLneo",
+    ),
+  },
+  "ccna-ou-security-plus": {
+    cover: cover(
+      "ccna-ou-security-plus",
+      {
+        fr: "Câbles Ethernet noirs branchés à l'arrière d'un équipement réseau",
+        ar: "كابلات إيثرنت سوداء موصولة بالجهة الخلفية لجهاز شبكة",
+        en: "Black Ethernet cables plugged into the back of a network device",
+      },
+      "Manuel Luikenga",
+      "y4GHs9GEFdM",
+    ),
+    figure: figure(
+      "ccna-ou-security-plus",
+      {
+        fr: "Écran de sécurité indiquant réseaux protégés, absence de virus et applications à jour",
+        ar: "شاشة أمان تشير إلى شبكات محمية وغياب الفيروسات وتطبيقات محدّثة",
+        en: "Security screen showing safe networks, no viruses and up-to-date apps",
+      },
+      "Zulfugar Karimov",
+      "-nBClEqKKVM",
+    ),
+  },
+  "ccna-cybersecurity-maroc": {
+    cover: cover(
+      "ccna-cybersecurity-maroc",
+      {
+        fr: "Vue de dessus d'une personne travaillant devant trois écrans lumineux dans le noir",
+        ar: "منظر علوي لشخص يعمل أمام ثلاث شاشات مضيئة في الظلام",
+        en: "Top-down view of a person working at three bright monitors in the dark",
+      },
+      "Max Duzij",
+      "qAjJk-un3BI",
+    ),
+    figure: figure(
+      "ccna-cybersecurity-maroc",
+      {
+        fr: "Tableau de bord de supervision affichant des indicateurs et des courbes sur un écran",
+        ar: "لوحة متابعة تعرض مؤشرات ومنحنيات بيانية على شاشة",
+        en: "Monitoring dashboard displaying metrics and trend charts on a screen",
+      },
+      "Stephen Dawson",
+      "qwtCeJ5cLYs",
+    ),
+  },
+  "certification-cissp-maroc": {
+    cover: cover(
+      "certification-cissp-maroc",
+      {
+        fr: "Responsable présentant une stratégie sur un écran à des collègues en réunion",
+        ar: "مسؤول يعرض استراتيجية على شاشة أمام زملائه خلال اجتماع",
+        en: "Manager presenting a strategy on a screen to colleagues in a meeting",
+      },
+      "Vitaly Gariev",
+      "SvYifX5HkeQ",
+    ),
+    figure: figure(
+      "certification-cissp-maroc",
+      {
+        fr: "Portrait d'un dirigeant en veste sombre assis à son bureau",
+        ar: "صورة لمدير تنفيذي بسترة داكنة يجلس إلى مكتبه",
+        en: "Portrait of an executive in a dark blazer seated at his desk",
+      },
+      "Ratul Puri",
+      "xQLiFkWCSvM",
+    ),
+  },
+  "formation-cybersecurite-en-ligne-maroc": {
+    cover: cover(
+      "formation-cybersecurite-en-ligne-maroc",
+      {
+        fr: "Ordinateur portable affichant une visioconférence avec de nombreux participants, près d'une tasse",
+        ar: "حاسوب محمول يعرض مكالمة فيديو مع مشاركين كثيرين بجانب كوب",
+        en: "Laptop showing a video call with many participants beside a mug",
+      },
+      "Chris Montgomery",
+      "smgTvepind4",
+    ),
+    figure: figure(
+      "formation-cybersecurite-en-ligne-maroc",
+      {
+        fr: "Femme souriante saluant de la main lors d'un appel vidéo sur son ordinateur",
+        ar: "امرأة مبتسمة تلوّح بيدها خلال مكالمة فيديو على حاسوبها",
+        en: "Smiling woman waving during a video call on her laptop",
+      },
+      "Vitaly Gariev",
+      "nSj0hdQUrW0",
+    ),
+  },
+  "metiers-cybersecurite-maroc": {
+    cover: cover(
+      "metiers-cybersecurite-maroc",
+      {
+        fr: "Deux professionnelles en discussion à une table devant une grande baie vitrée",
+        ar: "مهنيتان تتحاوران حول طاولة أمام نافذة زجاجية كبيرة",
+        en: "Two professional women talking at a table by a large window",
+      },
+      "Christina @ wocintechchat.com",
+      "LQ1t-8Ms5PY",
+    ),
+    figure: figure(
+      "metiers-cybersecurite-maroc",
+      {
+        fr: "Jeune employé en chemise travaillant sur ordinateur dans un bureau d'ingénierie",
+        ar: "موظف شاب بقميص يعمل على حاسوب في مكتب هندسي",
+        en: "Young employee in a shirt working at a computer in an engineering office",
+      },
+      "ThisisEngineering",
+      "WN1ZZaWY2fU",
+    ),
+  },
 };
