@@ -13,6 +13,7 @@ import { isLocale, type Locale } from "@/lib/i18n";
 import { faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
+import { LinkBudget } from "@/lib/autolink";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
   const { lang } = await params;
@@ -260,7 +261,12 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
 
       {/* Why us */}
       <section aria-labelledby="why" className="container-page py-20 sm:py-28">
-        <SectionHeading id="why" eyebrow={dict.why.eyebrow} title={dict.why.title} />
+        <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <SectionHeading id="why" eyebrow={dict.why.eyebrow} title={dict.why.title} />
+          <Link href={p(routes.about)} className={`${btnSecondary} shrink-0`}>
+            {dict.nav.about}
+          </Link>
+        </div>
         <div className="mt-14 grid border-s border-t border-line sm:grid-cols-2 lg:grid-cols-3">
           {dict.why.items.map((item, i) => (
             <div key={item.title} className="group border-e border-b border-line p-7 transition hover:bg-surface">
@@ -360,7 +366,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
               {dict.finalCta.whatsapp}
             </a>
           </div>
-          <FaqList faqs={dict.faq.items} />
+          <FaqList faqs={dict.faq.items} links={new LinkBudget(locale, routes.home, 8)} />
         </div>
       </section>
 

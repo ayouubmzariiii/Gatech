@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { certifications, cities } from "@/data";
+import { featuredPostSlugs, postsBySlugs } from "@/data/blog";
 import type { Dictionary } from "@/dictionaries";
 import type { Locale } from "@/lib/i18n";
 import { localePath, routes } from "@/lib/seo";
@@ -12,7 +13,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
   const headingClass = "mb-5 font-display text-lg font-bold tracking-wide text-white uppercase";
   return (
     <footer className="border-t-4 border-red bg-night">
-      <div className="container-page grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="container-page grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.3fr_1fr_1fr]">
         <div className="space-y-4">
           <Link href={p(routes.home)} aria-label="GATech" className="inline-block">
             <Logo inverted />
@@ -46,6 +47,21 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
               <li key={c.slug}>
                 <Link href={p(routes.certification(c.slug))} className={linkClass}>
                   <bdi>{c.shortName}</bdi>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-guides">
+          <h2 id="footer-guides" className={headingClass}>
+            {dict.footer.guides}
+          </h2>
+          <ul className="space-y-2">
+            {postsBySlugs(featuredPostSlugs.footer).map((post) => (
+              <li key={post.slug}>
+                <Link href={p(routes.post(post.slug))} className={linkClass}>
+                  {post.title[locale]}
                 </Link>
               </li>
             ))}

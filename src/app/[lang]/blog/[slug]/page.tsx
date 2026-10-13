@@ -13,6 +13,7 @@ import { fmt, getDictionary } from "@/dictionaries";
 import { isLocale, locales, type Locale } from "@/lib/i18n";
 import { articleSchema, breadcrumbSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { absoluteUrl, localePath, pageMetadata, routes } from "@/lib/seo";
+import { LinkBudget, linkify } from "@/lib/autolink";
 
 /** Only the slugs generated at build time exist; anything else is a 404. */
 export const dynamicParams = false;
@@ -65,6 +66,8 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
     { name: post.title[locale], href: localePath(locale, path) },
   ];
   const sections = post.sections[locale];
+  // Contextual links from this article to course, city and related article pages.
+  const links = new LinkBudget(locale, path, 10);
   const certs = post.relatedCerts.map(getCertification).filter((c) => c !== undefined).slice(0, 3);
   const shareText = encodeURIComponent(`${post.title[locale]} ${url}`);
   const shares = [
@@ -166,7 +169,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
                 </h2>
                 <div className="prose-body mt-5 text-base sm:text-[1.0625rem]">
                   {s.paragraphs.map((p) => (
-                    <p key={p.slice(0, 48)}>{p}</p>
+                    <p key={p.slice(0, 48)}>{linkify(p, links)}</p>
                   ))}
                 </div>
                 {s.list && (
@@ -174,7 +177,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
                     {s.list.map((item) => (
                       <li key={item} className="flex gap-3 leading-relaxed text-body">
                         <span aria-hidden className="mt-2.5 size-2 shrink-0 rotate-45 bg-red" />
-                        <span>{item}</span>
+                        <span>{linkify(item, links)}</span>
                       </li>
                     ))}
                   </ul>
@@ -202,7 +205,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
             <h2 id="post-faq" className="mb-6 scroll-mt-28 font-display text-3xl font-bold text-ink sm:text-4xl">
               {t.faqTitle}
             </h2>
-            <FaqList faqs={post.faqs[locale]} />
+            <FaqList faqs={post.faqs[locale]} links={links} />
           </section>
 
           <div className="mt-12 flex gap-5 border-t-2 border-ink pt-8">

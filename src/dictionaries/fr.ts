@@ -121,7 +121,7 @@ const fr = {
       {
         title: "SOC & Blue Team",
         text: "Détectez, analysez et répondez aux incidents dans un SOC ou une équipe CERT.",
-        certs: ["comptia-security-plus", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
+        certs: ["comptia-security-plus", "cisco-ccna-cybersecurity", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
       },
       {
         title: "Gouvernance, risque & conformité",
@@ -348,6 +348,7 @@ const fr = {
     emailLabel: "E-mail",
   },
   footer: {
+    guides: "Guides populaires",
     tagline: "Formations et certifications en cybersécurité au Maroc. Voucher d'examen officiel inclus.",
     certifications: "Certifications",
     company: "GATech",

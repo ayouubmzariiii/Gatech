@@ -113,5 +113,21 @@ export function relatedPosts(post: BlogPost, n = 3) {
   return others.sort((a, b) => score(b) - score(a)).slice(0, n);
 }
 
+/** Articles promoted from hub pages (catalog, business, cities, footer): the pillar/cluster entry points. */
+export const featuredPostSlugs = {
+  catalog: ["meilleur-centre-formation-cybersecurite-maroc", "quelle-certification-cybersecurite-choisir", "prix-certifications-cybersecurite-maroc"],
+  business: ["former-equipes-cybersecurite-entreprise", "loi-05-20-cybersecurite-maroc", "iso-27001-maroc"],
+  cities: ["meilleur-centre-formation-cybersecurite-maroc", "reconversion-cybersecurite-maroc", "quelle-certification-cybersecurite-choisir"],
+  footer: [
+    "meilleur-centre-formation-cybersecurite-maroc",
+    "quelle-certification-cybersecurite-choisir",
+    "prix-certifications-cybersecurite-maroc",
+    "ceh-ou-oscp",
+    "analyste-soc-maroc",
+  ],
+} as const;
+
+export const postsBySlugs = (slugs: readonly string[]) => slugs.map((s) => getPost(s)).filter((p) => p !== undefined);
+
 /** Anchor id for a section heading. */
 export const sectionId = (i: number) => `section-${i + 1}`;

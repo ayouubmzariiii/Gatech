@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqList, PageHero, PostsBand, SectionHeading } from "@/components/ui";
+import { featuredPostSlugs, postsBySlugs } from "@/data/blog";
 import { cities, getCertification, getCity } from "@/data";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
 import { breadcrumbSchema, cityServiceSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { localePath, pageMetadata, routes } from "@/lib/seo";
+import { LinkBudget, linkify } from "@/lib/autolink";
 
 /** Only the slugs generated at build time exist; anything else is a 404. */
 export const dynamicParams = false;
@@ -40,6 +42,7 @@ export default async function CityPage({ params }: PageProps<"/[lang]/maroc/[cit
     { name: city.name[lang], href: localePath(lang, routes.city(city.slug)) },
   ];
   const featured = city.featuredCerts.map(getCertification).filter((c) => c !== undefined);
+  const links = new LinkBudget(lang, routes.city(city.slug), 8);
 
   return (
     <>
@@ -61,7 +64,7 @@ export default async function CityPage({ params }: PageProps<"/[lang]/maroc/[cit
       <div className="container-page grid gap-12 py-14 lg:grid-cols-[1fr_20rem]">
         <div className="prose-body max-w-3xl text-base sm:text-[1.0625rem]">
           {city.intro[lang].map((para) => (
-            <p key={para.slice(0, 40)}>{para}</p>
+            <p key={para.slice(0, 40)}>{linkify(para, links)}</p>
           ))}
         </div>
         <aside aria-labelledby="sectors" className="card self-start bg-surface p-6">
@@ -88,11 +91,13 @@ export default async function CityPage({ params }: PageProps<"/[lang]/maroc/[cit
       <section aria-labelledby="city-faq" className="container-page py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.7fr]">
           <SectionHeading id="city-faq" title={dict.faq.eyebrow} />
-          <FaqList faqs={city.faqs[lang]} />
+          <FaqList faqs={city.faqs[lang]} links={links} />
         </div>
       </section>
 
-      <nav aria-labelledby="other-cities" className="container-page">
+      <PostsBand id="city-posts" title={dict.blog.related} posts={postsBySlugs(featuredPostSlugs.cities)} locale={lang} dict={dict} surface />
+
+      <nav aria-labelledby="other-cities" className="container-page pt-12">
         <h2 id="other-cities" className="font-semibold text-ink">
           {dict.city.otherCities}
         </h2>

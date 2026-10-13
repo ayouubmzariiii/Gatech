@@ -3,8 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CtaBanner, FaqSection, PageHero, SectionHeading } from "@/components/ui";
+import { Breadcrumbs, CtaBanner, FaqSection, PageHero, PostsBand, SectionHeading } from "@/components/ui";
 import { pageFaqs } from "@/data/pageFaqs";
+import { featuredPostSlugs, postsBySlugs } from "@/data/blog";
+import { LinkBudget } from "@/lib/autolink";
 
 import { cities } from "@/data";
 import { getDictionary } from "@/dictionaries";
@@ -62,7 +64,9 @@ export default async function CitiesPage({ params }: PageProps<"/[lang]/maroc">)
           ))}
         </ul>
       </section>
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.cities[lang]} surface />
+      <PostsBand id="hub-posts" title={dict.blog.related} posts={postsBySlugs(featuredPostSlugs.cities)} locale={lang} dict={dict} surface={false} />
+
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.cities[lang]} links={new LinkBudget(lang, routes.cities, 6)} surface />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

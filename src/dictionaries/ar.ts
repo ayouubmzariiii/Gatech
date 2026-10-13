@@ -123,7 +123,7 @@ const ar: Dictionary = {
       {
         title: "SOC و Blue Team",
         text: "رصد الحوادث وتحليلها والاستجابة لها داخل مركز SOC أو فريق CERT.",
-        certs: ["comptia-security-plus", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
+        certs: ["comptia-security-plus", "cisco-ccna-cybersecurity", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
       },
       {
         title: "الحوكمة والمخاطر والامتثال",
@@ -350,6 +350,7 @@ const ar: Dictionary = {
     emailLabel: "البريد الإلكتروني",
   },
   footer: {
+    guides: "أدلة شائعة",
     tagline: "تكوينات وشهادات في الأمن السيبراني بالمغرب. قسيمة الامتحان الرسمية مشمولة.",
     certifications: "الشهادات",
     company: "GATech",

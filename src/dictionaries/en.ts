@@ -123,7 +123,7 @@ const en: Dictionary = {
       {
         title: "SOC & Blue Team",
         text: "Detect, analyse and respond to incidents in a SOC or CERT team.",
-        certs: ["comptia-security-plus", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
+        certs: ["comptia-security-plus", "cisco-ccna-cybersecurity", "cnd-v3", "comptia-cysa-plus", "chfi-v11"],
       },
       {
         title: "Governance, risk & compliance",
@@ -350,6 +350,7 @@ const en: Dictionary = {
     emailLabel: "Email",
   },
   footer: {
+    guides: "Popular guides",
     tagline: "Cybersecurity training and certifications in Morocco. Official exam voucher included.",
     certifications: "Certifications",
     company: "GATech",

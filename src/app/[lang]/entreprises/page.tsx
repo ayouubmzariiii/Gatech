@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqSection, PageHero, SectionHeading, btnPrimary } from "@/components/ui";
+import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqSection, PageHero, PostsBand, SectionHeading, btnPrimary } from "@/components/ui";
 import { pageFaqs } from "@/data/pageFaqs";
+import { featuredPostSlugs, postsBySlugs } from "@/data/blog";
+import { LinkBudget, linkify } from "@/lib/autolink";
 
 import { getCertification } from "@/data";
 import { getDictionary } from "@/dictionaries";
@@ -52,7 +54,10 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
         <Breadcrumbs items={crumbs} />
         <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <SectionHeading as="h1" eyebrow={dict.business.eyebrow} title={dict.meta.businessTitle} subtitle={dict.business.text} />
+            <SectionHeading as="h1" eyebrow={dict.business.eyebrow} title={dict.meta.businessTitle} />
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-pretty text-body sm:text-lg">
+              {linkify(dict.business.text, new LinkBudget(lang, routes.business, 4))}
+            </p>
             <Link href={`${localePath(lang, routes.contact)}#format=intra`} className={`${btnPrimary} mt-8`}>
               {dict.business.cta}
             </Link>
@@ -95,7 +100,9 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
         </div>
       </section>
 
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.business[lang]} />
+      <PostsBand id="hub-posts" title={dict.blog.related} posts={postsBySlugs(featuredPostSlugs.business)} locale={lang} dict={dict} surface={true} />
+
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.business[lang]} links={new LinkBudget(lang, routes.business, 6)} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

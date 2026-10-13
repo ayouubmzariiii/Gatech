@@ -13,6 +13,7 @@ import { fixBidi } from "@/lib/bidi";
 import { isLocale, locales, type Locale } from "@/lib/i18n";
 import { breadcrumbSchema, courseSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { absoluteUrl, formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
+import { LinkBudget, linkify } from "@/lib/autolink";
 import { whatsappLink } from "@/lib/site";
 
 /** Only the slugs generated at build time exist; anything else is a 404. */
@@ -65,6 +66,9 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
     { name: cert.shortName, href: localePath(locale, routes.certification(cert.slug)) },
   ];
   const contactHref = `${localePath(locale, routes.contact)}#cert=${cert.slug}`;
+  // Contextual links: the session line first (city pages), then related courses and articles.
+  const links = new LinkBudget(locale, routes.certification(cert.slug), 9);
+  const sessions = linkify(t.sessions, links);
   const waHref = whatsappLink(fmt(t.whatsappMessage, { name: cert.shortName }));
 
   const facts = [
@@ -122,7 +126,7 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
           <Section id="overview" title={t.overview}>
             <div className="prose-body text-base sm:text-[1.0625rem]">
               {cert.overview[locale].map((para) => (
-                <p key={para.slice(0, 40)}>{para}</p>
+                <p key={para.slice(0, 40)}>{linkify(para, links)}</p>
               ))}
             </div>
           </Section>
@@ -132,7 +136,7 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
               <CheckList items={cert.audience[locale]} />
             </Section>
             <Section id="prerequisites" title={t.prerequisites}>
-              <CheckList items={cert.prerequisites[locale]} />
+              <CheckList items={cert.prerequisites[locale]} links={links} />
             </Section>
           </div>
 
@@ -178,11 +182,11 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
           </Section>
 
           <Section id="careers" title={t.careers}>
-            <CheckList items={cert.careers[locale]} />
+            <CheckList items={cert.careers[locale]} links={links} />
           </Section>
 
           <Section id="faq" title={t.faq}>
-            <FaqList faqs={cert.faqs[locale]} />
+            <FaqList faqs={cert.faqs[locale]} links={links} />
           </Section>
         </div>
 
@@ -210,7 +214,7 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
                 {!cert.voucherIncluded && <p className="mt-3 text-muted">{t.voucherNotIncluded}</p>}
               </div>
               <OffersList locale={locale} dict={dict} />
-              <p className="mt-6 bg-surface px-4 py-3 text-xs leading-relaxed text-body">{t.sessions}</p>
+              <p className="mt-6 bg-surface px-4 py-3 text-xs leading-relaxed text-body">{sessions}</p>
             </div>
           </div>
         </aside>

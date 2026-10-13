@@ -8,6 +8,7 @@ import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
 import { breadcrumbSchema, faqSchema, graph, orgId, webPageSchema } from "@/lib/schema";
 import { localePath, pageMetadata, routes } from "@/lib/seo";
+import { LinkBudget, linkify } from "@/lib/autolink";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/a-propos">): Promise<Metadata> {
   const { lang } = await params;
@@ -20,6 +21,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const dict = getDictionary(lang);
+  const links = new LinkBudget(lang, routes.about, 8);
   const crumbs = [
     { name: dict.breadcrumbs.home, href: localePath(lang, routes.home) },
     { name: dict.nav.about, href: localePath(lang, routes.about) },
@@ -43,7 +45,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
       <section className="container-page py-14">
         <div className="prose-body max-w-3xl text-base sm:text-[1.0625rem]">
           {dict.about.paragraphs.map((p) => (
-            <p key={p.slice(0, 40)}>{p}</p>
+            <p key={p.slice(0, 40)}>{linkify(p, links)}</p>
           ))}
         </div>
         <h2 className="mt-16 text-2xl font-bold text-ink">{dict.about.valuesTitle}</h2>
@@ -56,7 +58,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/a-propos"
           ))}
         </div>
       </section>
-      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.about[lang]} surface />
+      <FaqSection eyebrow={dict.faq.eyebrow} title={dict.faq.title} faqs={pageFaqs.about[lang]} surface links={links} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

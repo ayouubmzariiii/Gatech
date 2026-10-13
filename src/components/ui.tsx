@@ -8,6 +8,7 @@ import { fmt, type Dictionary } from "@/dictionaries";
 import type { Locale } from "@/lib/i18n";
 import { formatPrice, localePath, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
+import { linkify, type LinkBudget } from "@/lib/autolink";
 import { ArrowIcon, ChevronIcon, WhatsAppIcon } from "./icons";
 import { VendorLogo } from "./VendorLogo";
 
@@ -116,7 +117,7 @@ export function Breadcrumbs({ items, dark = false }: { items: { name: string; hr
   );
 }
 
-export function FaqList({ faqs }: { faqs: Faq[] }) {
+export function FaqList({ faqs, links }: { faqs: Faq[]; links?: LinkBudget }) {
   return (
     <div className="border-t-2 border-ink">
       {faqs.map((f) => (
@@ -127,7 +128,7 @@ export function FaqList({ faqs }: { faqs: Faq[] }) {
               <ChevronIcon width={16} height={16} />
             </span>
           </summary>
-          <p className="pe-12 pb-6 leading-relaxed text-body">{f.a}</p>
+          <p className="pe-12 pb-6 leading-relaxed text-body">{links ? linkify(f.a, links) : f.a}</p>
         </details>
       ))}
     </div>
@@ -174,13 +175,13 @@ export function PageHero({ children }: { children: ReactNode }) {
   );
 }
 
-export function CheckList({ items, dark = false }: { items: string[]; dark?: boolean }) {
+export function CheckList({ items, dark = false, links }: { items: string[]; dark?: boolean; links?: LinkBudget }) {
   return (
     <ul className="space-y-3">
       {items.map((item) => (
         <li key={item} className={`flex gap-3 leading-relaxed ${dark ? "text-white/80" : "text-body"}`}>
           <span aria-hidden className="mt-2 size-2 shrink-0 rotate-45 bg-red" />
-          <span>{item}</span>
+          <span>{links ? linkify(item, links) : item}</span>
         </li>
       ))}
     </ul>
@@ -234,13 +235,51 @@ export function PostCard({ post, locale, dict, featured = false }: { post: BlogP
   );
 }
 
+/** Band of article cards linking a hub page to its supporting articles. */
+export function PostsBand({ id, title, posts, locale, dict, surface = false }: { id: string; title: string; posts: BlogPost[]; locale: Locale; dict: Dictionary; surface?: boolean }) {
+  if (!posts.length) return null;
+  return (
+    <section aria-labelledby={id} className={surface ? "border-y border-line bg-surface py-16" : "py-16"}>
+      <div className="container-page">
+        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <h2 id={id} className="font-display text-3xl font-bold text-ink sm:text-4xl">
+            {title}
+          </h2>
+          <Link href={localePath(locale, routes.blog)} className="text-sm font-bold tracking-wide text-ink uppercase hover:text-red">
+            {dict.blog.viewAll} →
+          </Link>
+        </div>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((p) => (
+            <PostCard key={p.slug} post={p} locale={locale} dict={dict} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /** FAQ block with its own heading, used on listing and service pages. */
-export function FaqSection({ id = "faq", title, eyebrow, faqs, surface = false }: { id?: string; title: string; eyebrow?: string; faqs: Faq[]; surface?: boolean }) {
+export function FaqSection({
+  id = "faq",
+  title,
+  eyebrow,
+  faqs,
+  surface = false,
+  links,
+}: {
+  id?: string;
+  title: string;
+  eyebrow?: string;
+  faqs: Faq[];
+  surface?: boolean;
+  links?: LinkBudget;
+}) {
   return (
     <section aria-labelledby={id} className={surface ? "bg-surface py-20" : "py-20"}>
       <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.7fr]">
         <SectionHeading id={id} eyebrow={eyebrow} title={title} />
-        <FaqList faqs={faqs} />
+        <FaqList faqs={faqs} links={links} />
       </div>
     </section>
   );
