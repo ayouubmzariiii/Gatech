@@ -6,6 +6,7 @@
 export const site = {
   name: "GATech",
   legalName: "GATech World", // TODO: registered company name (raison sociale)
+  /** Set with the SITE_URL environment variable (mapped in next.config.ts). */
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://gatech.world").replace(/\/$/, ""),
   email: "contact@gatech.world",
   /** E.164 format, used for tel: links and structured data. */

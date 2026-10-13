@@ -34,7 +34,7 @@ To add a certification: create `src/data/certs/<slug>.ts` (copy an existing one)
 - Self-referencing canonical + `hreflang` `fr-MA` / `ar-MA` / `en-MA` / `x-default` in HTML **and** `sitemap.xml`.
 - `sitemap.xml` with hreflang alternates, `lastmod` and image entries (generated OG images).
 - `robots.txt` is environment-aware: Vercel **preview** deployments are `Disallow: /` + `X-Robots-Tag: noindex`.
-- 308 redirects: `/fr/*` → unprefixed, trailing slash removed, `www.gatech.world` → `gatech.world`.
+- 308 redirects: `/fr/*` → unprefixed, trailing slash removed (www → apex is set in Vercel Domains).
 - Localized 404 (`noindex`) for unknown URLs.
 - IndexNow key (`public/<key>.txt`) + `npm run indexnow` to push all URLs to Bing/Yandex after a deploy.
 - `/llms.txt`: markdown site map for AI assistants (ChatGPT, Perplexity, Gemini…).
@@ -80,7 +80,7 @@ Sitemap (with image), RSS, llms.txt, BlogPosting + FAQ schema, category pages an
 
 1. **Import** the GitHub repo in Vercel → framework "Next.js" is detected, no build settings to change.
 2. **Environment variables** (Project → Settings → Environment Variables, *Production*):
-   - `NEXT_PUBLIC_SITE_URL` = `https://gatech.world`
+   - `SITE_URL` = `https://gatech.world` (no trailing slash; redeploy after changing it)
    - `CONTACT_WEBHOOK_URL` = your Zapier / Make / n8n / CRM webhook (otherwise leads only appear in Vercel logs)
    - `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION` = tokens from Search Console / Bing Webmaster Tools (HTML-tag method)
 3. **Domains** (Project → Settings → Domains): add `gatech.world` (primary) **and** `www.gatech.world`

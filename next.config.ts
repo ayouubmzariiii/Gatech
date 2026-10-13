@@ -3,6 +3,13 @@ import type { NextConfig } from "next";
 /** Same rule as `isProduction` in src/lib/site.ts (next.config can't import app modules). */
 const isProduction = (process.env.VERCEL_ENV ?? "production") === "production";
 
+/**
+ * Public site URL, from the `SITE_URL` environment variable (no trailing slash).
+ * It is exposed to the app as NEXT_PUBLIC_SITE_URL (see `env` below) so server and
+ * browser code read the same value.
+ */
+const siteUrl = (process.env.SITE_URL ?? process.env.NEXT_PUBLIC_SITE_URL ?? "https://gatech.world").replace(/\/+$/, "");
+
 const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -30,6 +37,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  env: { NEXT_PUBLIC_SITE_URL: siteUrl },
   // Cache Components is deliberately OFF: with it, Next keeps previously visited pages in the DOM
   // (hidden <Activity>), so DOM-based SEO tools count several <h1> per page. Every page is still
   // prerendered as static HTML through generateStaticParams.
@@ -70,13 +78,7 @@ const nextConfig: NextConfig = {
       { source: "/guides/:slug", destination: "/blog/:slug", permanent: true },
       { source: "/:lang(ar|en)/guides", destination: "/:lang/blog", permanent: true },
       { source: "/:lang(ar|en)/guides/:slug", destination: "/:lang/blog/:slug", permanent: true },
-      // One canonical host: www.gatech.world -> gatech.world (also add both domains in Vercel).
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.gatech.world" }],
-        destination: "https://gatech.world/:path*",
-        permanent: true,
-      },
+      // www -> apex is handled by Vercel (Project → Settings → Domains).
     ];
   },
   turbopack: {
