@@ -4,34 +4,34 @@ const en: Dictionary = {
   meta: {
     homeTitle: "Cybersecurity Training Center Morocco: CEH, Security+, CISSP",
     homeDescription:
-      "Cybersecurity certification training center in Morocco for 2026: CEH v13, CompTIA Security+, CISSP, OSCP+, exam voucher included. Casablanca, Rabat, online.",
+      "Cybersecurity certification training center in Morocco (2026): CEH v13, CompTIA Security+, CISSP, OSCP+, voucher included. Casablanca, Rabat, online.",
     catalogTitle: "All Cybersecurity Certifications in Morocco (MAD prices)",
     catalogDescription:
       "Compare 12 cybersecurity certifications: CEH v13, Security+, CISSP, OSCP+, Cisco CCNA, ISO 27001… Duration, exam and price in MAD. Enroll today.",
     businessTitle: "Corporate Cybersecurity Training in Morocco",
     businessDescription:
-      "Train your IT and security teams in Morocco: on-site or remote private sessions, CEH, ISO 27001, CISSP. Law 05-20 and DNSSI compliance. Request a quote today.",
+      "Train your IT and security teams in Morocco: on-site or remote private sessions, CEH, ISO 27001, CISSP. Law 05-20 and DNSSI compliance. Get a quote.",
     citiesTitle: "Cybersecurity Training Across Morocco's Cities",
     citiesDescription:
-      "Certified cybersecurity training in Casablanca, Rabat, Marrakech, Tangier, Fez and Agadir: classroom, live online or on-site for companies. See the options.",
+      "Cybersecurity certification courses in Casablanca, Rabat, Marrakech, Tangier, Fez and Agadir: classroom, live online or in-house. See the options.",
     aboutTitle: "About Us: Cybersecurity Training Centre in Morocco",
     aboutDescription:
       "GATech prepares Moroccan professionals for globally recognised cybersecurity certifications. Discover our method, our instructors and our commitments.",
     contactTitle: "Contact & Enrollment: Talk to an Advisor",
     contactDescription:
       "A question about a certification, a corporate quote or enrollment? Write to us or reach us on WhatsApp. We reply within 24 business hours.",
-    privacyTitle: "Privacy Policy",
+    privacyTitle: "Privacy Policy – GATech (Moroccan law 09-08)",
     privacyDescription:
       "How GATech collects, uses and protects your personal data in accordance with Moroccan law 09-08 and the recommendations of the CNDP.",
-    legalTitle: "Legal Notice",
+    legalTitle: "Legal Notice – GATech Cybersecurity Training",
     legalDescription:
-      "Legal notice for gatech.world: publisher, hosting, intellectual property and certification vendors' trademarks.",
+      "Legal notice for gatech.world, the GATech cybersecurity training site in Morocco: publisher, hosting, intellectual property and vendor trademarks.",
     blogTitle: "Cybersecurity Blog Morocco: Certifications & Careers",
     blogDescription:
       "Morocco's cybersecurity blog: guides to CEH, OSCP+, CISSP and CompTIA certifications, prices in MAD, careers, law 05-20 and ISO 27001. Start reading.",
     blogCategoryTitle: "{category}: cybersecurity articles, Morocco",
     blogCategoryDescription:
-      "All our \"{category}\" articles: practical advice to pass your certification and grow your cybersecurity career in Morocco. Read our guides now.",
+      "All our \"{category}\" articles: advice to pass your certification and grow your cybersecurity career in Morocco. Read our guides now.",
     notFoundTitle: "Page not found",
   },
   nav: {

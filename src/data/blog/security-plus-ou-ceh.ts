@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "Security+ vs CEH: Which Should Beginners Choose?",
   },
   seoDescription: {
-    fr: "Security+ ou CEH v13 pour débuter ? Contenu, prérequis, examen, prix en MAD et débouchés comparés pour choisir le bon ordre. Lisez notre guide complet.",
+    fr: "Security+ ou CEH v13 pour débuter ? Contenu, prérequis, examen, prix en MAD et débouchés comparés pour choisir le bon ordre. Lisez notre guide.",
     ar: "Security+ أم CEH v13 للمبتدئين؟ مقارنة المحتوى والمتطلبات والامتحان والسعر بالدرهم والآفاق المهنية لاختيار الترتيب الصحيح. اقرأ دليلنا الكامل الآن.",
-    en: "Security+ or CEH v13 for beginners? We compare scope, prerequisites, exam, price in MAD and career outcomes to help you pick the right order. Read the guide.",
+    en: "Security+ or CEH v13 for beginners? We compare scope, prerequisites, exam, price in MAD and career outcomes to pick the right order. Read the guide.",
   },
   excerpt: {
     fr: "Security+ pose les fondamentaux de la sécurité défensive, le CEH v13 enseigne la méthodologie de l'attaquant. Pour un débutant, l'ordre dans lequel on les passe compte autant que le choix lui-même.",

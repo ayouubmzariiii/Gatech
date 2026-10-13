@@ -41,9 +41,9 @@ const cert: Certification = {
     en: "OSCP+ Training in Morocco – PEN-200 + Exam Attempt",
   },
   seoDescription: {
-    fr: "Préparez l'OSCP+ (PEN-200) au Maroc : 80 h de coaching, accès aux labs PEN-200 et tentative d'examen inclus. Casablanca, Rabat ou en ligne. Devis gratuit.",
-    ar: "استعد لشهادة OSCP+ (PEN-200) في المغرب: 80 ساعة من المواكبة والولوج إلى مختبرات PEN-200 ومحاولة الامتحان. الدار البيضاء أو الرباط أو عن بعد. اطلب عرضك الآن.",
-    en: "Prepare for OSCP+ (PEN-200) in Morocco: 80 h of coaching, PEN-200 lab access and an exam attempt included. Casablanca, Rabat or live online. Request a quote.",
+    fr: "Préparez l'OSCP+ (PEN-200) au Maroc : 80 h de coaching, labs PEN-200 et tentative d'examen inclus. Casablanca, Rabat ou en ligne. Devis gratuit.",
+    ar: "استعد لشهادة OSCP+ (PEN-200) في المغرب: 80 ساعة مواكبة والولوج إلى مختبرات PEN-200 ومحاولة الامتحان، بالدار البيضاء أو الرباط أو عن بعد. اطلب عرضك.",
+    en: "Prepare for OSCP+ (PEN-200) in Morocco: 80 h of coaching, PEN-200 labs and an exam attempt included. Casablanca, Rabat or live online. Get a quote.",
   },
   tagline: {
     fr: "Try Harder, mais pas seul : la certification pentest la plus exigeante du marché, préparée avec un coach qui vous guide jusqu'au rapport final.",

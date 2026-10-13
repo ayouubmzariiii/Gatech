@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "OSCP in Morocco: A 12-Week OSCP+ Preparation Plan",
   },
   seoDescription: {
-    fr: "Préparation OSCP+ au Maroc : prérequis, contenu PEN-200, plan sur 12 semaines, Active Directory, examen à distance et rapport. Lancez votre plan dès maintenant.",
+    fr: "Préparation OSCP+ au Maroc : prérequis, contenu PEN-200, plan sur 12 semaines, Active Directory, examen à distance et rapport. Lancez votre plan.",
     ar: "التحضير لـ OSCP+ في المغرب: المتطلبات ومحتوى PEN-200 وخطة من 12 أسبوعا وActive Directory والامتحان عن بعد والتقرير. ابدأ خطة تحضيرك الآن بثقة وتنظيم.",
-    en: "OSCP+ preparation in Morocco: prerequisites, PEN-200 content, a 12-week plan, Active Directory, remote exam logistics and the report. Start your plan today.",
+    en: "OSCP+ preparation in Morocco: prerequisites, PEN-200 content, a 12-week plan, Active Directory, the remote exam and the report. Start your plan today.",
   },
   excerpt: {
     fr: "L'OSCP+ ne se prépare pas en un week-end, mais il se prépare très bien depuis le Maroc. Voici un plan réaliste de 12 semaines, des prérequis jusqu'au rapport final, avec les points logistiques à anticiper pour l'examen à distance.",

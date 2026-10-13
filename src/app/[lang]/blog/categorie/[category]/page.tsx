@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { BlogListing } from "@/components/BlogListing";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, CtaBanner, PageHero, SectionHeading } from "@/components/ui";
-import { blogCategories, categoryLabels, postsInCategory } from "@/data/blog";
+import { blogCategories, categoryLabels, categoryPages, postsInCategory } from "@/data/blog";
 import type { BlogCategory } from "@/data/types";
 import { fmt, getDictionary } from "@/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
@@ -11,6 +11,9 @@ import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { absoluteUrl, localePath, pageMetadata, routes } from "@/lib/seo";
 
 const isCategory = (c: string): c is BlogCategory => (blogCategories as string[]).includes(c);
+
+/** Only the slugs generated at build time exist; anything else is a 404. */
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return locales.flatMap((lang) => blogCategories.map((category) => ({ lang, category })));
@@ -63,7 +66,7 @@ export default async function BlogCategoryPage({ params }: PageProps<"/[lang]/bl
       <PageHero>
         <Breadcrumbs items={crumbs} />
         <div className="mt-8">
-          <SectionHeading as="h1" eyebrow={fmt(dict.blog.count, { n: items.length })} title={label} subtitle={description} />
+          <SectionHeading as="h1" eyebrow={fmt(dict.blog.count, { n: items.length })} title={categoryPages[category].heading[lang]} subtitle={categoryPages[category].intro[lang]} />
         </div>
       </PageHero>
       <BlogListing posts={items} locale={lang} dict={dict} active={category} />

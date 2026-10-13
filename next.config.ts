@@ -10,14 +10,38 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  {
+    // Next.js injects inline scripts/styles, hence 'unsafe-inline'. Vercel Analytics/Speed Insights
+    // load from /_vercel on the same origin.
+    key: "Content-Security-Policy",
+    value: [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline'",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: blob:",
+      "font-src 'self'",
+      "connect-src 'self'",
+      "frame-ancestors 'self'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "object-src 'none'",
+    ].join("; "),
+  },
 ];
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Cache Components is deliberately OFF: with it, Next keeps previously visited pages in the DOM
+  // (hidden <Activity>), so DOM-based SEO tools count several <h1> per page. Every page is still
+  // prerendered as static HTML through generateStaticParams.
   poweredByHeader: false,
   trailingSlash: false,
-  images: { formats: ["image/avif", "image/webp"] },
+  images: {
+    formats: ["image/avif", "image/webp"],
+    // Source photos are at most 1600 px wide: never generate 2048/3840 px variants.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1600],
+    // 75 = default; 60 for large blog photos (visually identical, ~35% lighter).
+    qualities: [60, 75],
+  },
   async headers() {
     return [
       {

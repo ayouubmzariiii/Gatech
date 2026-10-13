@@ -15,6 +15,9 @@ import { breadcrumbSchema, courseSchema, faqSchema, graph, webPageSchema } from 
 import { absoluteUrl, formatPrice, localePath, pageMetadata, routes } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
 
+/** Only the slugs generated at build time exist; anything else is a 404. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((lang) => certifications.map((c) => ({ lang, slug: c.slug })));
 }
@@ -61,7 +64,7 @@ export default async function CertificationPage({ params }: PageProps<"/[lang]/c
     { name: dict.nav.certifications, href: localePath(locale, routes.certifications) },
     { name: cert.shortName, href: localePath(locale, routes.certification(cert.slug)) },
   ];
-  const contactHref = `${localePath(locale, routes.contact)}?certification=${cert.slug}`;
+  const contactHref = `${localePath(locale, routes.contact)}#cert=${cert.slug}`;
   const waHref = whatsappLink(fmt(t.whatsappMessage, { name: cert.shortName }));
 
   const facts = [

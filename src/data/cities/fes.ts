@@ -19,9 +19,9 @@ const city: City = {
     en: "Cybersecurity Training in Fez: CEH, Security+, OSCP+",
   },
   seoDescription: {
-    fr: "Formations Security+, CEH, PenTest+ et OSCP+ depuis Fès : sessions live en ligne, intra pour les entreprises, voucher inclus. Lancez votre carrière cyber.",
+    fr: "Formations Security+, CEH, PenTest+ et OSCP+ depuis Fès : sessions live en ligne, intra en entreprise, voucher inclus. Lancez votre carrière cyber.",
     ar: "تكوينات Security+ وCEH وPenTest+ وOSCP+ من فاس: دورات مباشرة عن بعد وتكوين داخلي للشركات، مع قسيمة الامتحان. انطلق في مسارك المهني في الأمن السيبراني.",
-    en: "Security+, CEH, PenTest+ and OSCP+ training from Fez: live online sessions, in-house courses for companies, exam voucher included. Start your cyber career now.",
+    en: "Security+, CEH, PenTest+ and OSCP+ training from Fez: live online sessions, in-house courses for companies, voucher included. Start your cyber career.",
   },
   heading: {
     fr: "Formations et certifications en cybersécurité à Fès",

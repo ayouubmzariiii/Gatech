@@ -3,6 +3,8 @@ import { posts } from "@/data/blog";
 import { absoluteUrl, formatPrice, localePath, routes } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 /**
  * /llms.txt — a plain-markdown map of the site for AI assistants and answer engines
  * (https://llmstxt.org). Generated from the same data as the pages.

@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "Best Cybersecurity Training Centers Morocco 2026: Guide",
   },
   seoDescription: {
-    fr: "CEH, Security+, CISSP, Cisco : critères pour choisir un centre de formation cybersécurité au Maroc en 2026 et les prix en MAD. Comparez avant de vous inscrire.",
-    ar: "CEH وSecurity+ وCISSP وCisco: معايير اختيار أفضل مركز تكوين في الأمن السيبراني بالمغرب سنة 2026 والأسعار بالدرهم والأسئلة الواجب طرحها. قارن قبل أن تسجّل.",
-    en: "CEH, Security+, CISSP, Cisco: the criteria to pick the best cybersecurity training center in Morocco in 2026, with MAD prices. Compare before you enrol.",
+    fr: "Choisir un centre de formation cybersécurité au Maroc en 2026 : critères, prix en MAD (CEH, Security+, CISSP, Cisco). Comparez avant l'inscription.",
+    ar: "CEH وSecurity+ وCISSP وCisco: معايير اختيار أفضل مركز تكوين في الأمن السيبراني بالمغرب سنة 2026 والأسعار بالدرهم. قارن قبل أن تسجّل.",
+    en: "CEH, Security+, CISSP, Cisco: how to pick the best cybersecurity training center in Morocco in 2026, with MAD prices. Compare before you enrol.",
   },
   excerpt: {
     fr: "Le meilleur centre de formation cybersécurité au Maroc en 2026 n'est pas celui qui se proclame n°1, mais celui dont l'agrément éditeur se vérifie, qui inclut le voucher d'examen officiel, fait pratiquer en labs et affiche ses prix en dirhams. Voici les critères, les certifications (CEH, Security+, CISSP, Cisco) et les questions à poser avant de vous inscrire.",

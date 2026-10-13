@@ -42,7 +42,7 @@ const cert: Certification = {
   seoDescription: {
     fr: "Devenez analyste SOC avec la formation CySA+ CS0-003 à Casablanca, Rabat ou en ligne : 5 jours, voucher inclus, dès 12 900 MAD. Réservez votre place.",
     ar: "كن محلل SOC مع تكوين CySA+ CS0-003 في الدار البيضاء أو الرباط أو عن بعد: 5 أيام مع قسيمة الامتحان، ابتداء من 12900 درهم. احجز مقعدك في الدورة القادمة.",
-    en: "Become a SOC analyst with CySA+ CS0-003 training in Casablanca, Rabat or live online: 5 days, exam voucher included, from 12,900 MAD. Book your seat now.",
+    en: "Become a SOC analyst with CySA+ CS0-003 training in Casablanca, Rabat or online: 5 days, exam voucher included, from 12,900 MAD. Book your seat.",
   },
   tagline: {
     fr: "Détecter, analyser et répondre aux menaces : la certification des analystes SOC et des équipes de défense.",

@@ -41,9 +41,9 @@ const cert: Certification = {
     en: "CISSP Training Morocco: Full Prep Course + Exam Voucher",
   },
   seoDescription: {
-    fr: "Préparez le CISSP au Maroc : 5 jours sur les 8 domaines ISC2, voucher d'examen inclus, à Casablanca, Rabat ou en ligne. Demandez votre devis dès maintenant.",
+    fr: "Préparez le CISSP au Maroc : 5 jours sur les 8 domaines ISC2, voucher d'examen inclus, à Casablanca, Rabat ou en ligne. Demandez votre devis.",
     ar: "استعد لشهادة CISSP في المغرب: تكوين لمدة 5 أيام يغطي المجالات 8 لـ ISC2 مع قسيمة الامتحان، في الدار البيضاء أو الرباط أو عن بُعد. اطلب عرض السعر الآن.",
-    en: "Prepare for CISSP in Morocco: 5-day course on all 8 ISC2 domains, exam voucher included, in Casablanca, Rabat or live online. Request your quote today.",
+    en: "Prepare for CISSP in Morocco: 5 days on all 8 ISC2 domains, exam voucher included, in Casablanca, Rabat or live online. Request your quote today.",
   },
   tagline: {
     fr: "La référence mondiale des responsables sécurité, préparée en 5 jours intensifs avec voucher d'examen inclus.",

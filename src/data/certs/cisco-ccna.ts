@@ -40,9 +40,9 @@ const cert: Certification = {
     en: "Cisco CCNA Training in Morocco – 200-301 Exam",
   },
   seoDescription: {
-    fr: "Formation CCNA 200-301 à Casablanca, Rabat ou en ligne : 5 jours de labs, voucher Cisco inclus, dès 10 900 MAD. Demandez le programme et les prochaines dates.",
-    ar: "تكوين CCNA 200-301 في الدار البيضاء أو الرباط أو عن بعد: 5 أيام من المختبرات مع قسيمة امتحان Cisco، ابتداء من 10900 درهم. اطلب البرنامج والمواعيد الآن.",
-    en: "CCNA 200-301 training in Casablanca, Rabat or live online: 5 lab-heavy days, Cisco exam voucher included, from 10,900 MAD. Request the syllabus and dates today.",
+    fr: "Formation CCNA 200-301 à Casablanca, Rabat ou en ligne : 5 jours de labs, voucher Cisco inclus, dès 10 900 MAD. Demandez le programme et les dates.",
+    ar: "تكوين CCNA 200-301 بالدار البيضاء أو الرباط أو عن بعد: 5 أيام من المختبرات مع قسيمة امتحان Cisco، ابتداء من 10900 درهم. اطلب البرنامج والمواعيد الآن.",
+    en: "CCNA 200-301 training in Casablanca, Rabat or online: 5 lab-heavy days, Cisco exam voucher included, from 10,900 MAD. Request the syllabus and dates.",
   },
   tagline: {
     fr: "Le socle réseau que recherchent les employeurs au Maroc, et la meilleure fondation pour une carrière en cybersécurité.",

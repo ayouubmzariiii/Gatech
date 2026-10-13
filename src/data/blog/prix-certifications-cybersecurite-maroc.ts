@@ -33,7 +33,7 @@ const guide: Guide = {
   seoDescription: {
     fr: "Security+, CEH, CISSP, OSCP+… Les prix 2026 en dirhams, ce qu'ils incluent et les frais cachés à anticiper. Comparez et demandez votre devis détaillé.",
     ar: "Security+ وCEH وCISSP وOSCP+: أسعار 2026 بالدرهم، وما تشمله، والتكاليف الخفية التي يجب توقعها. قارن العروض واطلب عرض سعر مفصلاً يناسب احتياجاتك الآن.",
-    en: "Security+, CEH, CISSP, OSCP+: 2026 prices in dirhams, what they include and the hidden costs to plan for. Compare options and request a detailed quote.",
+    en: "Security+, CEH, CISSP, OSCP+: 2026 prices in dirhams, what they include and hidden costs to plan for. Compare options and request a detailed quote.",
   },
   excerpt: {
     fr: "Combien coûte une certification en cybersécurité au Maroc ? Voici les prix 2026 en dirhams des 12 certifications les plus demandées, ce qu'ils couvrent et les coûts annexes à prévoir.",

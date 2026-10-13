@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "CISSP vs CISM: Which Is Right for a CISO?",
   },
   seoDescription: {
-    fr: "CISSP ou CISM ? Contenu, expérience exigée, format d'examen, maintenance et rôles visés au Maroc (RSSI, DSI, auditeur). Comparez et choisissez la vôtre.",
+    fr: "CISSP ou CISM ? Contenu, expérience exigée, format d'examen, maintenance et rôles visés au Maroc (RSSI, DSI, auditeur). Comparez et choisissez.",
     ar: "CISSP أم CISM؟ قارن المحتوى والخبرة المطلوبة وصيغة الامتحان والتجديد والمناصب المستهدفة في المغرب (RSSI، مدير النظم، مدقق). اختر شهادتك الآن.",
-    en: "CISSP or CISM? Compare content, required experience, exam format, renewal and target roles in Morocco (CISO, CIO, auditor). Find the right one for you.",
+    en: "CISSP or CISM? Compare content, required experience, exam format, renewal and target roles in Morocco (CISO, CIO, auditor). Find the right fit.",
   },
   excerpt: {
     fr: "CISSP et CISM visent tous deux les responsables sécurité, mais pas de la même façon. Ce comparatif vous aide à choisir selon votre rôle, votre expérience et les attentes du marché marocain.",

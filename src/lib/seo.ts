@@ -78,7 +78,7 @@ export function pageMetadata({
   const url = absoluteUrl(localePath(locale, path));
   // Keep titles within ~60 characters: drop the brand suffix when it would overflow.
   const suffix = ` | ${site.name}`;
-  if (title.length + suffix.length > 60) absoluteTitle = true;
+  if (title.length + suffix.length > 54) absoluteTitle = true;
   const fullTitle = absoluteTitle ? title : `${title}${suffix}`;
   return {
     title: absoluteTitle ? { absolute: title } : title,

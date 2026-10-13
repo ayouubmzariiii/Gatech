@@ -14,6 +14,9 @@ import { isLocale, locales, type Locale } from "@/lib/i18n";
 import { articleSchema, breadcrumbSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { absoluteUrl, localePath, pageMetadata, routes } from "@/lib/seo";
 
+/** Only the slugs generated at build time exist; anything else is a 404. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((lang) => posts.map((p) => ({ lang, slug: p.slug })));
 }
@@ -118,10 +121,12 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
           <Image
             src={post.cover.src}
             alt={post.cover.alt[locale]}
-            fill
+            width={post.cover.width}
+            height={post.cover.height}
             priority
+            quality={60}
             sizes="(min-width: 1024px) 1024px, 100vw"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
         <figcaption className="mx-auto mt-2 max-w-5xl text-end text-xs text-muted">

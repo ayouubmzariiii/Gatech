@@ -24,9 +24,9 @@ const guide: Guide = {
     en: "Morocco Law 05-20 on Cybersecurity: Obligations Guide",
   },
   seoDescription: {
-    fr: "Loi 05-20, décret d'application, DNSSI, rôle de la DGSSI et du maCERT : obligations des entités concernées et compétences utiles. Lisez notre guide complet.",
-    ar: "القانون 05-20 ومرسومه التطبيقي والتوجيه الوطني DNSSI ودور DGSSI وmaCERT: التزامات الهيئات المعنية والكفاءات اللازمة للامتثال. اطلع على دليلنا الكامل الآن.",
-    en: "Law 05-20, its implementing decree, the DNSSI, the role of DGSSI and maCERT: what affected entities must do and which skills help. Read our complete guide now.",
+    fr: "Loi 05-20, décret d'application, DNSSI, rôle de la DGSSI et du maCERT : obligations des entités concernées et compétences utiles. Lisez notre guide.",
+    ar: "القانون 05-20 ومرسومه التطبيقي والتوجيه الوطني DNSSI ودور DGSSI وmaCERT: التزامات الهيئات المعنية والكفاءات اللازمة للامتثال. اطلع على دليلنا الكامل.",
+    en: "Law 05-20, its implementing decree, the DNSSI, the role of DGSSI and maCERT: what affected entities must do and which skills help. Read our guide.",
   },
   excerpt: {
     fr: "Promulguée en 2020, la loi 05-20 fixe le cadre de la cybersécurité au Maroc pour les administrations, les établissements publics, les infrastructures d'importance vitale et certains opérateurs. Ce guide résume qui est concerné, ce qui est attendu et quelles compétences mobiliser pour s'y conformer.",

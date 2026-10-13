@@ -19,9 +19,9 @@ const city: City = {
     en: "Cybersecurity Training in Marrakech: Security+, CEH",
   },
   seoDescription: {
-    fr: "Formations Security+, CEH, ISO 27001 et CND pour Marrakech : sessions live en ligne et formation intra dans vos locaux. Voucher inclus. Contactez-nous.",
+    fr: "Formations Security+, CEH, ISO 27001 et CND pour Marrakech : sessions live en ligne et intra dans vos locaux. Voucher inclus. Contactez-nous.",
     ar: "تكوينات Security+ وCEH وISO 27001 وCND لمراكش: دورات مباشرة عن بعد وتكوين داخلي في مقر شركتك، مع قسيمة الامتحان الرسمي. تواصل معنا الآن لحجز مقعدك.",
-    en: "Security+, CEH, ISO 27001 and CND training for Marrakech: live online sessions and in-house training at your premises. Exam voucher included. Contact us.",
+    en: "Security+, CEH, ISO 27001 and CND training for Marrakech: live online sessions and in-house training on your premises. Voucher included. Contact us.",
   },
   heading: {
     fr: "Formations et certifications en cybersécurité à Marrakech",

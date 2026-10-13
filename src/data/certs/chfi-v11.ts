@@ -42,7 +42,7 @@ const cert: Certification = {
   seoDescription: {
     fr: "Formation CHFI v11 au Maroc : 5 jours d'investigation numérique (Windows, réseau, cloud, mobile) avec voucher 312-49 inclus. Réservez votre place.",
     ar: "تكوين CHFI v11 في المغرب: 5 أيام في التحقيق الجنائي الرقمي (Windows، الشبكات، السحابة، الهواتف) مع قسيمة امتحان 312-49. احجز مقعدك في الدورة القادمة.",
-    en: "CHFI v11 training in Morocco: 5 days of hands-on digital forensics (Windows, network, cloud, mobile) with the 312-49 exam voucher included. Book your seat.",
+    en: "CHFI v11 training in Morocco: 5 days of hands-on digital forensics (Windows, network, cloud, mobile), 312-49 exam voucher included. Book your seat.",
   },
   tagline: {
     fr: "Collecter, analyser et présenter la preuve numérique selon une méthode défendable, de l'incident jusqu'au rapport.",

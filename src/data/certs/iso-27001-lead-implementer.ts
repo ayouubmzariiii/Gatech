@@ -41,9 +41,9 @@ const cert: Certification = {
     en: "ISO 27001 Lead Implementer Training Morocco | PECB",
   },
   seoDescription: {
-    fr: "Devenez ISO 27001 Lead Implementer au Maroc : 5 jours sur la norme 2022, examen PECB inclus, à Casablanca, Rabat ou en ligne. Demandez le programme et un devis.",
-    ar: "احصل على ISO 27001 Lead Implementer في المغرب: 5 أيام حول نسخة 2022 مع امتحان PECB، في الدار البيضاء أو الرباط أو عن بُعد. اطلب البرنامج وعرض السعر الآن.",
-    en: "Become an ISO 27001 Lead Implementer in Morocco: 5 days on the 2022 standard, PECB exam included, in Casablanca, Rabat or online. Get the syllabus and a quote.",
+    fr: "Devenez ISO 27001 Lead Implementer au Maroc : 5 jours sur la norme 2022, examen PECB inclus, à Casablanca, Rabat ou en ligne. Demandez un devis.",
+    ar: "احصل على ISO 27001 Lead Implementer في المغرب: 5 أيام حول نسخة 2022 مع امتحان PECB، بالدار البيضاء أو الرباط أو عن بعد. اطلب البرنامج وعرض السعر.",
+    en: "Become an ISO 27001 Lead Implementer in Morocco: 5 days on the 2022 standard, PECB exam included, in Casablanca, Rabat or online. Request a quote.",
   },
   tagline: {
     fr: "Concevez, déployez et préparez à la certification un SMSI conforme à l'ISO/IEC 27001:2022.",

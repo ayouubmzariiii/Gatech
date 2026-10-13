@@ -9,6 +9,9 @@ import { isLocale, locales } from "@/lib/i18n";
 import { breadcrumbSchema, cityServiceSchema, faqSchema, graph, webPageSchema } from "@/lib/schema";
 import { localePath, pageMetadata, routes } from "@/lib/seo";
 
+/** Only the slugs generated at build time exist; anything else is a 404. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((lang) => cities.map((c) => ({ lang, city: c.slug })));
 }

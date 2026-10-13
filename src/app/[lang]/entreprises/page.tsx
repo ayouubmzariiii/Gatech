@@ -53,7 +53,7 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
         <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <SectionHeading as="h1" eyebrow={dict.business.eyebrow} title={dict.meta.businessTitle} subtitle={dict.business.text} />
-            <Link href={`${localePath(lang, routes.contact)}?format=intra`} className={`${btnPrimary} mt-8`}>
+            <Link href={`${localePath(lang, routes.contact)}#format=intra`} className={`${btnPrimary} mt-8`}>
               {dict.business.cta}
             </Link>
           </div>

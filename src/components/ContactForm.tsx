@@ -1,7 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-import { useActionState } from "react";
+import { useActionState, useSyncExternalStore } from "react";
 import { submitContact, type ContactState } from "@/app/actions";
 import type { Dictionary } from "@/dictionaries";
 import { CheckIcon } from "./icons";
@@ -152,13 +151,19 @@ export function ContactForm({ locale, labels, certifications, defaults = {} }: P
   );
 }
 
-/** Pre-fills the form from `?certification=` and `?format=` links. */
-export function ContactFormFromQuery(props: Omit<Props, "defaults">) {
-  const params = useSearchParams();
-  return (
-    <ContactForm
-      {...props}
-      defaults={{ certification: params.get("certification") ?? undefined, format: params.get("format") ?? undefined }}
-    />
-  );
+const subscribeHash = (onChange: () => void) => {
+  window.addEventListener("hashchange", onChange);
+  return () => window.removeEventListener("hashchange", onChange);
+};
+
+/**
+ * Pre-fills the form from links like `/contact#cert=ceh-v13&format=intra`.
+ * A URL fragment (not a query string) keeps a single crawlable /contact URL.
+ */
+export function ContactFormFromHash(props: Omit<Props, "defaults">) {
+  const hash = useSyncExternalStore(subscribeHash, () => window.location.hash, () => "");
+  const params = new URLSearchParams(hash.slice(1));
+  const defaults = { certification: params.get("cert") ?? undefined, format: params.get("format") ?? undefined };
+  // Remount when the fragment changes so the uncontrolled fields pick up the new defaults.
+  return <ContactForm key={hash} {...props} defaults={defaults} />;
 }

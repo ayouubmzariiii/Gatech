@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "CEH v13 Exam: How to Pass on Your First Attempt",
   },
   seoDescription: {
-    fr: "Examen CEH v13 (312-50) : format, 20 modules, plan de révision sur 4 à 6 semaines et conseils pour le jour J. Suivez la méthode et réussissez du premier coup.",
+    fr: "Examen CEH v13 (312-50) : format, 20 modules, plan de révision sur 4 à 6 semaines et conseils pour le jour J. Réussissez du premier coup.",
     ar: "امتحان CEH v13 (312-50): الشكل، الوحدات الـ20، خطة مراجعة من 4 إلى 6 أسابيع ونصائح ليوم الامتحان. اتبع منهجيتنا وانجح من المحاولة الأولى بكل ثقة.",
-    en: "CEH v13 exam (312-50): format, the 20 modules, a 4–6 week study plan and exam-day tips. Follow our method and pass on your first attempt. Start preparing today.",
+    en: "CEH v13 exam (312-50): format, the 20 modules, a 4–6 week study plan and exam-day tips. Follow our method and pass on your first attempt.",
   },
   excerpt: {
     fr: "125 questions, 4 heures et un seuil de réussite qui dépend de la forme de l'examen : le CEH v13 se réussit avec une méthode, pas avec du bachotage. Voici le format, un plan de révision réaliste et les erreurs à éviter.",

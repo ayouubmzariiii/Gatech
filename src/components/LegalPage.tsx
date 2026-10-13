@@ -16,16 +16,18 @@ export function LegalPage({
   path: string;
   sections: { h: string; p: string }[];
 }) {
+  // The SEO title is "Name – context"; the visible heading and breadcrumb use the short name.
+  const heading = title.split(" – ")[0];
   return (
     <>
       <PageHero>
         <Breadcrumbs
           items={[
             { name: dict.breadcrumbs.home, href: localePath(locale, routes.home) },
-            { name: title, href: localePath(locale, path) },
+            { name: heading, href: localePath(locale, path) },
           ]}
         />
-        <h1 className="mt-8 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h1>
+        <h1 className="mt-8 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{heading}</h1>
       </PageHero>
       <article className="container-page py-14">
         <div className="prose-body max-w-3xl">

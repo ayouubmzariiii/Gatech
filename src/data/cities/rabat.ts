@@ -19,9 +19,9 @@ const city: City = {
     en: "Cybersecurity Training in Rabat: ISO 27001, CISSP",
   },
   seoDescription: {
-    fr: "Formations ISO 27001, CISSP, CND et Security+ à Rabat, en salle ou en ligne, pour administrations et entreprises. Voucher inclus. Demandez votre devis.",
+    fr: "Formations ISO 27001, CISSP, CND et Security+ à Rabat, en salle ou en ligne, pour administrations et entreprises. Voucher inclus. Demandez un devis.",
     ar: "تكوينات ISO 27001 وCISSP وCND وSecurity+ بالرباط حضوريا أو عن بعد، للإدارات والمقاولات، مع قسيمة الامتحان الرسمي. اطلب عرض السعر الخاص بك اليوم.",
-    en: "ISO 27001, CISSP, CND and Security+ training in Rabat, in class or online, for public bodies and companies. Exam voucher included. Request your quote today.",
+    en: "ISO 27001, CISSP, CND and Security+ training in Rabat, in class or online, for public bodies and companies. Exam voucher included. Request a quote.",
   },
   heading: {
     fr: "Formations et certifications en cybersécurité à Rabat",

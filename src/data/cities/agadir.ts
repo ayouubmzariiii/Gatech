@@ -19,9 +19,9 @@ const city: City = {
     en: "Cybersecurity Training in Agadir: ISO 27001, Security+",
   },
   seoDescription: {
-    fr: "Formations Security+, ISO 27001, CND et CHFI pour Agadir et le Souss-Massa : sessions live en ligne et intra en entreprise. Voucher inclus. Contactez-nous.",
+    fr: "Formations Security+, ISO 27001, CND et CHFI pour Agadir et le Souss-Massa : sessions live en ligne et en intra. Voucher inclus. Contactez-nous.",
     ar: "تكوينات Security+ وISO 27001 وCND وCHFI لأكادير وجهة سوس-ماسة: دورات مباشرة عن بعد وتكوين داخلي بالمقاولات، مع قسيمة الامتحان الرسمي. تواصل معنا.",
-    en: "Security+, ISO 27001, CND and CHFI training for Agadir and Souss-Massa: live online sessions and in-house courses for companies. Voucher included. Contact us.",
+    en: "Security+, ISO 27001, CND and CHFI training for Agadir and Souss-Massa: live online sessions and in-house courses. Voucher included. Contact us.",
   },
   heading: {
     fr: "Formations et certifications en cybersécurité à Agadir",

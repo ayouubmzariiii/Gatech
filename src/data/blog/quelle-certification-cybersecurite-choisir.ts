@@ -25,9 +25,9 @@ const guide: Guide = {
     en: "Which Cybersecurity Certification to Choose in Morocco?",
   },
   seoDescription: {
-    fr: "Security+, CEH, CySA+, OSCP+, CISSP ou ISO 27001 : quelle certification cybersécurité choisir au Maroc selon votre profil ? Comparez et demandez conseil.",
-    ar: "Security+ أو CEH أو CySA+ أو OSCP+ أو CISSP أو ISO 27001: أي شهادة في الأمن السيبراني تناسب مسارك المهني في المغرب؟ قارن بين الخيارات واطلب استشارة الآن.",
-    en: "Security+, CEH, CySA+, OSCP+, CISSP or ISO 27001: which cybersecurity certification fits your profile in Morocco? Compare the options and ask for advice.",
+    fr: "Security+, CEH, CySA+, OSCP+, CISSP ou ISO 27001 : quelle certification cybersécurité choisir au Maroc selon votre profil ? Demandez conseil.",
+    ar: "Security+ أو CEH أو CySA+ أو OSCP+ أو CISSP أو ISO 27001: أي شهادة في الأمن السيبراني تناسب مسارك في المغرب؟ قارن الخيارات واطلب استشارة الآن.",
+    en: "Security+, CEH, CySA+, OSCP+, CISSP or ISO 27001: which cybersecurity certification fits your profile in Morocco? Compare and ask for advice.",
   },
   excerpt: {
     fr: "Étudiant, technicien, analyste SOC, pentester, RSSI ou auditeur : ce guide vous indique quelle certification cybersécurité viser au Maroc, dans quel ordre, et comment les recruteurs locaux la perçoivent.",

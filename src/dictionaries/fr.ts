@@ -5,23 +5,23 @@ const fr = {
       "Centre de formation cybersécurité au Maroc en 2026 : CEH v13, CompTIA Security+, CISSP, OSCP+, voucher d'examen inclus. Casablanca, Rabat ou en ligne.",
     catalogTitle: "Certifications cybersécurité au Maroc : prix en MAD",
     catalogDescription:
-      "Comparez 12 certifications cybersécurité : CEH v13, Security+, CISSP, OSCP+, Cisco CCNA, CCNA Cybersecurity, ISO 27001… Durée, examen et prix en dirhams.",
+      "Comparez 12 certifications cybersécurité au Maroc : CEH v13, Security+, CISSP, OSCP+, Cisco CCNA, ISO 27001… Durée, examen et prix en dirhams.",
     businessTitle: "Formation cybersécurité pour entreprises au Maroc",
     businessDescription:
-      "Formez vos équipes IT et sécurité au Maroc : sessions intra-entreprise sur site ou à distance, CEH, ISO 27001, CISSP. Conformité loi 05-20. Demandez un devis.",
+      "Formez vos équipes IT et sécurité au Maroc : sessions intra sur site ou à distance, CEH, ISO 27001, CISSP. Conformité loi 05-20. Demandez un devis.",
     citiesTitle: "Formations cybersécurité dans les villes du Maroc",
     citiesDescription:
-      "Formations certifiantes en cybersécurité à Casablanca, Rabat, Marrakech, Tanger, Fès et Agadir : présentiel, classe virtuelle ou intra. Voir les sessions.",
+      "Formations certifiantes en cybersécurité à Casablanca, Rabat, Marrakech, Tanger, Fès et Agadir : en salle, en ligne ou intra. Voir les sessions.",
     aboutTitle: "À propos : centre de formation en cybersécurité au Maroc",
     aboutDescription:
-      "GATech prépare les professionnels marocains aux certifications cybersécurité reconnues dans le monde entier. Notre méthode, nos formateurs et nos engagements.",
+      "GATech prépare les professionnels au Maroc aux certifications cybersécurité reconnues mondialement : notre méthode, nos formateurs et nos engagements.",
     contactTitle: "Contact et inscription : parlez à un conseiller",
     contactDescription:
       "Une question sur une certification, un devis entreprise ou une inscription ? Écrivez-nous ou contactez-nous sur WhatsApp. Réponse sous 24 h ouvrées.",
-    privacyTitle: "Politique de confidentialité",
+    privacyTitle: "Politique de confidentialité – GATech (loi 09-08)",
     privacyDescription:
       "Comment GATech collecte, utilise et protège vos données personnelles conformément à la loi marocaine 09-08 et aux recommandations de la CNDP.",
-    legalTitle: "Mentions légales",
+    legalTitle: "Mentions légales – GATech, formation cybersécurité",
     legalDescription:
       "Mentions légales du site gatech.world : éditeur, hébergement, propriété intellectuelle et marques des éditeurs de certifications.",
     blogTitle: "Blog cybersécurité Maroc : certifications et carrières",
@@ -29,7 +29,7 @@ const fr = {
       "Le blog cybersécurité de référence au Maroc : guides des certifications CEH, OSCP+, CISSP, prix en MAD, carrières, loi 05-20 et ISO 27001. À lire.",
     blogCategoryTitle: "{category} : articles cybersécurité Maroc",
     blogCategoryDescription:
-      "Tous nos articles « {category} » : conseils pour réussir votre certification et votre carrière en cybersécurité au Maroc. Lisez nos guides.",
+      "Articles « {category} » : conseils pour réussir votre certification et votre carrière en cybersécurité au Maroc. Lisez nos guides.",
     notFoundTitle: "Page introuvable",
   },
   nav: {

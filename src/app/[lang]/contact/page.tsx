@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
-import { ContactForm, ContactFormFromQuery } from "@/components/ContactForm";
+import { ContactFormFromHash } from "@/components/ContactForm";
 import { WhatsAppIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, FaqSection, PageHero, SectionHeading } from "@/components/ui";
@@ -58,9 +57,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
       </PageHero>
 
       <section className="container-page grid gap-10 py-14 lg:grid-cols-[1.6fr_1fr]">
-        <Suspense fallback={<ContactForm {...formProps} />}>
-          <ContactFormFromQuery {...formProps} />
-        </Suspense>
+        <ContactFormFromHash {...formProps} />
 
         <aside aria-labelledby="direct" className="card self-start bg-surface p-6">
           <h2 id="direct" className="font-display text-2xl font-bold text-ink uppercase">

@@ -40,9 +40,9 @@ const cert: Certification = {
     en: "CND v3 Training in Morocco – Network Defense & SOC",
   },
   seoDescription: {
-    fr: "Formation CND v3 à Casablanca, Rabat ou en ligne : 5 jours pour protéger, détecter et répondre aux attaques réseau. Voucher 312-38 inclus. Demandez un devis.",
+    fr: "Formation CND v3 à Casablanca, Rabat ou en ligne : 5 jours pour détecter et contrer les attaques réseau. Voucher 312-38 inclus. Demandez un devis.",
     ar: "تكوين CND v3 بالدار البيضاء أو الرباط أو عن بعد: 5 أيام لحماية الشبكات ورصد الهجمات والاستجابة لها، مع قسيمة امتحان 312-38. اطلب عرض السعر الآن.",
-    en: "CND v3 training in Casablanca, Rabat or online: 5 days to protect, detect and respond to network attacks, 312-38 exam voucher included. Request your quote now.",
+    en: "CND v3 training in Casablanca, Rabat or online: 5 days to protect, detect and respond to network attacks, 312-38 voucher included. Request a quote.",
   },
   tagline: {
     fr: "Protéger, détecter, répondre, anticiper : la certification qui fait d'un administrateur réseau un véritable défenseur.",

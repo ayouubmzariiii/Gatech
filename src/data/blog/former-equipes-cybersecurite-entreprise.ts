@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "Corporate Cybersecurity Training in Morocco: A Guide",
   },
   seoDescription: {
-    fr: "Formation cybersécurité en entreprise au Maroc : besoins par rôle, certifications, intra ou inter, budget, financement et plan annuel. Construisez votre plan.",
-    ar: "تكوين المقاولات في الأمن السيبراني بالمغرب: الحاجيات حسب كل دور، الشهادات، التكوين الداخلي أو المشترك، الميزانية والتمويل والمخطط السنوي. ابنِ مخططك الآن.",
-    en: "Corporate cybersecurity training in Morocco: needs by role, certifications, in-house or public sessions, budget, funding and a yearly plan. Build yours today.",
+    fr: "Former ses équipes en cybersécurité au Maroc : besoins par rôle, certifications, intra ou inter, budget, financement et plan annuel. Lisez le guide.",
+    ar: "تكوين المقاولات في الأمن السيبراني بالمغرب: الحاجيات حسب كل دور، الشهادات، التكوين الداخلي أو المشترك، الميزانية والتمويل والمخطط السنوي. ابنِ مخططك.",
+    en: "Corporate cybersecurity training in Morocco: needs by role, certifications, in-house vs public sessions, budget, funding, annual plan. Build yours.",
   },
   excerpt: {
     fr: "Incidents, facteur humain, loi 05-20, exigences des clients et des appels d'offres : former ses collaborateurs à la cybersécurité est devenu un enjeu de gestion. Voici comment identifier les besoins, choisir les certifications et bâtir un plan de formation annuel.",

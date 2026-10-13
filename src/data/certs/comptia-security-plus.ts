@@ -41,9 +41,9 @@ const cert: Certification = {
     en: "CompTIA Security+ Training in Morocco – SY0-701 Exam",
   },
   seoDescription: {
-    fr: "Formation Security+ SY0-701 à Casablanca, Rabat ou en ligne : 5 jours, voucher d'examen inclus, dès 10 900 MAD. Demandez le programme et les prochaines dates.",
+    fr: "Formation Security+ SY0-701 à Casablanca, Rabat ou en ligne : 5 jours, voucher d'examen inclus, dès 10 900 MAD. Demandez le programme et les dates.",
     ar: "تكوين Security+ SY0-701 في الدار البيضاء أو الرباط أو عن بعد: 5 أيام مع قسيمة الامتحان، ابتداء من 10900 درهم. اطلب البرنامج والمواعيد القادمة الآن.",
-    en: "Security+ SY0-701 training in Casablanca, Rabat or live online: 5 days, exam voucher included, from 10,900 MAD. Request the syllabus and upcoming dates today.",
+    en: "Security+ SY0-701 training in Casablanca, Rabat or live online: 5 days, exam voucher included, from 10,900 MAD. Request the syllabus and dates.",
   },
   tagline: {
     fr: "La certification de référence pour démarrer une carrière en cybersécurité, reconnue par les recruteurs au Maroc comme à l'international.",

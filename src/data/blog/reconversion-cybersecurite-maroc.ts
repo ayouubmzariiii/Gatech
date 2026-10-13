@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "Career Change to Cybersecurity in Morocco: Where to Start",
   },
   seoDescription: {
-    fr: "Reconversion en cybersécurité au Maroc : profils concernés, feuille de route sur 6 à 12 mois, première certification et premiers postes. Lancez votre projet.",
+    fr: "Reconversion en cybersécurité au Maroc : profils concernés, feuille de route sur 6 à 12 mois, première certification et premiers postes. Lancez-vous.",
     ar: "التحول المهني إلى الأمن السيبراني في المغرب: الملفات المعنية، خارطة طريق من 6 إلى 12 شهرا، أول شهادة وأولى الوظائف المتاحة. ابدأ مشروعك المهني اليوم.",
-    en: "Switching to cybersecurity in Morocco: who can do it, a 6 to 12-month roadmap, your first certification and first jobs. Start planning your career change today.",
+    en: "Switching to cybersecurity in Morocco: who can do it, a 6 to 12-month roadmap, your first certification and first jobs. Plan your career change today.",
   },
   excerpt: {
     fr: "Support informatique, administrateur système, développeur ou profil non technique motivé : la cybersécurité recrute des reconvertis. Voici une feuille de route réaliste pour passer le cap au Maroc en 6 à 12 mois.",

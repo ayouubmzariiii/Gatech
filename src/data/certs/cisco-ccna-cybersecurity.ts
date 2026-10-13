@@ -40,9 +40,9 @@ const cert: Certification = {
     en: "CCNA Cybersecurity Training in Morocco – 200-201 Exam",
   },
   seoDescription: {
-    fr: "Formation CCNA Cybersecurity au Maroc (200-201) : 5 jours à Casablanca, Rabat ou en ligne pour devenir analyste SOC, voucher inclus, dès 10 900 MAD. Réservez.",
-    ar: "تكوين CCNA Cybersecurity في المغرب (200-201): 5 أيام في الدار البيضاء أو الرباط أو عن بعد لتصبح محلل SOC، مع قسيمة الامتحان، ابتداء من 10900 درهم. سجل الآن.",
-    en: "CCNA Cybersecurity training in Morocco (200-201): 5 days in Casablanca, Rabat or online to become a SOC analyst, voucher included, from 10,900 MAD. Enrol now.",
+    fr: "Formation CCNA Cybersecurity (200-201) au Maroc : 5 jours à Casablanca, Rabat ou en ligne, voucher inclus, dès 10 900 MAD. Devenez analyste SOC.",
+    ar: "تكوين CCNA Cybersecurity (200-201) بالمغرب: 5 أيام بالدار البيضاء أو الرباط أو عن بعد لمحللي SOC، مع قسيمة الامتحان، ابتداء من 10900 درهم. سجل الآن.",
+    en: "CCNA Cybersecurity (200-201) training in Morocco: 5 days in Casablanca, Rabat or online for SOC roles, voucher included, from 10,900 MAD. Enrol now.",
   },
   tagline: {
     fr: "La voie Cisco vers les métiers d'analyste SOC : surveiller, détecter et analyser les incidents de sécurité.",

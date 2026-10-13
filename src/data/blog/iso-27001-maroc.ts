@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "ISO 27001 Certification in Morocco: Complete Guide",
   },
   seoDescription: {
-    fr: "ISO 27001 au Maroc : certifier son SMSI ou se certifier Lead Implementer, nouveautés de la version 2022, étapes clés et enjeux. Découvrez notre guide pratique.",
+    fr: "ISO 27001 au Maroc : certifier son SMSI ou devenir Lead Implementer, nouveautés de la version 2022, étapes clés et enjeux. Lisez notre guide pratique.",
     ar: "ISO 27001 في المغرب: إشهاد نظام إدارة أمن المعلومات أو الحصول على شهادة Lead Implementer، ومستجدات نسخة 2022 ومراحل التطبيق. اكتشف دليلنا العملي الآن.",
-    en: "ISO 27001 in Morocco: certifying your ISMS vs becoming a Lead Implementer, what changed in the 2022 edition, key steps and benefits. Read our practical guide.",
+    en: "ISO 27001 in Morocco: certifying your ISMS vs becoming a Lead Implementer, what changed in 2022, key steps and benefits. Read our practical guide.",
   },
   excerpt: {
     fr: "ISO 27001 désigne à la fois la certification d'un système de management de la sécurité de l'information et des certifications individuelles comme Lead Implementer. Ce guide clarifie la différence, résume la version 2022 et détaille les étapes pour une entreprise marocaine.",

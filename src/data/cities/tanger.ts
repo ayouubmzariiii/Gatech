@@ -19,9 +19,9 @@ const city: City = {
     en: "Cybersecurity Training in Tangier: CND, CySA+",
   },
   seoDescription: {
-    fr: "Formations CND, CySA+, ISO 27001 et CEH pour Tanger : sessions live en ligne et intra pour industriels et logisticiens. Voucher inclus. Demandez un devis.",
+    fr: "Formations CND, CySA+, ISO 27001 et CEH pour Tanger : classes virtuelles et intra pour industriels et logisticiens. Voucher inclus. Demandez un devis.",
     ar: "تكوينات CND وCySA+ وISO 27001 وCEH لطنجة: دورات مباشرة عن بعد وتكوين داخلي للصناعيين وشركات اللوجستيك، مع قسيمة الامتحان الرسمي. اطلب عرض سعر الآن.",
-    en: "CND, CySA+, ISO 27001 and CEH training for Tangier: live online sessions and in-house courses for industry and logistics firms. Voucher included. Get a quote.",
+    en: "CND, CySA+, ISO 27001 and CEH training for Tangier: online sessions and in-house courses for industry and logistics. Voucher included. Get a quote.",
   },
   heading: {
     fr: "Formations et certifications en cybersécurité à Tanger",

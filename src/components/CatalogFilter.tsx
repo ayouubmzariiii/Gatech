@@ -84,9 +84,9 @@ export function CatalogFilter({ items, vendors, levels, categories, labels }: Pr
         <Chips legend={labels.level} options={levels} value={filters.level} allLabel={labels.all} onChange={set("level")} />
         <Chips legend={labels.vendor} options={vendors} value={filters.vendor} allLabel={labels.all} onChange={set("vendor")} />
       </div>
-      <p className="mt-6 text-sm text-muted" aria-live="polite">
+      <h2 className="mt-6 text-sm font-semibold text-muted" aria-live="polite">
         {labels.results.replace("{count}", String(visible.length))}
-      </p>
+      </h2>
       {/* Every card stays in the DOM (hidden when filtered) so all links remain crawlable. */}
       <ul className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((i) => (

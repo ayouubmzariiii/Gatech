@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "SOC Analyst in Morocco: Duties, Skills, Certifications",
   },
   seoDescription: {
-    fr: "Analyste SOC au Maroc : rôles L1/L2/L3, missions, outils, compétences, certifications et où trouver un emploi SOC à Casablanca. Construisez votre parcours.",
-    ar: "محلل SOC في المغرب: أدوار L1 وL2 وL3 والمهام والأدوات والكفاءات والشهادات وأين تجد وظيفة SOC في الدار البيضاء. ابدأ اليوم في بناء مسارك المهني بخطوات واضحة.",
-    en: "SOC analyst in Morocco: L1/L2/L3 roles, daily tasks, tools, skills, certifications and where to find SOC jobs in Casablanca. Start building your career path.",
+    fr: "Analyste SOC au Maroc : rôles L1/L2/L3, missions, outils, compétences, certifications et où trouver un poste SOC à Casablanca. Lancez votre parcours.",
+    ar: "محلل SOC في المغرب: أدوار L1 وL2 وL3 والمهام والأدوات والكفاءات والشهادات وأين تجد وظيفة SOC في الدار البيضاء. ابدأ بناء مسارك المهني اليوم.",
+    en: "SOC analyst in Morocco: L1/L2/L3 roles, tasks, tools, skills, certifications and where to find SOC jobs in Casablanca. Start building your career.",
   },
   excerpt: {
     fr: "L'analyste SOC surveille, trie et traite les alertes de sécurité d'une organisation, souvent en équipe et en horaires décalés. Missions, niveaux L1 à L3, compétences, certifications et pistes concrètes pour décrocher un premier poste au Maroc.",

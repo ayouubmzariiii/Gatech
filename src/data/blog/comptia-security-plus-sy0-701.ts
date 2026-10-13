@@ -18,9 +18,9 @@ const guide: Guide = {
     en: "Security+ SY0-701 in Morocco: Syllabus, Exam, Preparation",
   },
   seoDescription: {
-    fr: "Certification Security+ SY0-701 : 5 domaines et leur poids, format d'examen, OnVUE ou centre Pearson VUE, plan de révision, débouchés au Maroc. Lisez le guide.",
-    ar: "شهادة Security+ SY0-701: المجالات الخمسة وأوزانها، شكل الامتحان، OnVUE أو مركز Pearson VUE، خطة المراجعة وفرص العمل في المغرب. اقرأ الدليل قبل أن تبدأ.",
-    en: "Security+ SY0-701 certification: 5 domains and weights, exam format, OnVUE or test centre, study plan and jobs in Morocco. Read this guide before you start.",
+    fr: "Security+ SY0-701 : 5 domaines et leur poids, format d'examen, OnVUE ou centre Pearson VUE, plan de révision, débouchés au Maroc. Lisez le guide.",
+    ar: "شهادة Security+ SY0-701: المجالات الخمسة وأوزانها، شكل الامتحان، OnVUE أو مركز Pearson VUE، خطة المراجعة وفرص العمل في المغرب. اقرأ الدليل الآن.",
+    en: "Security+ SY0-701 certification: 5 domains and weights, exam format, OnVUE or test centre, study plan and jobs in Morocco. Read the guide first.",
   },
   excerpt: {
     fr: "Security+ SY0-701 est la certification d'entrée en cybersécurité la plus répandue. Voici ses 5 domaines, le déroulement de l'examen, un plan de préparation et les postes qu'elle ouvre au Maroc.",

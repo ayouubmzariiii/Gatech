@@ -19,9 +19,9 @@ const city: City = {
     en: "Cybersecurity Training in Casablanca: CEH, CISSP",
   },
   seoDescription: {
-    fr: "Formations CEH, CISSP, CISM et CySA+ à Casablanca, en salle ou en ligne, voucher d'examen officiel inclus. Consultez les prochaines sessions et réservez.",
+    fr: "Formations CEH, CISSP, CISM et CySA+ à Casablanca, en salle ou en ligne, voucher d'examen officiel inclus. Consultez les sessions et réservez.",
     ar: "تكوينات CEH وCISSP وCISM وCySA+ بالدار البيضاء حضوريا أو عن بعد، مع قسيمة الامتحان الرسمي. اطلع على الدورات القادمة واحجز مقعدك الآن مع فريقنا.",
-    en: "CEH, CISSP, CISM and CySA+ training in Casablanca, in class or live online, with the official exam voucher included. See upcoming sessions and book your seat.",
+    en: "CEH, CISSP, CISM and CySA+ training in Casablanca, in class or live online, official exam voucher included. See upcoming sessions and book your seat.",
   },
   heading: {
     fr: "Formations et certifications en cybersécurité à Casablanca",

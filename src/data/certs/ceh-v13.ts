@@ -41,9 +41,9 @@ const cert: Certification = {
     en: "CEH v13 Training in Morocco – Course + Exam Voucher",
   },
   seoDescription: {
-    fr: "Formation CEH v13 (CEH AI) à Casablanca, Rabat ou en ligne : 5 jours, labs pratiques et voucher 312-50 inclus. Demandez votre devis et la prochaine session.",
+    fr: "Formation CEH v13 (CEH AI) à Casablanca, Rabat ou en ligne : 5 jours de labs pratiques, voucher 312-50 inclus. Demandez votre devis et les dates.",
     ar: "تكوين CEH v13 بالدار البيضاء أو الرباط أو عن بعد: 5 أيام من المختبرات التطبيقية مع قسيمة امتحان 312-50. اطلب عرض السعر وموعد الدورة القادمة الآن.",
-    en: "CEH v13 (CEH AI) training in Casablanca, Rabat or live online: 5 days of hands-on labs with the 312-50 exam voucher included. Request a quote and next dates.",
+    en: "CEH v13 (CEH AI) training in Casablanca, Rabat or online: 5 days of hands-on labs, 312-50 exam voucher included. Request a quote and next dates.",
   },
   tagline: {
     fr: "Pensez comme un attaquant, protégez comme un professionnel : la certification de référence du hacking éthique, désormais boostée à l'IA.",

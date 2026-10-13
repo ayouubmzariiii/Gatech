@@ -40,7 +40,7 @@ const cert: Certification = {
     en: "CISM Training Morocco: ISACA Exam Prep + Voucher",
   },
   seoDescription: {
-    fr: "Formation CISM au Maroc : 4 jours sur les 4 domaines ISACA, voucher d'examen inclus, à Casablanca, Rabat ou en ligne. Demandez votre devis personnalisé.",
+    fr: "Formation CISM au Maroc : 4 jours sur les 4 domaines ISACA, voucher d'examen inclus, à Casablanca, Rabat ou en ligne. Demandez votre devis.",
     ar: "تكوين CISM في المغرب: 4 أيام تغطي المجالات الأربعة لـ ISACA مع قسيمة الامتحان، في الدار البيضاء أو الرباط أو عن بُعد. اطلب عرض السعر المناسب لك الآن.",
     en: "CISM training in Morocco: 4 days on the 4 ISACA domains, exam voucher included, in Casablanca, Rabat or live online. Request your tailored quote now.",
   },

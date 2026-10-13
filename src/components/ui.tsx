@@ -192,6 +192,8 @@ export const formatDate = (iso: string, locale: Locale) =>
 
 export function PostCard({ post, locale, dict, featured = false }: { post: BlogPost; locale: Locale; dict: Dictionary; featured?: boolean }) {
   const href = localePath(locale, routes.post(post.slug));
+  // The featured post opens a listing: its title is the first sub-heading after the page <h1>.
+  const Heading = featured ? "h2" : "h3";
   return (
     <article
       className={`card group relative flex h-full overflow-hidden transition duration-200 hover:-translate-y-1 hover:border-ink hover:shadow-[0_18px_40px_-24px_rgb(17_19_24/0.45)] ${
@@ -202,10 +204,12 @@ export function PostCard({ post, locale, dict, featured = false }: { post: BlogP
         <Image
           src={post.cover.src}
           alt={post.cover.alt[locale]}
-          fill
+          width={post.cover.width}
+          height={post.cover.height}
           sizes={featured ? "(min-width: 1024px) 700px, 100vw" : "(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"}
-          className="object-cover transition duration-500 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
           priority={featured}
+          quality={60}
         />
         <span className="absolute start-4 top-4 bg-red px-2.5 py-1 text-[0.6875rem] font-bold tracking-wider text-white uppercase">
           {categoryLabels[post.category][locale]}
@@ -215,11 +219,11 @@ export function PostCard({ post, locale, dict, featured = false }: { post: BlogP
         <p className="text-xs font-semibold tracking-wider text-muted uppercase">
           <time dateTime={post.datePublished}>{formatDate(post.datePublished, locale)}</time> · {fmt(dict.blog.minutes, { n: post.readingMinutes })}
         </p>
-        <h3 className={`mt-3 font-display leading-tight font-bold text-ink group-hover:text-red ${featured ? "text-3xl sm:text-4xl" : "text-2xl"}`}>
+        <Heading className={`mt-3 font-display leading-tight font-bold text-ink group-hover:text-red ${featured ? "text-3xl sm:text-4xl" : "text-2xl"}`}>
           <Link href={href} className="after:absolute after:inset-0">
             {post.title[locale]}
           </Link>
-        </h3>
+        </Heading>
         <p className={`mt-3 leading-relaxed text-body ${featured ? "text-base" : "line-clamp-3 text-sm"}`}>{post.excerpt[locale]}</p>
         <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold tracking-wide text-ink uppercase group-hover:text-red">
           {dict.blog.readMore}
