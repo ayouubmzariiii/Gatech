@@ -27,6 +27,8 @@ export const autoLinkRules: AutoLinkRule[] = [
   post("preparer-oscp-maroc", { fr: ["pr[ée]par(?:er|ation)(?: de| à)? l'OSCP\\+?"], en: ["OSCP\\+? prep(?:aration)?", "prepar(?:e|ing) for (?:the )?OSCP\\+?"], ar: ["التحضير لـ? ?OSCP\\+?"] }),
   post("comptia-security-plus-sy0-701", { all: ["SY0-701"] }),
   post("ceh-v14", { all: ["CEH v14"] }),
+  post("voucher-certification-gratuit", { fr: ["vouchers? (?:d'examen )?gratuits?", "vouchers? à prix réduit"], en: ["free (?:exam )?vouchers?", "discounted vouchers?"], ar: ["قسائم? (?:امتحان )?مجانية"] }),
+  post("certifications-cybersecurite-gratuites", { fr: ["certifications? (?:cybersécurité )?gratuites?"], en: ["free (?:cybersecurity )?certifications?"], ar: ["شهادات? (?:الأمن السيبراني )?مجانية"] }),
   post("ccna-ou-security-plus", { fr: ["CCNA ou (?:la )?(?:CompTIA )?Security\\+"], en: ["CCNA (?:or|vs\\.?) (?:CompTIA )?Security\\+"], ar: ["CCNA أم (?:CompTIA )?Security\\+"] }),
   post("metiers-cybersecurite-maroc", { fr: ["métiers de la cybersécurité"], en: ["cybersecurity (?:jobs|careers)"], ar: ["مهن الأمن السيبراني"] }),
   post("formation-cybersecurite-en-ligne-maroc", { fr: ["formation en ligne", "classe virtuelle"], en: ["online training", "live online class(?:es)?"], ar: ["التكوين عن بعد"] }),

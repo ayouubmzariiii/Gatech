@@ -490,4 +490,48 @@ export const blogImages: Record<string, Entry> = {
       "WN1ZZaWY2fU",
     ),
   },
+  "voucher-certification-gratuit": {
+    cover: cover(
+      "voucher-certification-gratuit",
+      {
+        fr: "Étudiante concentrée rédigeant un examen à son bureau, vue à travers une fenêtre",
+        ar: "طالبة مركّزة تكتب إجابات امتحان على مكتبها، تُرى من خلال نافذة",
+        en: "Focused student writing an exam at her desk, seen through a window",
+      },
+      "Yanhao Fang",
+      "QR-XQbUVC1s",
+    ),
+    figure: figure(
+      "voucher-certification-gratuit",
+      {
+        fr: "Jeune femme vérifiant attentivement un message sur son smartphone sur un quai de gare",
+        ar: "شابة تتحقق بانتباه من رسالة على هاتفها الذكي في رصيف محطة قطار",
+        en: "Young woman carefully checking a message on her smartphone at a train platform",
+      },
+      "Daria Nepriakhina",
+      "_XR5rkprHQU",
+    ),
+  },
+  "certifications-cybersecurite-gratuites": {
+    cover: cover(
+      "certifications-cybersecurite-gratuites",
+      {
+        fr: "Mains tapant sur un clavier d'ordinateur portable à côté d'un carnet de notes manuscrites",
+        ar: "يدان تكتبان على لوحة مفاتيح حاسوب محمول بجانب دفتر ملاحظات مكتوبة بخط اليد",
+        en: "Hands typing on a laptop keyboard beside a notebook of handwritten notes",
+      },
+      "Daria Glakteeva",
+      "2w0IdiEI-hg",
+    ),
+    figure: figure(
+      "certifications-cybersecurite-gratuites",
+      {
+        fr: "Étudiants travaillant sur leurs ordinateurs dans une grande salle de bibliothèque universitaire",
+        ar: "طلاب يعملون على حواسيبهم في قاعة مكتبة جامعية كبيرة ذات رفوف خشبية",
+        en: "Students working on laptops in a large university library reading room",
+      },
+      "Zoshua Colah",
+      "Ma7aOy5mMp0",
+    ),
+  },
 };
