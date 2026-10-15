@@ -17,7 +17,8 @@ export function proxy(request: NextRequest) {
 
   if (first === defaultLocale) {
     const url = request.nextUrl.clone();
-    url.pathname = pathname.slice(defaultLocale.length + 1) || "/";
+    // Also drop any trailing slash here so /fr/x/ reaches /x in a single redirect.
+    url.pathname = pathname.slice(defaultLocale.length + 1).replace(/\/+$/, "") || "/";
     url.search = search;
     return NextResponse.redirect(url, 308);
   }
