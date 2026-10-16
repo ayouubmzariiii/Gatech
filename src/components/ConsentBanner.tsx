@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSyncExternalStore } from "react";
-import { CONSENT_KEY } from "./GoogleTag";
+import { CONSENT_KEY, consentUpdate } from "./GoogleTag";
 
 const EVENT = "gatech-consent-change";
 
@@ -28,7 +28,7 @@ function choose(value: "granted" | "denied") {
   try {
     localStorage.setItem(CONSENT_KEY, value);
   } catch {}
-  (window as unknown as { gtag?: Gtag }).gtag?.("consent", "update", { analytics_storage: value });
+  (window as unknown as { gtag?: Gtag }).gtag?.("consent", "update", consentUpdate(value));
   window.dispatchEvent(new Event(EVENT));
 }
 
@@ -85,7 +85,7 @@ export function ConsentManageLink({ label, className }: { label: string; classNa
         try {
           localStorage.removeItem(CONSENT_KEY);
         } catch {}
-        (window as unknown as { gtag?: Gtag }).gtag?.("consent", "update", { analytics_storage: "denied" });
+        (window as unknown as { gtag?: Gtag }).gtag?.("consent", "update", consentUpdate("denied"));
         window.dispatchEvent(new Event(EVENT));
       }}
     >

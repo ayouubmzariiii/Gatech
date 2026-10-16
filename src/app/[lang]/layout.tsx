@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ConsentBanner } from "@/components/ConsentBanner";
-import { GoogleTag } from "@/components/GoogleTag";
+import { GoogleTagHead, GoogleTagLoader } from "@/components/GoogleTag";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -69,6 +69,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
 
   return (
     <html lang={lang} dir={dir(lang)} className={`${inter.variable} ${display.variable} ${arabic.variable}`}>
+      <head>{isProduction && <GoogleTagHead />}</head>
       <body className="min-h-dvh">
         <JsonLd data={graph(organizationSchema(lang, dict.meta.homeDescription), websiteSchema(lang))} />
         <SiteHeader locale={lang} dict={dict} />
@@ -80,7 +81,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           <SpeedInsights />
         </Suspense>
         {/* Google Analytics 4 with Consent Mode v2 (production only) + cookie banner. */}
-        {isProduction && <GoogleTag />}
+        {isProduction && <GoogleTagLoader />}
         <ConsentBanner labels={dict.consent} privacyHref={localePath(lang, routes.privacy)} />
       </body>
     </html>
