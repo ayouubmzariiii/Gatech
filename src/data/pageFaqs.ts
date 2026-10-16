@@ -342,4 +342,140 @@ export const pageFaqs: Record<PageFaqKey, Localized<Faq[]>> = {
       },
     ],
   },
+  vouchers: {
+    fr: [
+      {
+        q: "Combien coûte un voucher d'examen au Maroc ?",
+        a: "Le prix dépend de l'éditeur, de l'examen et du taux de change : il vous est communiqué sur devis, en dirhams, après vérification de la disponibilité. Si vous suivez une de nos formations certifiantes, le voucher est déjà compris dans le prix."
+      },
+      {
+        q: "Combien de temps un voucher est-il valable ?",
+        a: "La plupart des vouchers sont valables environ 12 mois après leur émission, mais chaque éditeur fixe ses propres règles. La date limite est indiquée sur votre devis et sur le voucher : réservez votre examen avant cette date, car un voucher expiré n'est en général ni remboursé ni prolongé."
+      },
+      {
+        q: "Comment vais-je recevoir mon voucher ?",
+        a: "Après réception du paiement par virement bancaire ou par carte, le code du voucher vous est envoyé par e-mail, avec les instructions pour créer votre compte candidat et réserver votre examen auprès du centre de test ou de la plateforme de l'éditeur."
+      },
+      {
+        q: "Où passer l'examen : en centre ou en ligne ?",
+        a: "Cela dépend de la certification. Certains examens se passent dans un centre agréé, par exemple Pearson VUE, d'autres sont aussi proposés en surveillance en ligne depuis chez vous, et certains éditeurs utilisent leur propre plateforme. Nous vous indiquons les options disponibles pour votre examen avant l'achat."
+      },
+      {
+        q: "Proposez-vous des vouchers avec seconde tentative ou pour des groupes ?",
+        a: "Selon l'éditeur, des formules incluant une seconde tentative (retake) ou des packs examen + supports peuvent exister : nous vous les proposons lorsqu'elles sont disponibles. Pour les entreprises, nous regroupons plusieurs vouchers sur un seul devis et une seule facture."
+      }
+    ],
+    en: [
+      {
+        q: "How much does an exam voucher cost in Morocco?",
+        a: "The price depends on the vendor, the exam and the exchange rate: we provide it on quote, in dirhams, after checking availability. If you take one of our certification courses, the voucher is already included in the price."
+      },
+      {
+        q: "How long is a voucher valid?",
+        a: "Most vouchers are valid for around 12 months from issue, but each vendor sets its own rules. The expiry date is shown on your quote and on the voucher: book your exam before that date, as an expired voucher is generally neither refunded nor extended."
+      },
+      {
+        q: "How will I receive my voucher?",
+        a: "Once payment by bank transfer or card is received, the voucher code is sent to you by email, with instructions to create your candidate account and book your exam with the test centre or the vendor's platform."
+      },
+      {
+        q: "Where do I take the exam: at a test centre or online?",
+        a: "It depends on the certification. Some exams are taken at an authorised test centre such as Pearson VUE, others are also available with online proctoring from home, and some vendors use their own platform. We tell you the options for your exam before you buy."
+      },
+      {
+        q: "Do you offer vouchers with a retake or for groups?",
+        a: "Depending on the vendor, options including a second attempt (retake) or exam + materials bundles may exist, and we offer them when available. For companies, we group several vouchers on a single quote and invoice."
+      }
+    ],
+    ar: [
+      {
+        q: "كم ثمن قسيمة الامتحان في المغرب؟",
+        a: "يختلف الثمن حسب الجهة المانحة والامتحان وسعر الصرف، ونقدمه لك في عرض سعر بالدرهم بعد التحقق من توفر القسيمة. وإذا تابعت إحدى دوراتنا المعتمدة، فالقسيمة مشمولة أصلًا في الثمن."
+      },
+      {
+        q: "ما مدة صلاحية القسيمة؟",
+        a: "تكون أغلب القسائم صالحة لحوالي 12 شهرًا من تاريخ إصدارها، لكن لكل جهة مانحة قواعدها الخاصة. يُذكر تاريخ انتهاء الصلاحية في عرض السعر وفي القسيمة نفسها، فاحجز امتحانك قبله لأن القسيمة المنتهية لا تُسترجع ولا تُمدد في الغالب."
+      },
+      {
+        q: "كيف أتوصل بالقسيمة؟",
+        a: "بعد استلام الأداء بالتحويل البنكي أو بالبطاقة، نرسل لك رمز القسيمة عبر البريد الإلكتروني مع تعليمات إنشاء حساب المترشح وحجز الامتحان لدى مركز الامتحانات أو منصة الجهة المانحة."
+      },
+      {
+        q: "أين أجتاز الامتحان: في مركز أم عن بعد؟",
+        a: "يتوقف ذلك على الشهادة. بعض الامتحانات تُجتاز في مركز معتمد مثل Pearson VUE، وبعضها متاح أيضًا عن بعد مع مراقبة إلكترونية من المنزل، وبعض الجهات تعتمد منصتها الخاصة. نخبرك بالخيارات المتاحة لامتحانك قبل الشراء."
+      },
+      {
+        q: "هل توفرون قسائم مع محاولة ثانية أو للمجموعات؟",
+        a: "حسب الجهة المانحة، قد توجد صيغ تشمل محاولة ثانية (retake) أو باقات امتحان مع موارد التحضير، ونقترحها عليك متى توفرت. وبالنسبة للشركات، نجمع عدة قسائم في عرض سعر واحد وفاتورة واحدة."
+      }
+    ]
+  },
+  services: {
+    fr: [
+      {
+        q: "Quelle est la différence entre un test d'intrusion et un audit de sécurité ?",
+        a: "Le test d'intrusion simule une attaque réelle sur un périmètre défini pour prouver quelles failles sont exploitables. L'audit de sécurité est plus large : il évalue la gouvernance, les processus et les configurations par rapport à un référentiel, comme la DNSSI ou l'ISO 27001. Les deux démarches sont complémentaires."
+      },
+      {
+        q: "Comment se déroule un test d'intrusion ?",
+        a: "Nous définissons d'abord avec vous le périmètre, les dates, le type de test (boîte noire, grise ou blanche) et les autorisations écrites. Nos consultants réalisent ensuite les tests, puis vous remettent un rapport technique avec les vulnérabilités classées par criticité, une synthèse pour la direction et des recommandations de correction, présentés lors d'une restitution."
+      },
+      {
+        q: "Vos audits tiennent-ils compte de la réglementation marocaine ?",
+        a: "Oui. Nos audits peuvent être alignés sur la Directive Nationale de la Sécurité des Systèmes d'Information (DNSSI), la loi 05-20 relative à la cybersécurité et, pour le secteur financier, les directives de Bank Al-Maghrib. Nous prenons aussi en compte la loi 09-08 lorsque des données personnelles sont concernées."
+      },
+      {
+        q: "Pouvez-vous nous accompagner jusqu'à la certification ISO 27001 ?",
+        a: "Nous vous accompagnons à chaque étape : analyse d'écart, appréciation des risques, documentation du SMSI, déclaration d'applicabilité et audit interne à blanc. La certification elle-même est délivrée par un organisme certificateur accrédité et indépendant ; notre rôle est de vous y préparer."
+      },
+      {
+        q: "Combien coûte une mission d'audit ou de pentest ?",
+        a: "Le coût dépend du périmètre (nombre d'applications, d'adresses IP, de sites), de la profondeur des tests et de la durée de la mission. Nous établissons un devis détaillé en dirhams après un premier échange pour cadrer votre besoin."
+      }
+    ],
+    en: [
+      {
+        q: "What is the difference between a penetration test and a security audit?",
+        a: "A penetration test simulates a real attack on a defined scope to prove which weaknesses can be exploited. A security audit is broader: it assesses governance, processes and configurations against a framework such as DNSSI or ISO 27001. The two are complementary."
+      },
+      {
+        q: "How does a penetration test work?",
+        a: "First we agree with you on the scope, dates, test type (black, grey or white box) and written authorisations. Our consultants then run the tests and deliver a technical report with vulnerabilities ranked by severity, an executive summary and remediation advice, presented in a debrief meeting."
+      },
+      {
+        q: "Do your audits take Moroccan regulations into account?",
+        a: "Yes. Our audits can be aligned with the National Information Systems Security Directive (DNSSI), law 05-20 on cybersecurity and, for the financial sector, Bank Al-Maghrib directives. We also consider law 09-08 where personal data is involved."
+      },
+      {
+        q: "Can you support us all the way to ISO 27001 certification?",
+        a: "We support you at every step: gap analysis, risk assessment, ISMS documentation, Statement of Applicability and a mock internal audit. Certification itself is granted by an independent accredited certification body; our role is to get you ready for it."
+      },
+      {
+        q: "How much does an audit or pentest engagement cost?",
+        a: "The cost depends on the scope (number of applications, IP addresses or sites), the depth of testing and the length of the engagement. We prepare a detailed quote in dirhams after an initial call to scope your needs."
+      }
+    ],
+    ar: [
+      {
+        q: "ما الفرق بين اختبار الاختراق والتدقيق الأمني؟",
+        a: "يحاكي اختبار الاختراق هجومًا حقيقيًا على نطاق محدد لإثبات الثغرات القابلة للاستغلال. أما التدقيق الأمني فأوسع، إذ يقيّم الحوكمة والمساطر والإعدادات مقارنة بمرجع مثل DNSSI أو ISO 27001. والمقاربتان متكاملتان."
+      },
+      {
+        q: "كيف يتم اختبار الاختراق؟",
+        a: "نحدد معك أولًا النطاق والتواريخ ونوع الاختبار (صندوق أسود أو رمادي أو أبيض) والتراخيص المكتوبة. ثم ينجز مستشارونا الاختبارات ويسلمونك تقريرًا تقنيًا بالثغرات مرتبة حسب خطورتها، وملخصًا للإدارة وتوصيات للتصحيح، يُعرض في جلسة لتقديم النتائج."
+      },
+      {
+        q: "هل تراعي عمليات التدقيق لديكم القوانين المغربية؟",
+        a: "نعم. يمكن مواءمة عمليات التدقيق مع المديرية الوطنية لأمن نظم المعلومات (DNSSI) والقانون 05-20 المتعلق بالأمن السيبراني، ومع توجيهات بنك المغرب بالنسبة للقطاع المالي. كما نأخذ القانون 09-08 بعين الاعتبار عندما يتعلق الأمر بمعطيات شخصية."
+      },
+      {
+        q: "هل يمكنكم مواكبتنا حتى الحصول على شهادة ISO 27001؟",
+        a: "نواكبك في كل مرحلة: تحليل الفجوات وتقييم المخاطر وتوثيق نظام إدارة أمن المعلومات وبيان قابلية التطبيق وتدقيق داخلي تجريبي. أما الإشهاد نفسه فتمنحه هيئة إشهاد مستقلة ومعتمدة، ودورنا هو تحضيرك له."
+      },
+      {
+        q: "كم تكلف مهمة تدقيق أو اختبار اختراق؟",
+        a: "تتوقف التكلفة على النطاق (عدد التطبيقات أو عناوين IP أو المواقع) وعمق الاختبارات ومدة المهمة. نعد لك عرض سعر مفصلًا بالدرهم بعد أول تواصل لتحديد حاجتك."
+      }
+    ]
+  },
 };

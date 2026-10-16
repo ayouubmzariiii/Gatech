@@ -1,8 +1,10 @@
 import type { Localized } from "@/lib/i18n";
 
-export type Vendor = "EC-Council" | "CompTIA" | "ISC2" | "ISACA" | "OffSec" | "PECB" | "Cisco";
+export type Vendor =
+  | "EC-Council" | "CompTIA" | "ISC2" | "ISACA" | "OffSec" | "PECB" | "Cisco"
+  | "Fortinet" | "Palo Alto Networks" | "Check Point" | "Microsoft" | "AWS";
 export type Level = "beginner" | "intermediate" | "advanced" | "expert";
-export type Category = "offensive" | "defensive" | "governance" | "forensics";
+export type Category = "offensive" | "defensive" | "governance" | "forensics" | "network" | "cloud";
 
 export interface Faq {
   q: string;
@@ -134,4 +136,4 @@ export interface Guide {
 export type BlogPost = Guide & { cover: BlogImage; figure?: BlogImage & { afterSection: number } };
 
 /** FAQs for listing / service pages, keyed by page. */
-export type PageFaqKey = "catalog" | "business" | "cities" | "contact" | "about";
+export type PageFaqKey = "catalog" | "business" | "cities" | "contact" | "about" | "vouchers" | "services";

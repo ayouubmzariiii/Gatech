@@ -92,6 +92,8 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             <li><Link href={p(routes.blog)} className={linkClass}>{dict.nav.blog}</Link></li>
             <li><Link href={p(routes.about)} className={linkClass}>{dict.nav.about}</Link></li>
             <li><Link href={p(routes.business)} className={linkClass}>{dict.nav.business}</Link></li>
+            <li><Link href={p(routes.services)} className={linkClass}>{dict.nav.services}</Link></li>
+            <li><Link href={p(routes.vouchers)} className={linkClass}>{dict.nav.vouchers}</Link></li>
             <li><Link href={p(routes.contact)} className={linkClass}>{dict.nav.contact}</Link></li>
             <li><Link href={p(routes.privacy)} className={linkClass}>{dict.footer.privacy}</Link></li>
             <li><Link href={p(routes.legal)} className={linkClass}>{dict.footer.legal}</Link></li>

@@ -38,6 +38,10 @@ export const autoLinkRules: AutoLinkRule[] = [
   post("quelle-certification-cybersecurite-choisir", { fr: ["choisir (?:sa|votre|une) certification"], en: ["choos(?:e|ing) (?:a|your) certification"], ar: ["اختيار (?:الشهادة|شهادتك)"] }),
   post("meilleur-centre-formation-cybersecurite-maroc", { fr: ["centres? de formation"], en: ["training cent(?:er|re)s?"], ar: ["مراكز? التكوين"] }),
 
+  // Service pages: purchase / consulting intents only (not the generic "voucher inclus").
+  { path: routes.vouchers, patterns: { fr: ["ach(?:at|eter) (?:d'un |de |un |votre )?vouchers? d'examen"], en: ["buy(?:ing)? (?:an? |your )?exam vouchers?"], ar: ["شراء قسيمة (?:ال)?امتحان"] } },
+  { path: routes.services, patterns: { fr: ["audits? de sécurité", "tests? d'intrusion"], en: ["security audits?", "penetration test(?:s|ing)?"], ar: ["التدقيق الأمني", "اختبارات? الاختراق"] } },
+
   // Certifications (money pages) — product names are the same in every language.
   cert("cisco-ccna-cybersecurity", ["CCNA Cybersecurity", "CyberOps Associate"]),
   cert("cisco-ccna", ["CCNA(?! Cybersecurity)"]),

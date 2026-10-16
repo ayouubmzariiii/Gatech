@@ -40,6 +40,8 @@ export function GET() {
     "",
     `- [Catalogue des certifications](${fr(routes.certifications)})`,
     `- [Formation pour entreprises](${fr(routes.business)})`,
+    `- [Services cybersécurité : tests d'intrusion, audit de sécurité (DNSSI, loi 05-20, Bank Al-Maghrib), accompagnement ISO 27001, sensibilisation au phishing, coaching SOC](${fr(routes.services)})`,
+    `- [Vouchers d'examen officiels (EC-Council, CompTIA, ISC2, ISACA, PECB, OffSec, Cisco, Fortinet, Palo Alto Networks, Check Point, Microsoft, AWS), sur devis en MAD](${fr(routes.vouchers)})`,
     `- [À propos](${fr(routes.about)})`,
     `- [Contact et inscription](${fr(routes.contact)})`,
     "",

@@ -49,6 +49,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
             items={[
               { href: p(routes.certifications), label: dict.nav.certifications },
               { href: p(routes.business), label: dict.nav.business },
+              { href: p(routes.services), label: dict.nav.services },
               { href: p(routes.blog), label: dict.nav.blog },
               { href: p(routes.cities), label: dict.nav.cities },
               { href: p(routes.about), label: dict.nav.about },

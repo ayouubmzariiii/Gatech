@@ -8,6 +8,8 @@ export const routes = {
   certifications: "/certifications",
   certification: (slug: string) => `/certifications/${slug}`,
   business: "/entreprises",
+  services: "/services",
+  vouchers: "/vouchers-examen",
   cities: "/maroc",
   city: (slug: string) => `/maroc/${slug}`,
   blog: "/blog",

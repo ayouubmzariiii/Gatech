@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
+import { TrainingFormats } from "@/components/TrainingFormats";
 import { Breadcrumbs, CertCard, CheckList, CtaBanner, FaqSection, PageHero, PostsBand, SectionHeading, btnPrimary } from "@/components/ui";
 import { pageFaqs } from "@/data/pageFaqs";
 import { featuredPostSlugs, postsBySlugs } from "@/data/blog";
@@ -84,6 +85,8 @@ export default async function BusinessPage({ params }: PageProps<"/[lang]/entrep
           ))}
         </div>
       </section>
+
+      <TrainingFormats id="b-formats" dict={dict} />
 
       <section aria-labelledby="b-process" className="border-y border-line bg-surface py-16 sm:py-20">
         <div className="container-page">

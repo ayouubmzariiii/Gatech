@@ -33,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       image: () => absoluteUrl(p.cover.src),
     })),
     { path: routes.business, priority: 0.8, changeFrequency: "monthly" },
+    { path: routes.services, priority: 0.8, changeFrequency: "monthly" },
+    { path: routes.vouchers, priority: 0.8, changeFrequency: "monthly" },
     { path: routes.cities, priority: 0.7, changeFrequency: "monthly" },
     ...cities.map((c) => ({
       path: routes.city(c.slug),

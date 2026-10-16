@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/certificat
 }
 
 const levelOrder: Level[] = ["beginner", "intermediate", "advanced", "expert"];
-const categoryOrder: Category[] = ["offensive", "defensive", "governance", "forensics"];
+const categoryOrder: Category[] = ["offensive", "defensive", "network", "cloud", "governance", "forensics"];
 
 export default async function CatalogPage({ params }: PageProps<"/[lang]/certifications">) {
   const { lang } = await params;

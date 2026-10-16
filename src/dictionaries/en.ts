@@ -2,6 +2,10 @@ import type { Dictionary } from "./fr";
 
 const en: Dictionary = {
   meta: {
+    vouchersTitle: "Official Exam Vouchers in Morocco",
+    vouchersDescription: "Buy your official exam voucher in Morocco: EC-Council, CompTIA, ISC2, ISACA, PECB, Cisco, Microsoft, AWS and more. Quote in dirhams, delivery by email.",
+    servicesTitle: "Cybersecurity Services in Morocco: Audit, Pentest, ISO 27001",
+    servicesDescription: "Penetration testing, security audits aligned with DNSSI and law 05-20, ISO 27001 support, phishing awareness and SOC coaching in Morocco. Get a quote.",
     homeTitle: "Cybersecurity Training Center Morocco: CEH, Security+, CISSP",
     homeDescription:
       "Cybersecurity certification training center in Morocco (2026): CEH v13, CompTIA Security+, CISSP, OSCP+, voucher included. Casablanca, Rabat, online.",
@@ -38,6 +42,8 @@ const en: Dictionary = {
     home: "Home",
     certifications: "Certifications",
     business: "Business",
+    services: "Services",
+    vouchers: "Exam vouchers",
     cities: "Cities",
     blog: "Blog",
     about: "About",
@@ -242,6 +248,8 @@ const en: Dictionary = {
       defensive: "Defensive",
       governance: "Governance",
       forensics: "Forensics",
+      network: "Network & firewall",
+      cloud: "Cloud",
     },
     from: "From",
     currency: "MAD",
@@ -334,7 +342,7 @@ const en: Dictionary = {
     certification: "Certification you are interested in",
     certificationPlaceholder: "Not sure yet",
     format: "Preferred format",
-    formats: { classroom: "Classroom", online: "Live online", intra: "On-site (company)" },
+    formats: { classroom: "Classroom", online: "Live online", intra: "On-site (company)", voucher: "Exam voucher" },
     message: "Your message",
     consent: "I agree that my data will be used to answer my request, in accordance with the privacy policy (law 09-08).",
     submit: "Send my request",
@@ -355,6 +363,131 @@ const en: Dictionary = {
     reject: "Decline",
     more: "Learn more",
     manage: "Cookies",
+  },
+  vouchers: {
+    eyebrow: "Exam vouchers",
+    intro: "Already prepared and just want to sit the exam? GATech supplies the vendor's official exam voucher, with a quote in dirhams, a Moroccan invoice and help booking your exam slot.",
+    cta: "Request a voucher quote",
+    whatTitle: "What is an exam voucher?",
+    whatText: "A voucher is a prepaid code, issued by the certification vendor or its testing partner, that replaces payment of the exam fee. You enter it when booking your exam: it covers one attempt at a specific exam (for example CompTIA Security+ SY0-701 or CEH v13), under the vendor's conditions.",
+    vendorsTitle: "Vendors we supply vouchers for",
+    vendorsSubtitle: "The leading cybersecurity, networking and cloud vendors.",
+    others: "And other vendors on request: tell us the exam you need and its code.",
+    howTitle: "How it works",
+    steps: [
+      {
+        title: "Request",
+        text: "Tell us the exam (name and code) and how many vouchers you need. We check availability for Morocco."
+      },
+      {
+        title: "Quote in MAD",
+        text: "You receive a quote in dirhams. The price depends on the vendor and the exam and is provided on quote."
+      },
+      {
+        title: "Payment",
+        text: "Pay by bank transfer or card. Companies receive an invoice in their name."
+      },
+      {
+        title: "Delivery and booking",
+        text: "The voucher is sent to you by email. You then book at an authorised test centre (such as Pearson VUE) or with online proctoring, depending on the exam."
+      }
+    ],
+    validityTitle: "Validity and conditions",
+    validity: [
+      "A voucher is generally valid for 12 months from issue, but the period depends on the vendor: we state it on your quote.",
+      "A voucher is tied to a specific exam and cannot be swapped for another exam, unless the vendor's terms allow it.",
+      "Depending on the vendor, options with a second attempt (retake) or exam + materials bundles may be available.",
+      "Exam delivery (test centre, online proctoring, vendor platform) varies by certification.",
+      "For several employees, we group the vouchers on a single quote and invoice."
+    ],
+    bundleTitle: "Voucher included with our training",
+    bundleText: "If you take a GATech course, there is nothing extra to buy: the official exam voucher is included in the price of every certification course, along with labs and practice exams.",
+    bundleCta: "See the courses",
+    guidesTitle: "Guides on vouchers and exams"
+  },
+  services: {
+    eyebrow: "Cybersecurity services",
+    intro: "Beyond training, our consultants work with companies and public bodies in Morocco on the ground: penetration testing, security audits, ISO 27001 compliance, staff awareness and upskilling of SOC teams.",
+    cta: "Request a quote",
+    relatedTraining: "Related training",
+    items: [
+      {
+        key: "pentest",
+        title: "Penetration testing",
+        text: "We simulate a real attacker to measure how exposed your systems are, within a scope agreed with you (perimeter, dates, authorisations), and deliver a prioritised report.",
+        points: [
+          "Web applications and APIs",
+          "Android and iOS mobile apps",
+          "External and internal networks",
+          "Active Directory and privilege escalation",
+          "Technical report, executive summary and debrief"
+        ]
+      },
+      {
+        key: "audit",
+        title: "Organisational and technical security audit",
+        text: "We assess your governance, processes and configurations against the frameworks that apply to your organisation in Morocco.",
+        points: [
+          "Organisational audit: policies, roles, risk management",
+          "Technical audit: configurations, hardening, architecture review",
+          "Alignment with DNSSI and law 05-20",
+          "Bank Al-Maghrib directives for the financial sector",
+          "Prioritised action plan"
+        ]
+      },
+      {
+        key: "iso27001",
+        title: "ISO 27001 (ISMS) support",
+        text: "We help you design and implement an information security management system, then prepare for the certification audit.",
+        points: [
+          "Gap analysis against ISO/IEC 27001:2022",
+          "Risk assessment and treatment",
+          "Statement of Applicability and ISMS documentation",
+          "Mock internal audit before certification",
+          "Readiness for the certification body's audit"
+        ]
+      },
+      {
+        key: "awareness",
+        title: "Awareness and phishing simulation",
+        text: "Most incidents start with an email. We train your staff in the right reflexes and measure progress with simulated phishing campaigns.",
+        points: [
+          "Awareness workshops in French, English or Arabic",
+          "Supervised simulated phishing campaigns",
+          "Content tailored to each role and department",
+          "Tracking metrics from one campaign to the next"
+        ]
+      },
+      {
+        key: "soc",
+        title: "SOC and blue team coaching",
+        text: "We coach your analysts on their own tools and use cases to improve incident detection and response.",
+        points: [
+          "Review of detection rules and use cases",
+          "Scenario-based incident response exercises",
+          "Threat hunting and log analysis methods",
+          "Upskilling path towards certification"
+        ]
+      }
+    ]
+  },
+  formats: {
+    title: "Three training formats",
+    subtitle: "Sessions in French or English, with support in Arabic when needed.",
+    items: [
+      {
+        title: "Public classes in Casablanca and Rabat",
+        text: "Classroom sessions in small groups, with an instructor, hands-on labs and practice exams."
+      },
+      {
+        title: "Live online virtual classroom",
+        text: "The same programme live with the instructor, from anywhere in Morocco or abroad, remote labs included."
+      },
+      {
+        title: "On-site in-house training",
+        text: "A session dedicated to your team, at your premises anywhere in Morocco or Africa, on your dates."
+      }
+    ]
   },
   footer: {
     guides: "Popular guides",

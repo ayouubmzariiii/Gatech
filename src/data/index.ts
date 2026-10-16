@@ -13,6 +13,22 @@ import chfiV11 from "./certs/chfi-v11";
 import cndV3 from "./certs/cnd-v3";
 import ciscoCcna from "./certs/cisco-ccna";
 import ciscoCcnaCyber from "./certs/cisco-ccna-cybersecurity";
+import ecCouncilCpent from "./certs/ec-council-cpent";
+import ecCouncilCciso from "./certs/ec-council-cciso";
+import isacaCisa from "./certs/isaca-cisa";
+import isacaCrisc from "./certs/isaca-crisc";
+import isoN27001LeadAuditor from "./certs/iso-27001-lead-auditor";
+import isoN27005RiskManager from "./certs/iso-27005-risk-manager";
+import isoN22301LeadImplementer from "./certs/iso-22301-lead-implementer";
+import nisTwoLeadImplementer from "./certs/nis-2-lead-implementer";
+import doraLeadManager from "./certs/dora-lead-manager";
+import ebiosRiskManager from "./certs/ebios-risk-manager";
+import fortinetFortigateAdministrator from "./certs/fortinet-fortigate-administrator";
+import paloAltoFirewallEdu210 from "./certs/palo-alto-firewall-edu-210";
+import checkPointCcsaR82 from "./certs/check-point-ccsa-r82";
+import microsoftAz104 from "./certs/microsoft-az-104";
+import microsoftSc200 from "./certs/microsoft-sc-200";
+import awsSecuritySpecialty from "./certs/aws-security-specialty";
 
 import casablanca from "./cities/casablanca";
 import rabat from "./cities/rabat";
@@ -49,6 +65,22 @@ export const certifications: Certification[] = [
   cndV3,
   ciscoCcna,
   ciscoCcnaCyber,
+  ecCouncilCpent,
+  ecCouncilCciso,
+  isacaCisa,
+  isacaCrisc,
+  isoN27001LeadAuditor,
+  isoN27005RiskManager,
+  isoN22301LeadImplementer,
+  nisTwoLeadImplementer,
+  doraLeadManager,
+  ebiosRiskManager,
+  fortinetFortigateAdministrator,
+  paloAltoFirewallEdu210,
+  checkPointCcsaR82,
+  microsoftAz104,
+  microsoftSc200,
+  awsSecuritySpecialty,
 ].map(withArabicBidi);
 
 export const cities: City[] = [casablanca, rabat, marrakech, tanger, fes, agadir].map(withArabicBidi);
@@ -63,4 +95,4 @@ export const vendors = [...new Set(certifications.map((c) => c.vendor))];
 export const minPrice = Math.min(...certifications.map((c) => c.priceMAD));
 
 /** Date of the last content update, used for sitemap lastModified. */
-export const contentUpdatedAt = new Date("2026-10-12");
+export const contentUpdatedAt = new Date("2026-10-16");

@@ -1,5 +1,9 @@
 const fr = {
   meta: {
+    vouchersTitle: "Vouchers d'examen officiels au Maroc",
+    vouchersDescription: "Achetez votre voucher d'examen officiel au Maroc : EC-Council, CompTIA, ISC2, ISACA, PECB, Cisco, Microsoft, AWS… Devis en dirhams, envoi par e-mail.",
+    servicesTitle: "Services cybersécurité au Maroc : audit, pentest, ISO 27001",
+    servicesDescription: "Tests d'intrusion, audit de sécurité aligné DNSSI et loi 05-20, accompagnement ISO 27001, sensibilisation au phishing et coaching SOC au Maroc. Devis.",
     homeTitle: "Centre de formation cybersécurité au Maroc : CEH, CISSP",
     homeDescription:
       "Centre de formation cybersécurité au Maroc en 2026 : CEH v13, CompTIA Security+, CISSP, OSCP+, voucher d'examen inclus. Casablanca, Rabat ou en ligne.",
@@ -36,6 +40,8 @@ const fr = {
     home: "Accueil",
     certifications: "Certifications",
     business: "Entreprises",
+    services: "Services",
+    vouchers: "Vouchers d'examen",
     cities: "Villes",
     blog: "Blog",
     about: "À propos",
@@ -240,6 +246,8 @@ const fr = {
       defensive: "Défensive",
       governance: "Gouvernance",
       forensics: "Forensic",
+      network: "Réseau & pare-feu",
+      cloud: "Cloud",
     },
     from: "À partir de",
     currency: "MAD",
@@ -332,7 +340,7 @@ const fr = {
     certification: "Certification qui vous intéresse",
     certificationPlaceholder: "Je ne sais pas encore",
     format: "Format souhaité",
-    formats: { classroom: "Présentiel", online: "Classe virtuelle", intra: "Intra-entreprise" },
+    formats: { classroom: "Présentiel", online: "Classe virtuelle", intra: "Intra-entreprise", voucher: "Voucher d'examen" },
     message: "Votre message",
     consent: "J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la politique de confidentialité (loi 09-08).",
     submit: "Envoyer ma demande",
@@ -353,6 +361,131 @@ const fr = {
     reject: "Refuser",
     more: "En savoir plus",
     manage: "Cookies",
+  },
+  vouchers: {
+    eyebrow: "Vouchers d'examen",
+    intro: "Vous êtes déjà prêt et voulez simplement passer l'examen ? GATech vous fournit le voucher d'examen officiel de l'éditeur, avec un devis en dirhams, une facture marocaine et un accompagnement pour réserver votre créneau.",
+    cta: "Demander un devis voucher",
+    whatTitle: "Qu'est-ce qu'un voucher d'examen ?",
+    whatText: "Un voucher est un code prépayé, émis par l'éditeur de la certification ou son partenaire de test, qui remplace le paiement des frais d'examen. Vous le saisissez au moment de réserver votre examen : il couvre une tentative pour un examen précis (par exemple CompTIA Security+ SY0-701 ou CEH v13), dans les conditions fixées par l'éditeur.",
+    vendorsTitle: "Éditeurs pour lesquels nous fournissons des vouchers",
+    vendorsSubtitle: "Les principaux éditeurs de la cybersécurité, du réseau et du cloud.",
+    others: "Et d'autres éditeurs sur demande : indiquez-nous l'examen visé et son code.",
+    howTitle: "Comment ça marche",
+    steps: [
+      {
+        title: "Demande",
+        text: "Indiquez l'examen (nom et code) et le nombre de vouchers. Nous vérifions la disponibilité pour le Maroc."
+      },
+      {
+        title: "Devis en MAD",
+        text: "Vous recevez un devis en dirhams. Le prix dépend de l'éditeur et de l'examen : il est communiqué sur devis."
+      },
+      {
+        title: "Paiement",
+        text: "Réglez par virement bancaire ou par carte. Les entreprises reçoivent une facture à leur nom."
+      },
+      {
+        title: "Réception et réservation",
+        text: "Le voucher vous est envoyé par e-mail. Vous réservez ensuite en centre agréé (Pearson VUE par exemple) ou en surveillance en ligne, selon l'examen."
+      }
+    ],
+    validityTitle: "Validité et conditions",
+    validity: [
+      "Un voucher est généralement valable 12 mois après son émission, mais la durée dépend de l'éditeur : nous vous l'indiquons sur le devis.",
+      "Le voucher est lié à un examen précis et ne peut pas être échangé contre un autre examen, sauf conditions particulières de l'éditeur.",
+      "Selon l'éditeur, des formules avec seconde tentative (retake) ou des packs examen + supports peuvent exister.",
+      "Les modalités de passage (centre de test, surveillance en ligne, plateforme de l'éditeur) varient selon la certification.",
+      "Pour plusieurs collaborateurs, nous regroupons les vouchers sur un seul devis et une seule facture."
+    ],
+    bundleTitle: "Voucher inclus avec nos formations",
+    bundleText: "Si vous suivez une formation GATech, vous n'avez rien à acheter en plus : le voucher d'examen officiel est compris dans le prix de chaque formation certifiante, avec les labs et les examens blancs.",
+    bundleCta: "Voir les formations",
+    guidesTitle: "Guides sur les vouchers et les examens"
+  },
+  services: {
+    eyebrow: "Services cybersécurité",
+    intro: "Au-delà de la formation, nos consultants accompagnent les entreprises et administrations au Maroc sur le terrain : tests d'intrusion, audits de sécurité, mise en conformité ISO 27001, sensibilisation des collaborateurs et montée en compétence des équipes SOC.",
+    cta: "Demander un devis",
+    relatedTraining: "Formation associée",
+    items: [
+      {
+        key: "pentest",
+        title: "Tests d'intrusion (pentest)",
+        text: "Nous simulons les attaques d'un adversaire réel pour mesurer l'exposition de vos systèmes, dans un cadre défini avec vous (périmètre, dates, autorisations) et avec un rapport priorisé.",
+        points: [
+          "Applications web et API",
+          "Applications mobiles Android et iOS",
+          "Réseau externe et interne",
+          "Active Directory et escalade de privilèges",
+          "Rapport technique, synthèse pour la direction et restitution"
+        ]
+      },
+      {
+        key: "audit",
+        title: "Audit de sécurité organisationnel et technique",
+        text: "Nous évaluons votre gouvernance, vos processus et vos configurations par rapport aux référentiels qui s'appliquent à votre organisation au Maroc.",
+        points: [
+          "Audit organisationnel : politiques, rôles, gestion des risques",
+          "Audit technique : configurations, durcissement, revue d'architecture",
+          "Alignement avec la DNSSI et la loi 05-20",
+          "Prise en compte des directives de Bank Al-Maghrib pour le secteur financier",
+          "Plan d'action priorisé"
+        ]
+      },
+      {
+        key: "iso27001",
+        title: "Accompagnement ISO 27001 (SMSI)",
+        text: "Nous vous aidons à concevoir et mettre en place un système de management de la sécurité de l'information, puis à préparer l'audit de certification.",
+        points: [
+          "Analyse d'écart (gap analysis) par rapport à l'ISO/IEC 27001:2022",
+          "Appréciation et traitement des risques",
+          "Déclaration d'applicabilité et documentation du SMSI",
+          "Audit interne à blanc avant certification",
+          "Préparation à l'audit de l'organisme certificateur"
+        ]
+      },
+      {
+        key: "awareness",
+        title: "Sensibilisation et simulation de phishing",
+        text: "La plupart des incidents commencent par un e-mail. Nous formons vos collaborateurs aux bons réflexes et mesurons leurs progrès par des campagnes de phishing simulé.",
+        points: [
+          "Ateliers de sensibilisation en français, anglais ou arabe",
+          "Campagnes de phishing simulé encadrées",
+          "Contenus adaptés aux métiers et aux directions",
+          "Indicateurs de suivi d'une campagne à l'autre"
+        ]
+      },
+      {
+        key: "soc",
+        title: "Coaching SOC et blue team",
+        text: "Nous accompagnons vos analystes sur leurs propres outils et cas d'usage pour améliorer la détection et la réponse aux incidents.",
+        points: [
+          "Revue des règles de détection et des cas d'usage",
+          "Exercices de réponse à incident sur scénarios",
+          "Méthodes de threat hunting et d'analyse de logs",
+          "Parcours de montée en compétence vers la certification"
+        ]
+      }
+    ]
+  },
+  formats: {
+    title: "Trois formats de formation",
+    subtitle: "Sessions en français ou en anglais, avec un accompagnement en arabe si besoin.",
+    items: [
+      {
+        title: "Inter-entreprises à Casablanca et Rabat",
+        text: "Sessions en salle, en petits groupes, avec formateur, labs pratiques et examens blancs."
+      },
+      {
+        title: "Classe virtuelle en direct",
+        text: "Le même programme en direct avec le formateur, accessible depuis tout le Maroc et l'étranger, labs à distance inclus."
+      },
+      {
+        title: "Intra-entreprise sur site",
+        text: "Une session dédiée à votre équipe, dans vos locaux partout au Maroc ou en Afrique, à vos dates."
+      }
+    ]
   },
   footer: {
     guides: "Guides populaires",

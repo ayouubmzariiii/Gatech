@@ -9,6 +9,11 @@ const logos: Partial<Record<Vendor, { src: string; width: number; height: number
   ISACA: { src: "/logos/vendors/isaca.png", width: 600, height: 146 },
   PECB: { src: "/logos/vendors/pecb.png", width: 196, height: 55 },
   Cisco: { src: "/logos/vendors/cisco.svg", width: 216, height: 114 },
+  Fortinet: { src: "/logos/vendors/fortinet.svg", width: 1024, height: 124 },
+  "Palo Alto Networks": { src: "/logos/vendors/palo-alto-networks.svg", width: 390, height: 71 },
+  "Check Point": { src: "/logos/vendors/check-point.svg", width: 385, height: 184 },
+  Microsoft: { src: "/logos/vendors/microsoft.svg", width: 338, height: 72 },
+  AWS: { src: "/logos/vendors/aws.svg", width: 304, height: 182 },
 };
 
 /** Optical size correction so all logos look equally big at the same `height`. */
@@ -20,6 +25,11 @@ const scale: Record<Vendor, number> = {
   PECB: 0.9,
   OffSec: 1.1,
   Cisco: 1.35,
+  Fortinet: 0.85,
+  "Palo Alto Networks": 1,
+  "Check Point": 1.4,
+  Microsoft: 1,
+  AWS: 1.4,
 };
 
 /** Renders the vendor's logo at a fixed height; falls back to a text wordmark when no file exists. */
