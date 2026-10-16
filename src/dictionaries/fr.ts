@@ -347,6 +347,13 @@ const fr = {
     phoneLabel: "Téléphone",
     emailLabel: "E-mail",
   },
+  consent: {
+    text: "Nous utilisons des cookies de mesure d'audience (Google Analytics) pour améliorer le site. Ils ne sont déposés qu'avec votre accord.",
+    accept: "Accepter",
+    reject: "Refuser",
+    more: "En savoir plus",
+    manage: "Cookies",
+  },
   footer: {
     guides: "Guides populaires",
     tagline: "Formations et certifications en cybersécurité au Maroc. Voucher d'examen officiel inclus.",
@@ -385,7 +392,7 @@ const fr = {
       },
       {
         h: "Cookies",
-        p: "Ce site n'utilise pas de cookies publicitaires. Seuls des cookies strictement nécessaires au fonctionnement du site peuvent être déposés.",
+        p: "Ce site utilise Google Analytics 4 pour mesurer l'audience, uniquement si vous l'acceptez via le bandeau cookies (mode consentement de Google). Sans accord, aucun cookie de mesure n'est déposé. Vous pouvez changer d'avis à tout moment via le lien « Cookies » en bas de page. Aucun cookie publicitaire n'est utilisé.",
       },
     ],
     notice: [

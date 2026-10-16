@@ -4,13 +4,16 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ConsentBanner } from "@/components/ConsentBanner";
+import { GoogleTag } from "@/components/GoogleTag";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getDictionary } from "@/dictionaries";
 import { dir, isLocale, locales } from "@/lib/i18n";
 import { graph, organizationSchema, websiteSchema } from "@/lib/schema";
-import { site } from "@/lib/site";
+import { localePath, routes } from "@/lib/seo";
+import { isProduction, site } from "@/lib/site";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -76,6 +79,9 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           <Analytics />
           <SpeedInsights />
         </Suspense>
+        {/* Google Analytics 4 with Consent Mode v2 (production only) + cookie banner. */}
+        {isProduction && <GoogleTag />}
+        <ConsentBanner labels={dict.consent} privacyHref={localePath(lang, routes.privacy)} />
       </body>
     </html>
   );

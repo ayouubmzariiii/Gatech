@@ -5,6 +5,7 @@ import type { Dictionary } from "@/dictionaries";
 import type { Locale } from "@/lib/i18n";
 import { localePath, routes } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
+import { ConsentManageLink } from "./ConsentBanner";
 import { Logo } from "./Logo";
 
 export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary }) {
@@ -94,6 +95,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             <li><Link href={p(routes.contact)} className={linkClass}>{dict.nav.contact}</Link></li>
             <li><Link href={p(routes.privacy)} className={linkClass}>{dict.footer.privacy}</Link></li>
             <li><Link href={p(routes.legal)} className={linkClass}>{dict.footer.legal}</Link></li>
+            <li><ConsentManageLink label={dict.consent.manage} className={`${linkClass} cursor-pointer`} /></li>
           </ul>
         </nav>
       </div>

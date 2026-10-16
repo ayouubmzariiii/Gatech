@@ -349,6 +349,13 @@ const en: Dictionary = {
     phoneLabel: "Phone",
     emailLabel: "Email",
   },
+  consent: {
+    text: "We use audience measurement cookies (Google Analytics) to improve the site. They are only set with your consent.",
+    accept: "Accept",
+    reject: "Decline",
+    more: "Learn more",
+    manage: "Cookies",
+  },
   footer: {
     guides: "Popular guides",
     tagline: "Cybersecurity training and certifications in Morocco. Official exam voucher included.",
@@ -387,7 +394,7 @@ const en: Dictionary = {
       },
       {
         h: "Cookies",
-        p: "This website does not use advertising cookies. Only cookies strictly necessary for the site to function may be set.",
+        p: "This site uses Google Analytics 4 to measure audience, only if you accept it in the cookie banner (Google consent mode). Without your consent, no measurement cookie is set. You can change your choice at any time using the \"Cookies\" link at the bottom of the page. No advertising cookies are used.",
       },
     ],
     notice: [
