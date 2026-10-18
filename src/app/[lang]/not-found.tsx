@@ -8,7 +8,7 @@ import { localePath, routes } from "@/lib/seo";
 
 export default async function NotFound() {
   const value = await lang();
-  const locale = isLocale(value) ? value : defaultLocale;
+  const locale = value && isLocale(value) ? value : defaultLocale;
   const dict = getDictionary(locale);
   return (
     <section className="container-page py-24 text-center">
