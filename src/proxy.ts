@@ -1,4 +1,5 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
+import { trackRequest } from "@/lib/analytics/track";
 import { defaultLocale, locales } from "@/lib/i18n";
 
 /**
@@ -6,8 +7,16 @@ import { defaultLocale, locales } from "@/lib/i18n";
  * `/fr/certifications`. Requests to `/fr/...` are permanently redirected to
  * the unprefixed URL so each page has exactly one indexable address.
  */
-export function proxy(request: NextRequest) {
+export function proxy(request: NextRequest, event: NextFetchEvent) {
   const { pathname, search } = request.nextUrl;
+
+  // First-party analytics (views, sources, crawlers); never delays the response.
+  const tracking = trackRequest(request, request.nextUrl.hostname);
+  if (tracking) event.waitUntil(tracking);
+
+  // Crawl tracking only for these files; the admin area lives outside [lang].
+  if (/^\/(robots\.txt|sitemap\.xml|llms\.txt)$/.test(pathname) || pathname === "/admin" || pathname.startsWith("/admin/")) return;
+
   const segments = pathname.split("/");
   const first = segments[1];
   const last = segments[segments.length - 1];
@@ -39,5 +48,5 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // Skip Next internals, API routes, metadata routes and any file with an extension.
-  matcher: ["/((?!_next|api|icon|apple-icon|opengraph-image|.*\\..*).*)"],
+  matcher: ["/((?!_next|api|icon|apple-icon|opengraph-image|.*\\..*).*)", "/robots.txt", "/sitemap.xml", "/llms.txt"],
 };

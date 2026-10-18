@@ -1,5 +1,7 @@
 "use server";
 
+import { trackLead } from "@/lib/analytics/track";
+
 export type ContactField = "name" | "email" | "phone" | "consent";
 
 export interface ContactState {
@@ -48,6 +50,8 @@ export async function submitContact(_prev: ContactState, data: FormData): Promis
     message: lead.message,
   };
   if (Object.keys(errors).length) return { status: "error", errors, values };
+
+  await trackLead(lead.certification);
 
   const webhook = process.env.CONTACT_WEBHOOK_URL;
   if (webhook) {
