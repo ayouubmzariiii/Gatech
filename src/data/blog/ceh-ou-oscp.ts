@@ -4,7 +4,7 @@ const guide: Guide = {
   slug: "ceh-ou-oscp",
   category: "comparatifs",
   datePublished: "2026-10-12",
-  dateModified: "2026-10-12",
+  dateModified: "2026-10-22",
   readingMinutes: 7,
   relatedCerts: ["ceh-v13", "oscp", "comptia-pentest-plus"],
   title: {
@@ -33,7 +33,7 @@ const guide: Guide = {
         heading: "CEH v13 et OSCP+ : deux certifications pentest, deux philosophies",
         paragraphs: [
           "Le CEH (Certified Ethical Hacker) d'EC-Council et l'OSCP+ d'OffSec sont les deux noms qui reviennent le plus souvent quand on parle de certification en test d'intrusion. On les oppose volontiers, comme s'il fallait choisir un camp. En réalité, elles ne mesurent pas la même chose et ne s'adressent pas exactement au même moment d'une carrière.",
-          "Le CEH v13, dit « CEH AI », valide une connaissance large de la méthodologie du hacking éthique : reconnaissance, scan, énumération, exploitation, maintien d'accès, attaques web, sans fil, cloud, IoT, et désormais l'usage de l'IA dans l'attaque comme dans la défense. Son examen principal (312-50) vérifie que vous connaissez ces techniques, ces outils et le vocabulaire associé.",
+          "Le CEH v13, dit « CEH AI », est la version en vigueur (le CEH v14 n'est pas encore sorti). Il valide une connaissance large de la méthodologie du hacking éthique : reconnaissance, scan, énumération, exploitation, maintien d'accès, attaques web, sans fil, cloud, IoT, et désormais l'usage de l'IA dans l'attaque comme dans la défense. Son examen principal (312-50) vérifie que vous connaissez ces techniques, ces outils et le vocabulaire associé.",
           "L'OSCP+, obtenu après le cours PEN-200, valide autre chose : votre capacité à compromettre réellement des machines, seul, sous pression, puis à le prouver dans un rapport professionnel. On pourrait résumer ainsi : le CEH démontre que vous savez de quoi est fait un pentest, l'OSCP+ démontre que vous savez en mener un.",
         ],
       },
@@ -98,7 +98,7 @@ const guide: Guide = {
         heading: "CEH v13 وOSCP+: شهادتان في اختبار الاختراق بفلسفتين مختلفتين",
         paragraphs: [
           "تعد شهادة CEH (Certified Ethical Hacker) من EC-Council وشهادة OSCP+ من OffSec الاسمين الأكثر تداولا عند الحديث عن شهادات اختبار الاختراق. وكثيرا ما يتم وضعهما في مواجهة بعضهما وكأن على المترشح أن يختار معسكرا. لكن الحقيقة أنهما لا تقيسان الشيء نفسه، ولا تستهدفان المرحلة نفسها من المسار المهني.",
-          "تثبت CEH v13، المعروفة باسم «CEH AI»، معرفة واسعة بمنهجية الاختراق الأخلاقي: الاستطلاع والمسح والتعداد والاستغلال والحفاظ على الولوج، وهجمات الويب والشبكات اللاسلكية والسحابة وإنترنت الأشياء، إضافة الآن إلى توظيف الذكاء الاصطناعي في الهجوم والدفاع. ويتحقق امتحانها الرئيسي (312-50) من إلمامك بهذه التقنيات والأدوات والمصطلحات المرتبطة بها.",
+          "CEH v13، المعروفة باسم «CEH AI»، هي النسخة المعتمدة حاليًا (لم تصدر CEH v14 بعد)، وتثبت معرفة واسعة بمنهجية الاختراق الأخلاقي: الاستطلاع والمسح والتعداد والاستغلال والحفاظ على الولوج، وهجمات الويب والشبكات اللاسلكية والسحابة وإنترنت الأشياء، إضافة الآن إلى توظيف الذكاء الاصطناعي في الهجوم والدفاع. ويتحقق امتحانها الرئيسي (312-50) من إلمامك بهذه التقنيات والأدوات والمصطلحات المرتبطة بها.",
           "أما OSCP+، التي يتم الحصول عليها بعد دورة PEN-200، فتثبت شيئا آخر: قدرتك الفعلية على اختراق الأجهزة بمفردك وتحت الضغط، ثم إثبات ذلك في تقرير احترافي. باختصار: تُظهر CEH أنك تعرف مكونات اختبار الاختراق، بينما تُظهر OSCP+ أنك قادر على إنجازه.",
         ],
       },
@@ -163,7 +163,7 @@ const guide: Guide = {
         heading: "CEH v13 and OSCP+: two pentest certifications, two philosophies",
         paragraphs: [
           "EC-Council's CEH (Certified Ethical Hacker) and OffSec's OSCP+ are the two names that come up most often in any discussion of penetration testing certifications. They are often pitted against each other as if you had to pick a side. In reality, they do not measure the same thing and they do not target exactly the same stage of a career.",
-          "CEH v13, branded \"CEH AI\", validates broad knowledge of the ethical hacking methodology: reconnaissance, scanning, enumeration, exploitation, maintaining access, web, wireless, cloud and IoT attacks, and now the use of AI on both the attacking and defending side. Its main exam (312-50) checks that you know these techniques, tools and the related vocabulary.",
+          "CEH v13, branded \"CEH AI\", is the current version (CEH v14 has not been released yet). It validates broad knowledge of the ethical hacking methodology: reconnaissance, scanning, enumeration, exploitation, maintaining access, web, wireless, cloud and IoT attacks, and now the use of AI on both the attacking and defending side. Its main exam (312-50) checks that you know these techniques, tools and the related vocabulary.",
           "OSCP+, earned after the PEN-200 course, validates something else: your ability to actually compromise machines, on your own, under pressure, and then prove it in a professional report. Put simply, CEH shows you know what a pentest is made of; OSCP+ shows you can run one.",
         ],
       },

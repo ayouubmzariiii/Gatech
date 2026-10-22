@@ -19,12 +19,12 @@ const guide: Guide = {
     en: "Morocco's Law 05-20 on Cybersecurity: Obligations and Skills",
   },
   seoTitle: {
-    fr: "Loi 05-20 cybersécurité Maroc : obligations et DGSSI",
+    fr: "Loi 05-20 Maroc : résumé, entités concernées et obligations",
     ar: "القانون 05-20 للأمن السيبراني بالمغرب: الالتزامات",
     en: "Morocco Law 05-20 on Cybersecurity: Obligations Guide",
   },
   seoDescription: {
-    fr: "Loi 05-20, décret d'application, DNSSI, rôle de la DGSSI et du maCERT : obligations des entités concernées et compétences utiles. Lisez notre guide.",
+    fr: "Loi 05-20 en bref : qui est concerné (administrations, infrastructures vitales, opérateurs), quelles obligations, rôle de la DGSSI et du maCERT. Lisez le résumé.",
     ar: "القانون 05-20 ومرسومه التطبيقي والتوجيه الوطني DNSSI ودور DGSSI وmaCERT: التزامات الهيئات المعنية والكفاءات اللازمة للامتثال. اطلع على دليلنا الكامل.",
     en: "Law 05-20, its implementing decree, the DNSSI, the role of DGSSI and maCERT: what affected entities must do and which skills help. Read our guide.",
   },

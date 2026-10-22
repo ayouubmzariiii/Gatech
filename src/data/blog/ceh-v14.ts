@@ -13,14 +13,14 @@ const guide: Guide = {
     en: "CEH v14: What We Know, Predictions and Should You Wait?",
   },
   seoTitle: {
-    fr: "CEH v14 : date de sortie, nouveautés et prévisions",
-    ar: "CEH v14: موعد الإصدار والجديد والتوقعات",
-    en: "CEH v14: Release Date, Changes and Predictions",
+    fr: "CEH v14 : date de sortie ? Pas encore sorti (octobre 2026)",
+    ar: "CEH v14: موعد الإصدار؟ لم يصدر بعد (أكتوبر 2026)",
+    en: "CEH v14 Release Date: Not Out Yet (October 2026 Update)",
   },
   seoDescription: {
-    fr: "CEH v14 est-il sorti ? Ce que l'on sait, ce qu'il pourrait changer face au CEH v13 et pourquoi ne pas attendre. Lisez notre analyse.",
-    ar: "هل صدر CEH v14؟ ما نعرفه رسميًا، والتوقعات مقارنة بـ CEH v13، ولماذا لا داعي للانتظار للحصول على شهادتك في المغرب. اقرأ تحليلنا الآن.",
-    en: "Is CEH v14 out? What we know, what may change versus CEH v13 and why waiting rarely pays off. Read our analysis now.",
+    fr: "Non, le CEH v14 n'est pas sorti : au 13 octobre 2026, EC-Council ne l'a pas annoncé le CEH v13 reste en vigueur. Calendrier probable et faut-il attendre ?",
+    ar: "لا، لم تصدر CEH v14 بعد: إلى غاية 13 أكتوبر 2026 لم تعلن عنها EC-Council وما تزال CEH v13 هي النسخة المعتمدة. الموعد المرجح والجديد المتوقع وهل يجب الانتظار.",
+    en: "No, CEH v14 is not out: as of 13 October 2026 EC-Council has not announced it and CEH v13 is current. Likely timing, expected changes and whether to wait.",
   },
   excerpt: {
     fr: "À ce jour, EC-Council n'a ni annoncé ni publié de CEH v14 : la version en vigueur reste le CEH v13. Voici ce que l'historique des versions laisse prévoir, et pourquoi attendre n'est généralement pas une bonne idée.",
