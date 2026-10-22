@@ -26,14 +26,14 @@ const guide: Guide = {
     en: "Cybersecurity certification prices in Morocco in 2026 (in MAD)",
   },
   seoTitle: {
-    fr: "Prix certifications cybersécurité Maroc 2026 (MAD)",
-    ar: "أسعار شهادات الأمن السيبراني في المغرب 2026",
-    en: "Cybersecurity Certification Prices in Morocco 2026",
+    fr: "Prix certifications cybersécurité Maroc 2026 : dès 10 900 MAD",
+    ar: "أسعار شهادات الأمن السيبراني بالمغرب 2026: من 10,900 درهم",
+    en: "Cybersecurity Cert Prices in Morocco 2026: From 10,900 MAD",
   },
   seoDescription: {
-    fr: "Security+, CEH, CISSP, OSCP+… Les prix 2026 en dirhams, ce qu'ils incluent et les frais cachés à anticiper. Comparez et demandez votre devis détaillé.",
-    ar: "Security+ وCEH وCISSP وOSCP+: أسعار 2026 بالدرهم، وما تشمله، والتكاليف الخفية التي يجب توقعها. قارن العروض واطلب عرض سعر مفصلاً يناسب احتياجاتك الآن.",
-    en: "Security+, CEH, CISSP, OSCP+: 2026 prices in dirhams, what they include and hidden costs to plan for. Compare options and request a detailed quote.",
+    fr: "Security+ 10 900 MAD, CEH 21 900 MAD, CISSP 23 900 MAD, OSCP+ 29 900 MAD : les 12 prix 2026 examen inclus, et les frais cachés. Demandez un devis.",
+    ar: "Security+ بـ10,900 درهم، CEH بـ21,900، CISSP بـ23,900، OSCP+ بـ29,900: أسعار 12 شهادة لسنة 2026 مع الامتحان، والتكاليف الخفية. اطلب عرض سعر مفصلاً.",
+    en: "Security+ 10,900 MAD, CEH 21,900 MAD, CISSP 23,900 MAD, OSCP+ 29,900 MAD: 2026 prices for 12 certifications, exam included, plus hidden costs. Get a quote.",
   },
   excerpt: {
     fr: "Combien coûte une certification en cybersécurité au Maroc ? Voici les prix 2026 en dirhams des 12 certifications les plus demandées, ce qu'ils couvrent et les coûts annexes à prévoir.",

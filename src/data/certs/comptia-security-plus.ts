@@ -36,9 +36,9 @@ const cert: Certification = {
     },
   },
   seoTitle: {
-    fr: "Formation CompTIA Security+ au Maroc – Examen SY0-701",
-    ar: "تكوين CompTIA Security+ في المغرب – امتحان SY0-701",
-    en: "CompTIA Security+ Training in Morocco – SY0-701 Exam",
+    fr: "CompTIA Security+ Maroc : formation + examen, 10 900 MAD",
+    ar: "CompTIA Security+ بالمغرب: تكوين وامتحان بـ10,900 درهم",
+    en: "CompTIA Security+ Morocco: Course + Exam for 10,900 MAD",
   },
   seoDescription: {
     fr: "Formation Security+ SY0-701 à Casablanca, Rabat ou en ligne : 5 jours, voucher d'examen inclus, dès 10 900 MAD. Demandez le programme et les dates.",
