@@ -358,6 +358,28 @@ export const blogImages: Record<string, Entry> = {
       "tvn5IIZtnEU",
     ),
   },
+  "formation-ceh-v13-maroc-centre-accredite": {
+    cover: cover(
+      "formation-ceh-v13-maroc-centre-accredite",
+      {
+        fr: "Cadenas rouge posé sur un clavier d'ordinateur rétroéclairé en vert, symbole de sécurité",
+        ar: "قفل أحمر موضوع على لوحة مفاتيح حاسوب بإضاءة خضراء، رمزاً للأمن الرقمي",
+        en: "Red padlock resting on a green backlit computer keyboard, symbolising digital security",
+      },
+      "FlyD",
+      "mT7lXZPjk7U",
+    ),
+    figure: figure(
+      "formation-ceh-v13-maroc-centre-accredite",
+      {
+        fr: "Femme présentant au tableau blanc à son équipe lors d'un atelier",
+        ar: "امرأة تقدّم عرضاً أمام السبورة البيضاء لفريقها خلال ورشة عمل",
+        en: "Woman presenting at a whiteboard to her team during a workshop",
+      },
+      "Vitaly Gariev",
+      "piULICqeV5Y",
+    ),
+  },
   "ceh-v14": {
     cover: cover(
       "ceh-v14",

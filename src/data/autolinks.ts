@@ -36,6 +36,11 @@ export const autoLinkRules: AutoLinkRule[] = [
   post("ccna-cybersecurity-maroc", { all: ["200-201"] }),
   post("former-equipes-cybersecurite-entreprise", { fr: ["former (?:vos|ses|les) équipes", "formation intra-entreprise"], en: ["train(?:ing)? your teams", "in-house training"], ar: ["تكوين (?:فرقك|الفرق)"] }),
   post("quelle-certification-cybersecurite-choisir", { fr: ["choisir (?:sa|votre|une) certification"], en: ["choos(?:e|ing) (?:a|your) certification"], ar: ["اختيار (?:الشهادة|شهادتك)"] }),
+  post("formation-ceh-v13-maroc-centre-accredite", {
+    fr: ["centres? (?:de formation )?(?:accrédités?|agréés?) (?:par )?EC-Council", "Accredited Training Cent(?:er|re)s?"],
+    en: ["EC-Council accredited (?:training )?(?:cent(?:er|re)s?|partners?)", "Accredited Training Cent(?:er|re)s?"],
+    ar: ["(?:ال)?مراكز? (?:تكوين )?(?:ال)?معتمدة? (?:من|لدى) EC-Council", "Accredited Training Center"],
+  }),
   post("meilleur-centre-formation-cybersecurite-maroc", { fr: ["centres? de formation"], en: ["training cent(?:er|re)s?"], ar: ["مراكز? التكوين"] }),
 
   // Service pages: purchase / consulting intents only (not the generic "voucher inclus").
