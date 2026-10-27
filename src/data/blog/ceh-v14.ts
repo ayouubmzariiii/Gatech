@@ -18,7 +18,7 @@ const guide: Guide = {
     en: "CEH v14 Release Date: Not Out Yet (October 2026 Update)",
   },
   seoDescription: {
-    fr: "Non, le CEH v14 n'est pas sorti : au 13 octobre 2026, EC-Council ne l'a pas annoncé le CEH v13 reste en vigueur. Calendrier probable et faut-il attendre ?",
+    fr: "Non, le CEH v14 n'est pas sorti : au 13 octobre 2026, EC-Council ne l'a pas annoncé et le CEH v13 reste en vigueur. Calendrier probable et faut-il attendre ?",
     ar: "لا، لم تصدر CEH v14 بعد: إلى غاية 13 أكتوبر 2026 لم تعلن عنها EC-Council وما تزال CEH v13 هي النسخة المعتمدة. الموعد المرجح والجديد المتوقع وهل يجب الانتظار.",
     en: "No, CEH v14 is not out: as of 13 October 2026 EC-Council has not announced it and CEH v13 is current. Likely timing, expected changes and whether to wait.",
   },

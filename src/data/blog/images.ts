@@ -534,4 +534,26 @@ export const blogImages: Record<string, Entry> = {
       "Ma7aOy5mMp0",
     ),
   },
+  "fortigate-palo-alto-ou-check-point": {
+    cover: cover(
+      "fortigate-palo-alto-ou-check-point",
+      {
+        fr: "Salle serveurs d'un datacenter avec baies et chemins de câbles réseau",
+        ar: "قاعة خوادم في مركز بيانات مع خزائن ومسارات كابلات الشبكة",
+        en: "Data centre server room with racks and overhead network cable trays",
+      },
+      "Taylor Vick",
+      "aWslrFhs1w4",
+    ),
+    figure: figure(
+      "fortigate-palo-alto-ou-check-point",
+      {
+        fr: "Écran de sécurité indiquant réseaux protégés, absence de virus et applications à jour",
+        ar: "شاشة أمان تشير إلى شبكات محمية وغياب الفيروسات وتطبيقات محدّثة",
+        en: "Security screen showing safe networks, no viruses and up-to-date apps",
+      },
+      "Zulfugar Karimov",
+      "-nBClEqKKVM",
+    ),
+  },
 };

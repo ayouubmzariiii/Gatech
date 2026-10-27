@@ -4,8 +4,8 @@ const guide: Guide = {
   slug: "ccna-ou-security-plus",
   category: "comparatifs",
   datePublished: "2026-10-13",
-  dateModified: "2026-10-13",
-  readingMinutes: 7,
+  dateModified: "2026-10-27",
+  readingMinutes: 8,
   relatedCerts: ["cisco-ccna", "comptia-security-plus", "cisco-ccna-cybersecurity"],
   title: {
     fr: "CCNA ou CompTIA Security+ : par laquelle commencer ?",
@@ -108,6 +108,14 @@ const guide: Guide = {
         ],
       },
       {
+        heading: "Et le CCNA Cybersecurity face au Security+ ?",
+        paragraphs: [
+          "Le Cisco CCNA Cybersecurity (examen 200-201, anciennement CyberOps Associate) est souvent comparé au Security+, car tous deux visent les premiers postes en cybersécurité. La différence tient au périmètre : le Security+ donne une culture sécurité large (menaces, architecture, identités, risques, conformité), tandis que le CCNA Cybersecurity est centré sur le travail d'un analyste SOC de niveau 1 : surveillance, analyse de journaux et de trafic réseau, détection et réponse aux incidents.",
+          "Si vous hésitez entre les deux pour un poste SOC, le Security+ reste le meilleur premier pas, puis le CCNA Cybersecurity vient approfondir le volet opérationnel. Les deux formations sont au même tarif chez GATech (10 900 MAD, voucher inclus).",
+          "Quant au « CCNA Security » que l'on trouve encore dans de nombreuses recherches, il n'existe plus : Cisco l'a retiré en février 2020 lors de la refonte de ses certifications. Pour un parcours sécurité chez Cisco aujourd'hui, c'est le CCNA (200-301) puis le CCNA Cybersecurity qu'il faut viser.",
+        ],
+      },
+      {
         heading: "Comment GATech vous accompagne vers le CCNA ou le Security+ ?",
         paragraphs: [
           "GATech propose une formation CCNA et une formation CompTIA Security+ de 5 jours chacune, à 10 900 MAD, voucher d'examen officiel inclus, en présentiel ou en classe virtuelle. Pour la suite d'un parcours SOC, la formation Cisco CCNA Cybersecurity est proposée au même tarif. Consultez nos offres en cours et contactez-nous pour choisir l'ordre qui correspond à votre profil.",
@@ -191,6 +199,14 @@ const guide: Guide = {
           "مسار SOC، الشهر 2: البنية الآمنة، الهويات والوصول، عمليات الأمن؛ تدرّب على أسئلة الأداء.",
           "مسار SOC، الشهر 3: امتحانات تجريبية ثم اجتياز Security+.",
           "مسار SOC، الأشهر 4 إلى 6: CCNA Cybersecurity (200-201) مع تحليل السجلات والتقاطات الحزم والتنبيهات في مختبر شخصي.",
+        ],
+      },
+      {
+        heading: "وماذا عن CCNA Cybersecurity مقابل Security+؟",
+        paragraphs: [
+          "كثيرا ما تُقارن Cisco CCNA Cybersecurity (امتحان 200-201، المعروفة سابقا بـ CyberOps Associate) بـ Security+، لأن كلتيهما تستهدفان أولى وظائف الأمن السيبراني. والفرق في النطاق: تمنح Security+ ثقافة أمنية واسعة (التهديدات والبنية والهويات والمخاطر والامتثال)، بينما تركز CCNA Cybersecurity على عمل محلل SOC من المستوى الأول: المراقبة وتحليل السجلات وحركة الشبكة واكتشاف الحوادث والاستجابة لها.",
+          "إذا كنت مترددا بينهما من أجل وظيفة في SOC، فإن Security+ تبقى أفضل خطوة أولى، ثم تأتي CCNA Cybersecurity لتعميق الجانب العملي. ويُقدَّم التكوينان بالسعر نفسه لدى GATech (10900 درهم مع القسيمة).",
+          "أما «CCNA Security» التي ما تزال تظهر في كثير من عمليات البحث، فلم تعد موجودة: سحبتها Cisco في فبراير 2020 عند إعادة هيكلة شهاداتها. ولمسار أمني لدى Cisco اليوم، يجب استهداف CCNA (200-301) ثم CCNA Cybersecurity.",
         ],
       },
       {
@@ -280,6 +296,14 @@ const guide: Guide = {
         ],
       },
       {
+        heading: "What about CCNA Cybersecurity vs Security+?",
+        paragraphs: [
+          "Cisco CCNA Cybersecurity (exam 200-201, formerly CyberOps Associate) is often compared with Security+, since both target entry-level security jobs. The difference is scope: Security+ gives broad security knowledge (threats, architecture, identity, risk, compliance), while CCNA Cybersecurity focuses on the work of a Tier 1 SOC analyst: monitoring, log and network traffic analysis, incident detection and response.",
+          "If you are torn between the two for a SOC role, Security+ is still the better first step, with CCNA Cybersecurity then deepening the hands-on side. Both courses cost the same at GATech (10,900 MAD, voucher included).",
+          "As for the \"CCNA Security\" that still shows up in many searches, it no longer exists: Cisco retired it in February 2020 when it overhauled its certifications. For a security path with Cisco today, aim for CCNA (200-301) and then CCNA Cybersecurity.",
+        ],
+      },
+      {
         heading: "How can GATech help you prepare for CCNA or Security+?",
         paragraphs: [
           "GATech offers a CCNA course and a CompTIA Security+ course, 5 days each, at MAD 10,900 with the official exam voucher included, in class or in a live virtual classroom. To continue on a SOC path, the Cisco CCNA Cybersecurity course is offered at the same price. Check our current offers and contact us to choose the order that fits your profile.",
@@ -293,6 +317,7 @@ const guide: Guide = {
       { q: "Combien coûtent le CCNA et le Security+ chez GATech ?", a: "Les deux formations sont à 10 900 MAD chacune, pour 5 jours (40 heures), voucher de l'examen officiel inclus." },
       { q: "Combien de questions comportent les examens ?", a: "Le Security+ SY0-701 compte 90 questions au maximum en 90 minutes, avec un score de réussite de 750 sur 900. Pour le CCNA 200-301 (environ 120 minutes), Cisco ne publie pas le nombre exact de questions." },
       { q: "Quelle certification pour devenir analyste SOC ?", a: "Commencez plutôt par le Security+, puis poursuivez avec le Cisco CCNA Cybersecurity (200-201), centré sur la surveillance et l'analyse d'incidents. Des bases réseau solides restent indispensables." },
+      { q: "Le CCNA Security existe-t-il encore ?", a: "Non. Cisco a retiré le CCNA Security en février 2020. Pour la sécurité, le parcours actuel est le CCNA (200-301) puis le CCNA Cybersecurity (200-201), orienté SOC." },
       { q: "Le CCNA et le Security+ expirent-ils ?", a: "Oui, les deux sont valables 3 ans. Le CCNA se renouvelle via un examen ou des crédits Cisco Continuing Education, le Security+ via le programme CompTIA CE." },
     ],
     ar: [
@@ -300,6 +325,7 @@ const guide: Guide = {
       { q: "كم تكلف CCNA وSecurity+ لدى GATech؟", a: "يُقدَّم كل تكوين بسعر 10900 درهم، لمدة 5 أيام (40 ساعة)، مع قسيمة الامتحان الرسمي." },
       { q: "كم عدد أسئلة الامتحانين؟", a: "يضم امتحان Security+ SY0-701 ما يصل إلى 90 سؤالًا في 90 دقيقة، وعتبة النجاح 750 من 900. أما CCNA 200-301 (حوالي 120 دقيقة) فلا تنشر Cisco العدد الدقيق لأسئلته." },
       { q: "أي شهادة لتصبح محلل SOC؟", a: "ابدأ بـ Security+، ثم تابع بـ Cisco CCNA Cybersecurity (200-201) المركزة على المراقبة وتحليل الحوادث. وتبقى أساسيات الشبكات المتينة ضرورية." },
+      { q: "هل ما تزال شهادة CCNA Security موجودة؟", a: "لا. سحبت Cisco شهادة CCNA Security في فبراير 2020. والمسار الحالي في الأمن هو CCNA (200-301) ثم CCNA Cybersecurity (200-201) الموجهة نحو SOC." },
       { q: "هل تنتهي صلاحية CCNA وSecurity+؟", a: "نعم، كلتاهما صالحة 3 سنوات. تُجدَّد CCNA بامتحان أو بأرصدة Cisco Continuing Education، وSecurity+ عبر برنامج CompTIA CE." },
     ],
     en: [
@@ -307,6 +333,7 @@ const guide: Guide = {
       { q: "How much do CCNA and Security+ cost at GATech?", a: "Both courses cost MAD 10,900 each, for 5 days (40 hours), official exam voucher included." },
       { q: "How many questions are on the exams?", a: "Security+ SY0-701 has up to 90 questions in 90 minutes, with a passing score of 750 out of 900. For CCNA 200-301 (about 120 minutes), Cisco does not publish the exact number of questions." },
       { q: "Which certification to become a SOC analyst?", a: "Start with Security+, then continue with Cisco CCNA Cybersecurity (200-201), which focuses on monitoring and incident analysis. Solid networking basics remain essential." },
+      { q: "Does CCNA Security still exist?", a: "No. Cisco retired CCNA Security in February 2020. The current security path is CCNA (200-301) followed by CCNA Cybersecurity (200-201), which is SOC-focused." },
       { q: "Do CCNA and Security+ expire?", a: "Yes, both are valid for 3 years. CCNA is renewed by exam or Cisco Continuing Education credits, Security+ through the CompTIA CE program." },
     ],
   },
