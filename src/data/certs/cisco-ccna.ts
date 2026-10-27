@@ -35,9 +35,9 @@ const cert: Certification = {
     },
   },
   seoTitle: {
-    fr: "Formation Cisco CCNA au Maroc – Examen 200-301",
-    ar: "تكوين Cisco CCNA في المغرب – امتحان 200-301",
-    en: "Cisco CCNA Training in Morocco – 200-301 Exam",
+    fr: "Formation CCNA Maroc : prix 10 900 MAD, examen 200-301",
+    ar: "تكوين CCNA بالمغرب: 10900 درهم مع امتحان 200-301",
+    en: "CCNA Training Morocco: 10,900 MAD, 200-301 Exam Included",
   },
   seoDescription: {
     fr: "Formation CCNA 200-301 à Casablanca, Rabat ou en ligne : 5 jours de labs, voucher Cisco inclus, dès 10 900 MAD. Demandez le programme et les dates.",

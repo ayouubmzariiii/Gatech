@@ -35,9 +35,9 @@ const cert: Certification = {
     },
   },
   seoTitle: {
-    fr: "Formation FortiGate 7.6 Administrator au Maroc – FCP",
-    ar: "تكوين FortiGate 7.6 Administrator في المغرب – FCP",
-    en: "FortiGate 7.6 Administrator Training in Morocco – FCP",
+    fr: "Formation FortiGate Administrator Maroc (ex-NSE 4) – FCP",
+    ar: "تكوين FortiGate Administrator بالمغرب (NSE 4 سابقا) – FCP",
+    en: "FortiGate Administrator Training Morocco (ex-NSE 4) – FCP",
   },
   seoDescription: {
     fr: "Formation FortiGate 7.6 Administrator à Casablanca, Rabat ou en ligne : 4 jours de labs, voucher FCP inclus, dès 14 900 MAD. Demandez le programme.",

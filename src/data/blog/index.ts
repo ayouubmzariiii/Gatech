@@ -26,6 +26,7 @@ import ccnaCyber from "./ccna-cybersecurity-maroc";
 import cisspMaroc from "./certification-cissp-maroc";
 import enLigne from "./formation-cybersecurite-en-ligne-maroc";
 import metiers from "./metiers-cybersecurite-maroc";
+import pareFeu from "./fortigate-palo-alto-ou-check-point";
 
 /** Fixes "+" placement in Arabic text (see lib/bidi). */
 const withArabicBidi = (g: Guide): Guide => {
@@ -44,7 +45,7 @@ const withImages = (g: Guide): BlogPost => {
 
 /** Editorial order: strategic posts first, newest first within the same date. */
 export const posts: BlogPost[] = [
-  meilleurCentre, cehV14, voucherGratuit, certifsGratuites, choisir, metiers, prix, cehOscp, ccnaOuSecPlus, enLigne, cisspMaroc, ccnaCyber, reussirCeh, securityPlus, secPlusCeh, oscpPrep, soc, reconversion,
+  meilleurCentre, cehV14, voucherGratuit, certifsGratuites, choisir, metiers, prix, cehOscp, ccnaOuSecPlus, pareFeu, enLigne, cisspMaroc, ccnaCyber, reussirCeh, securityPlus, secPlusCeh, oscpPrep, soc, reconversion,
   entreprise, cisspCism, loi0520, iso27001, pentester,
 ].map((g) => withImages(withArabicBidi(g)));
 
