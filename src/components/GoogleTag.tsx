@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 /** GA4 measurement ID. */
-export const GA_ID = "G-N0J1QEX7NX";
+export const GA_ID = "G-Q4HG64VW69";
 
 /** localStorage key holding the visitor's analytics choice: "granted" | "denied". */
 export const CONSENT_KEY = "gatech-consent";
